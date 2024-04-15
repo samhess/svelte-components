@@ -4,7 +4,7 @@
   export let menu
   /** @type {Object.<string, any>} */
   const navigation = {
-    main: [ 'Home', 'Charts', 'Tables', 'Icons'], 
+    main: [ 'Home', 'Charts', 'Tables', 'Icons', 'Forms'], 
     user: [
       { name: 'Profile', path: '/user/profile'},
       { name: 'Logout', path: '/user/profile'},
