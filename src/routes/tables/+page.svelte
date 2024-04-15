@@ -1,5 +1,7 @@
 <script>
+  /** @type {import('./$types').PageData} */
   import {DataTable} from '@samhess/svelte-components'
+  //export let data;
   const entity = {
     attributes: [
       { key:'code', name:'Alpha-2 code', align:'left' },
@@ -19,6 +21,9 @@
     currencyCode: 'CHF'
   }]
 </script>
-<h1>Welcome to my library project</h1>
-<h2>Datatable</h2>
-<DataTable {entity} {records}></DataTable>
+<article class="prose">
+  <h1>Tables</h1>
+  <h2>DataTable</h2>
+  <DataTable {entity} {records}></DataTable>
+  <h2>EditDialog</h2>
+</article>
