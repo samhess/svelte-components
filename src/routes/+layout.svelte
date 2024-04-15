@@ -1,19 +1,17 @@
 <script lang="js">
   import { page } from '$app/stores'
-  import Navigation from '$lib/components/Navigation.svelte'
+  import Navigation from './Navigation.svelte'
   import HeroIcon from '$lib/components/HeroIcon.svelte'
   import '../main.css'
-  export let data
-  const {menu} = data
   let path = ''
   $: path = $page.route.id?.slice(1).replaceAll('/',' > ') ?? ''
 </script>
 
 <svelte:head>
-  <title>moontrade.ch &mdash; {path}</title>
+  <title>@samhess/svelte-components &mdash; {path}</title>
 </svelte:head>
 
-<Navigation {menu}></Navigation>
+<Navigation></Navigation>
 <main class="mx-auto max-w-7xl pt-10 px-2 md:px-4">
   <slot />
   <!-- footer -->
