@@ -8,7 +8,8 @@
     limit : 5,
     language: 'de'
   }
-  function getAddress(event) {
+
+  function updateAddress(event) {
     const {address} = event.detail
     postcode = address.postcode
     city = address.city
@@ -16,6 +17,7 @@
     country = address.country
   }
 </script>
+
 <article class="prose">
   <h1>Form Elements</h1>
   <h2>Address Autocomplete</h2>
@@ -24,7 +26,7 @@
     <div>
       <div class="mb-2 w-1/2">
         <label class="form-label" for="street">Street</label>
-        <AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
+        <AddressInput {mapboxOptions} on:addressSelect={updateAddress}></AddressInput>
       </div>
     </div>
     <div class="flex justify-normal">

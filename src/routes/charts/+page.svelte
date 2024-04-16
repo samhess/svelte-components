@@ -1,5 +1,5 @@
 <script>
-  import {Treemap} from '@samhess/svelte-components'
+  import Treemap from '$lib/components/Treemap.svelte'
   const data = [
     {
       name: 'AAPL',
