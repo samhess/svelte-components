@@ -1,4 +1,4 @@
-# Vue Component for Address Completion
+# Svelte Component for Address Completion
 
 This is a Svelte component for address autocompletion. It integrates with 
 [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) and [Tailwind CSS](https://tailwindcss.com/).
@@ -15,7 +15,7 @@ npm install @samhess/svelte-components
 <AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
 
 <script setup>
-  import AddressInput from '$lib/components/AddressInput.svelte'
+  import AddressInput from '@samhess/svelte-components'
   let postcode,city,state,country
 
   // mapbox options as per https://docs.mapbox.com/api/search/geocoding

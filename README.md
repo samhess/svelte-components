@@ -1,19 +1,37 @@
-# create-svelte
+# Sam's Svelte Components
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+* [Address autocompletion](https://github.com/samhess/svelte-components/tree/main/src/routes/forms)
+* [DataTable](https://github.com/samhess/svelte-components/tree/main/src/routes/tables)
+* [Heroicons](https://github.com/samhess/svelte-components/tree/main/src/routes/icons)
+* [TreeMap](https://github.com/samhess/svelte-components/tree/main/src/routes/charts)
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
+## Installation
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
+npm install @samhess/svelte-components
+```
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Usage 
+```html
+<AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
+
+<script setup>
+  import {AddressInput} from '@samhess/svelte-components'
+  let postcode,city,state,country
+
+  // mapbox options as per https://docs.mapbox.com/api/search/geocoding
+  const mapboxOptions = {
+    access_token : 'YOUR_TOKEN',
+    limit : 5,
+    language: 'en'
+  }
+  function getAddress(event) {
+    const {address} = event.detail
+    postcode = address.postcode
+    city = address.city
+    state = address.state
+    country = address.country
+  }
+</script>
 ```
 
 ## Developing
@@ -46,13 +64,3 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
-
-```bash
-npm publish
-```
