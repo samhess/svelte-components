@@ -3,7 +3,7 @@
   const menu = [ 'Home', 'Charts', 'Forms', 'Icons', 'Tables']
 
   function getCurrentRoute(path) {
-    return path.replace(/^\//,'')
+    return path?.replace(/^\//,'')
   }
   
   let currentRoute
