@@ -1,37 +1,35 @@
 # Vue Component for Address Completion
 
-This is a Vue 3 Single File Components (SFC) for address autocompletion. It integrates with 
-[Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) and [Bootstrap 5](https://getbootstrap.com).
+This is a Svelte component for address autocompletion. It integrates with 
+[Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) and [Tailwind CSS](https://tailwindcss.com/).
 
 A current build of the component can be found in the *dist* directory.
 
-A current build of the example app can be found in the *docs* directory so it can be served on GitHub Pages.
-
 ## Installation
 ```bash
-npm install @samhess/vue-address-input
+npm install @samhess/svelte-components
 ```
 
 ## Usage 
 ```html
-<template>
-  <AddressInput @addressSelect="getAddress" :mapboxOptions="mapboxOptions"></AddressInput>
-</template>
+<AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
 
 <script setup>
-  import { reactive } from 'vue'
-  // import AddressInput from './components/AddressInput.vue'
-  // import AddressInput from './components/AddressInput.js'
-  import AddressInput from '@samhess/vue-address-input'
-  const editedItem = reactive({})
+  import AddressInput from '$lib/components/AddressInput.svelte'
+  let postcode,city,state,country
+
   // mapbox options as per https://docs.mapbox.com/api/search/geocoding
   const mapboxOptions = {
     access_token : 'YOUR_TOKEN',
-    limit : 10,
-    language: 'de'
+    limit : 5,
+    language: 'en'
   }
-  function getAddress(address) {
-    Object.assign(editedItem,address)
+  function getAddress(event) {
+    const {address} = event.detail
+    postcode = address.postcode
+    city = address.city
+    state = address.state
+    country = address.country
   }
 </script>
 ```
