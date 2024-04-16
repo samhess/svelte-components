@@ -1,5 +1,5 @@
 <script>
-  import {DataTable} from '@samhess/svelte-components'
+  import DataTable from '$lib/components/DataTable.svelte'
   const entity = {
     attributes: [
       { key:'code', name:'Alpha-2 code', align:'left' },
