@@ -1,17 +1,45 @@
 <script lang="js">
   import { page } from '$app/stores'
-  import Navigation from './Navigation.svelte'
   import HeroIcon from '$lib/components/HeroIcon.svelte'
   import '../main.css'
-  let path = ''
-  $: path = $page.route.id?.slice(1).replaceAll('/',' > ') ?? ''
+  const menu = [ 'Home', 'Charts', 'Forms', 'Icons', 'Tables']
+  
+  let breadcrumb, currentRoute
+  $: breadcrumb = $page.route.id?.slice(1).replaceAll('/',' > ') ?? ''
+  $: currentRoute = $page.route.id?.replace(/^\//,'')
 </script>
 
 <svelte:head>
-  <title>@samhess/svelte-components &mdash; {path}</title>
+  <title>@samhess/svelte-components &mdash; {breadcrumb}</title>
 </svelte:head>
 
-<Navigation></Navigation>
+<!-- top navigation -->
+<header class="bg-sky-500">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+      <div class="flex bg-slate-100 rounded-full">
+      </div>
+      <div class="hidden md:block">
+        <div class="flex items-baseline space-x-2 justify-center">
+          {#each menu as item}
+            <a
+              href={`/${item.toLowerCase()}`}
+              class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 py-1.5 font-medium" 
+              class:text-white = { currentRoute === item.toLowerCase() }
+              >{ item }
+            </a>
+          {/each}
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-4 flex items-center md:ml-6">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- main content -->
 <main class="mx-auto max-w-7xl pt-10 px-2 md:px-4">
   <slot />
   <!-- footer -->
@@ -19,7 +47,7 @@
   <footer class="flex justify-between pb-10">
     <div>@samhess/svelte-components</div>
     <div>
-      <a href="https://www.linkedin.com/in/samhess/" target="_blank">Contact <HeroIcon name="envelope" className="w-5 h-5 inline"/></a>
+      <a href="https://github.com/samhess" target="_blank">Contact <HeroIcon name="envelope" className="w-5 h-5 inline"/></a>
     </div>
   </footer>
 </main>
