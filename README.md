@@ -10,7 +10,55 @@
 npm install @samhess/svelte-components
 ```
 
-## Usage 
+## Usage
+### DataTable
+```html
+<script>
+  import {DataTable} from '@samhess/svelte-components'
+  const entity = {
+    attributes: [
+      { key:'code', name:'Alpha-2 code', align:'left' },
+      { key:'name', name:'Name' },
+      { key:'region', name:'Region' },
+      { key:'currency', name:'Currency' }
+    ],
+    endpoint: 'country',
+    name: 'Countries',
+    sorting: {field:'code'},
+    isEditable: true
+  }
+  const records = [
+    {
+      code: 'CH',
+      name: 'Switzerland',
+      region: 'Europa',
+      currency: 'CHF'
+    },
+    {
+      code: 'DE',
+      name: 'Germany',
+      region: 'Europa',
+      currency: 'EUR'
+    },
+    {
+      code: 'US',
+      name: 'United States of America',
+      region: 'America',
+      currency: 'USD'
+    }
+  ]
+</script>
+<article class="prose">
+  <h1>Tables</h1>
+  <h2>DataTable</h2>
+  <p>
+    This is a sortable (click on column in table header) and optionally editable (double click on table row) data table.
+  </p>
+  <DataTable {entity} {records}></DataTable>
+</article>
+```
+
+### AddressInput
 ```html
 <AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
 
@@ -34,33 +82,44 @@ npm install @samhess/svelte-components
 </script>
 ```
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+### TreeMap
+```html
+<script>
+  import Treemap from '$lib/components/Treemap.svelte'
+  const data = [
+    {
+      name: 'AAPL',
+      marketCap: 200,
+      performance1d: 1,
+      type: 'stock'
+    },
+    {
+      name: 'GOOG',
+      marketCap: 200,
+      performance1d: 2,
+      type: 'stock'
+    },
+    {
+      name: 'TSLA',
+      marketCap: 100,
+      performance1d: -1,
+      type: 'stock'
+    },
+    {
+      name: 'BTC',
+      marketCap: 200,
+      performance1d: 3,
+      type: 'crypto'
+    }
+  ]
+  const evaluation = 'performance1d'
+  const structure = 'marketCap'
+  const grouping = ['type', 'name']
+</script>
+<article class="prose">
+  <h1>Charts</h1>
+  <h2>TreeMap</h2>
+  <Treemap {data} {structure} {grouping} {evaluation}>
+  </Treemap>
+</article>
 ```
-
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
