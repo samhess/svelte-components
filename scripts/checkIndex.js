@@ -10,8 +10,8 @@ const ARGS = process.argv.slice(2)
 const supportedIndexes = [
   'SMI', 
   'SLI', 
-  'SXGE',
-  'SSIRT',
+  //'SXGE',
+  //'SSIRT',
   'DAX', 
   'SX5E', 
   'SX5R', 
@@ -27,34 +27,41 @@ const supportedIndexes = [
 async function getRemoteTitles(indexTicker) {
   let remmoteTitles = []
   if (['SMI', 'SLI', 'SXGE', 'SSIRT'].includes(indexTicker)) {
-    const response = await quoteIndexSix(indexTicker, ['ShortName','ValorSymbol','ISIN','Currency', 'NumberInIssue', 'ClosingPrice'])
-    if (Array.isArray(response)) {
-      remmoteTitles = response.map(title => ({
-        name: title.ShortName,
-        isin: title.ISIN,
-        ticker: title.ValorSymbol,
-        exchangeId: 'XSWX',
-        marketCap: normalizeCurrency(title.NumberInIssue * title.ClosingPrice, 'CHF', 'USD'),
-        countryCode: title.ISIN.slice(0,2),
-        assetclass: 'equity'
-      }))
-    } else if (response instanceof Error) {
+    const response = await quoteIndexSix(indexTicker, ['ShortName','ValorSymbol','ISIN','Currency', 'NumberInIssue', 'ClosingPrice','TradingSegmentId'])
+    if (!(response instanceof Error)) {
+      if (Array.isArray(response)) {
+        remmoteTitles = response
+          .map(title => ({
+            name: title.ShortName,
+            isin: title.ISIN,
+            ticker: title.ValorSymbol,
+            exchangeId: 'XSWX',
+            marketCap: normalizeCurrency(title.NumberInIssue * title.ClosingPrice, 'CHF', 'USD'),
+            countryCode: title.ISIN.slice(0,2),
+            assetclass: 'equity',
+            TradingSegmentId: parseInt(title.TradingSegmentId)
+          }))
+          .filter(instrument => instrument.TradingSegmentId !== 597) // no second line
+      }
+    } else {
       throw new Error(`Query ${indexTicker} failed: ${response.message}`)
     }
   } 
   else if (['DAX'].includes(indexTicker)) {
     const response = await quoteIndexFwb(indexTicker)
-    if (Array.isArray(response)) {
-      remmoteTitles = response.map(quote => ({
-        isin: quote.isin,
-        name: quote.name.originalValue,
-        ticker: quote.wkn, 
-        exchangeId: 'XETR',
-        marketCap: normalizeCurrency(quote.keyData.marketCapitalisation, 'EUR', 'USD'),
-        countryCode: quote.isin.slice(0,2),
-        assetclass: 'equity'
-      }))
-    } else if (response instanceof Error) {
+    if (!(response instanceof Error)) {
+      if (Array.isArray(response)) {
+        remmoteTitles = response.map(quote => ({
+          isin: quote.isin,
+          name: quote.name.originalValue,
+          ticker: quote.wkn, 
+          exchangeId: 'XETR',
+          marketCap: normalizeCurrency(quote.keyData.marketCapitalisation, 'EUR', 'USD'),
+          countryCode: quote.isin.slice(0,2),
+          assetclass: 'equity'
+        }))
+      }
+    } else {
       console.log(`Could not get ${indexTicker} titles (${response.message})`)
     }
   }
@@ -63,17 +70,19 @@ async function getRemoteTitles(indexTicker) {
   } 
   else if (['C20'].includes(indexTicker)) {
     const response = await quoteIndexCmc(1,20)
-    if (Array.isArray(response)) {
-      remmoteTitles = response.map(quote => ({
-        isin: `ZZXOFF${quote.symbol}`,
-        name: quote.name,
-        ticker: quote.symbol,
-        exchangeId: 'XOFF',
-        countryCode: 'ZZ', 
-        assetclass: 'cryptocurrency',
-        marketCap: quote.circulating_supply * quote.quote.USD.price
-      }))
-    } else if (response instanceof Error) {
+    if (!(response instanceof Error)) {
+      if (Array.isArray(response)) {
+        remmoteTitles = response.map(quote => ({
+          isin: `ZZXOFF${quote.symbol}`,
+          name: quote.name,
+          ticker: quote.symbol,
+          exchangeId: 'XOFF',
+          countryCode: 'ZZ', 
+          assetclass: 'cryptocurrency',
+          marketCap: quote.circulating_supply * quote.quote.USD.price
+        }))
+      }
+    } else {
       console.log(`Could not get ${indexTicker} instruments`)
       throw response
     }

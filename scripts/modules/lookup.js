@@ -5,11 +5,15 @@ const blacklist = [
   'Bobst Group',
   'Achiko',
   'Credit Suisse Group',
-  'Von Roll Holding',
-  'EPH European Property Holding',
+  'Von Roll',
+  'EPH European Property',
   'Castle Alternative Invest',
   'IGEA Pharma N.V.',
-  'Vifor Pharma'
+  'Vifor Pharma',
+  'One Swiss Bank',
+  'Schaffner',
+  'Kinarus Therapeutics',
+  'Banque Profil de Gestion' // One swiss bank
 ]
 
 export async function findCompany(name) {
@@ -20,6 +24,8 @@ export async function findCompany(name) {
     .replace(/\sSA$/, '')
     .replace(/\sSpA$/, '')
     .replace(/\sNV$/, '')
+    .replace(/\sHolding$/, '')
+    .replace(/\sLtd$/, '')
     .replace(/^St\s/, 'St. ')
     .replace(/^ams/, 'ams-OSRAM')
     .replace(/Baloise/, 'Bâloise')
@@ -37,9 +43,9 @@ export async function findCompany(name) {
     .replace(/Truebsee/, 'Trübsee')
     .replace(/Zueblin/, 'Züblin')
     .replace(/Zur Rose Group/, 'DocMorris')
-    .replace(/Tornos Holding/, 'StarragTornos Group AG')
-    .replace(/Starrag Group Holding/, 'StarragTornos Group AG')
-    .replace(/Poenina Holding/, 'Burkhalter Holding AG')
+    .replace(/Tornos/, 'StarragTornos Group AG')
+    .replace(/Starrag Group/, 'StarragTornos Group AG')
+    .replace(/Poenina/, 'Burkhalter Holding AG')
     .replace(/Air Liquide/, 'L\u0027Air Liquide S.A.')
     .replace(/DHL Group/, 'Deutsche Post AG')
     .replace(/L\u2019Oréal/, 'L\u0027Oréal S.A.')
@@ -47,7 +53,8 @@ export async function findCompany(name) {
     .replace(/RELX Group/, 'RELX PLC')
     .replace(/^ABB$/, 'ABB Ltd')
     .replace(/^VT5 Acquisition Company$/, 'R&S Group Holding')
-    .replace(/^Banque Profil de Gestion$/, 'One Swiss Bank')
+    .replace(/Energiedienst/, 'Naturenergie')
+     
     
   const title = await prisma.instrument.findFirst({where:{name:{startsWith:name}}})
   if (title) {

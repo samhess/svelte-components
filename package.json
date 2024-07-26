@@ -37,6 +37,8 @@
 		"svelte": "^4.0.0"
 	},
 	"devDependencies": {
+		"@extractus/article-extractor": "^8.0.10",
+		"@extractus/feed-extractor": "^7.1.3",
 		"@sveltejs/adapter-auto": "^3.2.2",
 		"@sveltejs/adapter-vercel": "^5.4.1",
 		"@sveltejs/kit": "^2.5.18",

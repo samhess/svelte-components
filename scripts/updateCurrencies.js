@@ -21,7 +21,6 @@ const wb = XLSX.readFile(inputFile)
 const ws = wb.Sheets[wb.SheetNames[0]]
 const headers = ['issuer', 'currency', 'alphabeticCode', 'numericCode', 'minorUnit']
 const currencies = XLSX.utils.sheet_to_json(ws, { range:'A5:E285',  header:headers, defval:null })
-console.log(currencies)
 
 for (const currency of currencies) {
   if (currency.alphabeticCode) {
@@ -40,22 +39,16 @@ for (const currency of currencies) {
   }
 }
 
-for (const currency of currencies) {
-  const {code,name,issuer } = currency
-  await prisma.currency.upsert({
-    where: {code},
-    update: {name},
-    create: {
-      code,
-      name,
-      issuer,
-      Country: {
-        connectOrCreate: {
-          where: {code:'ZZ'},
-          create: {code:'ZZ'}
-        }}
+const countries = await prisma.country.findMany()
+for (const country of countries) {
+  const officialCurrency = currencies.find(item => item.countryCode === country.code)
+  if (officialCurrency) {
+    if (country.currency !== officialCurrency.alphabeticCode) {
+      console.log(`${country.name} currency is ${country.currency} but might be ${officialCurrency.alphabeticCode}`)
     }
-  })
+  } else {
+    //console.log(`no official currency in ${country.name}`)
+  }
 }
 
 

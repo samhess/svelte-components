@@ -3,17 +3,18 @@ import { writeFile } from 'node:fs/promises'
 import { format, resolve } from 'node:path'
 
 const prisma = new PrismaClient()
-const backupDir = resolve('..', 'scripts/backup')
+const backupDir = resolve('..', 'database/backup')
 console.log(`Backup directory is ${backupDir}`)
 
 const tables = await prisma.$queryRaw`
-  select table_name
-  from information_schema.tables
-  where table_schema = 'public'
-  order by table_name
+  select tbl_name
+  from sqlite_schema
+  where type='table' 
+    and tbl_name not like 'sqlite_%' 
+    and tbl_name not like '_prisma_%';
 `
 for (const table of tables) {
-  const {table_name:name} = table
+  const {tbl_name:name} = table
   const records = await prisma[name].findMany()
   const json = JSON.stringify(records, undefined, 2)
   const path = format({dir:backupDir, name, ext:'json'})
