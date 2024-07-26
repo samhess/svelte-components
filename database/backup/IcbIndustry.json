@@ -1,0 +1,46 @@
+[
+  {
+    "code": 10,
+    "name": "Technology"
+  },
+  {
+    "code": 15,
+    "name": "Telecommunications"
+  },
+  {
+    "code": 20,
+    "name": "Health Care"
+  },
+  {
+    "code": 30,
+    "name": "Financials"
+  },
+  {
+    "code": 35,
+    "name": "Real Estate"
+  },
+  {
+    "code": 40,
+    "name": "Consumer Discretionary"
+  },
+  {
+    "code": 45,
+    "name": "Consumer Staples"
+  },
+  {
+    "code": 50,
+    "name": "Industrials"
+  },
+  {
+    "code": 55,
+    "name": "Basic Materials"
+  },
+  {
+    "code": 60,
+    "name": "Energy"
+  },
+  {
+    "code": 65,
+    "name": "Utilities"
+  }
+]

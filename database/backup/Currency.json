@@ -1,0 +1,1088 @@
+[
+  {
+    "code": "AFN",
+    "name": "Afghani",
+    "countryCode": "AF",
+    "issuer": "Da Afghanistan Bank"
+  },
+  {
+    "code": "EUR",
+    "name": "Euro",
+    "countryCode": "ZZ",
+    "issuer": "European Central Bank"
+  },
+  {
+    "code": "ALL",
+    "name": "Lek",
+    "countryCode": "AL",
+    "issuer": "Bank of Albania"
+  },
+  {
+    "code": "DZD",
+    "name": "Algerian Dinar",
+    "countryCode": "DZ",
+    "issuer": "Bank Of Algeria"
+  },
+  {
+    "code": "USD",
+    "name": "US Dollar",
+    "countryCode": "US",
+    "issuer": "Federal Reserve"
+  },
+  {
+    "code": "AOA",
+    "name": "Kwanza",
+    "countryCode": "AO",
+    "issuer": "Banco Nacional de Angola"
+  },
+  {
+    "code": "XCD",
+    "name": "East Caribbean Dollar",
+    "countryCode": "ZZ",
+    "issuer": "Eastern Caribbean Central Bank"
+  },
+  {
+    "code": "ARS",
+    "name": "Argentine Peso",
+    "countryCode": "AR",
+    "issuer": "Central Bank of Argentina"
+  },
+  {
+    "code": "AMD",
+    "name": "Armenian Dram",
+    "countryCode": "AM",
+    "issuer": "Central Bank of the Republic of Armenia"
+  },
+  {
+    "code": "AWG",
+    "name": "Aruban Florin",
+    "countryCode": "AW",
+    "issuer": "Centrale Bank van Aruba"
+  },
+  {
+    "code": "AUD",
+    "name": "Australian Dollar",
+    "countryCode": "AU",
+    "issuer": "Reserve Bank of Australia"
+  },
+  {
+    "code": "AZN",
+    "name": "Azerbaijan Manat",
+    "countryCode": "AZ",
+    "issuer": "Central Bank of the Republic of Azerbaijan"
+  },
+  {
+    "code": "BSD",
+    "name": "Bahamian Dollar",
+    "countryCode": "BS",
+    "issuer": "Central Bank of The Bahamas"
+  },
+  {
+    "code": "BHD",
+    "name": "Bahraini Dinar",
+    "countryCode": "BH",
+    "issuer": "Central Bank of Bahrain"
+  },
+  {
+    "code": "BDT",
+    "name": "Taka",
+    "countryCode": "BD",
+    "issuer": "Bangladesh Bank"
+  },
+  {
+    "code": "BBD",
+    "name": "Barbados Dollar",
+    "countryCode": "BB",
+    "issuer": "Central Bank of Barbados"
+  },
+  {
+    "code": "BYN",
+    "name": "Belarusian Ruble",
+    "countryCode": "BY",
+    "issuer": "National Bank of the Republic of Belarus"
+  },
+  {
+    "code": "BZD",
+    "name": "Belize Dollar",
+    "countryCode": "BZ",
+    "issuer": "Central Bank of Belize"
+  },
+  {
+    "code": "XOF",
+    "name": "CFA Franc BCEAO",
+    "countryCode": "ZZ",
+    "issuer": "Banque Centrale des Etats de l’Afrique de l’Ouest"
+  },
+  {
+    "code": "BMD",
+    "name": "Bermudian Dollar",
+    "countryCode": "BM",
+    "issuer": "Bermuda Monetary Authority"
+  },
+  {
+    "code": "INR",
+    "name": "Indian Rupee",
+    "countryCode": "IN",
+    "issuer": "Central Bank of India"
+  },
+  {
+    "code": "BTN",
+    "name": "Ngultrum",
+    "countryCode": "BT",
+    "issuer": "Royal Monetary Authority of Bhutan"
+  },
+  {
+    "code": "BOB",
+    "name": "Boliviano",
+    "countryCode": "BO",
+    "issuer": "Banco Central de Bolivia"
+  },
+  {
+    "code": "BOV",
+    "name": "Mvdol",
+    "countryCode": "BO",
+    "issuer": "Banco Central de Bolivia"
+  },
+  {
+    "code": "BAM",
+    "name": "Convertible Mark",
+    "countryCode": "BA",
+    "issuer": "Central Bank of Bosnia and Herzegovina"
+  },
+  {
+    "code": "BWP",
+    "name": "Pula",
+    "countryCode": "BW",
+    "issuer": "Bank of Botswana"
+  },
+  {
+    "code": "NOK",
+    "name": "Norwegian Krone",
+    "countryCode": "NO",
+    "issuer": "Norges Bank"
+  },
+  {
+    "code": "BRL",
+    "name": "Brazilian Real",
+    "countryCode": "BR",
+    "issuer": "Banco Central do Brasil"
+  },
+  {
+    "code": "BND",
+    "name": "Brunei Dollar",
+    "countryCode": "BN",
+    "issuer": "Brunei Darussalam Central Bank"
+  },
+  {
+    "code": "BGN",
+    "name": "Bulgarian Lev",
+    "countryCode": "BG",
+    "issuer": "Bulgarian National Bank"
+  },
+  {
+    "code": "BIF",
+    "name": "Burundi Franc",
+    "countryCode": "BI",
+    "issuer": "Bank of the Republic of Burundi"
+  },
+  {
+    "code": "CVE",
+    "name": "Cabo Verde Escudo",
+    "countryCode": "CV",
+    "issuer": "Banco de Cabo Verde"
+  },
+  {
+    "code": "KHR",
+    "name": "Riel",
+    "countryCode": "KH",
+    "issuer": "National Bank of Cambodia"
+  },
+  {
+    "code": "XAF",
+    "name": "CFA Franc BEAC",
+    "countryCode": "ZZ",
+    "issuer": "Banque des États de l'Afrique Centrale"
+  },
+  {
+    "code": "CAD",
+    "name": "Canadian Dollar",
+    "countryCode": "CA",
+    "issuer": "Bank of Canada"
+  },
+  {
+    "code": "KYD",
+    "name": "Cayman Islands Dollar",
+    "countryCode": "KY",
+    "issuer": "Cayman Islands Monetary Authority"
+  },
+  {
+    "code": "CLP",
+    "name": "Chilean Peso",
+    "countryCode": "CL",
+    "issuer": "Banco Central de Chile"
+  },
+  {
+    "code": "CLF",
+    "name": "Unidad de Fomento",
+    "countryCode": "CL",
+    "issuer": "Banco Central de Chile"
+  },
+  {
+    "code": "CNY",
+    "name": "Yuan Renminbi",
+    "countryCode": "CN",
+    "issuer": "People's Bank of China"
+  },
+  {
+    "code": "COP",
+    "name": "Colombian Peso",
+    "countryCode": "CO",
+    "issuer": "Banco de la República - Colombia"
+  },
+  {
+    "code": "COU",
+    "name": "Unidad de Valor Real",
+    "countryCode": "CO",
+    "issuer": "Banco de la República - Colombia"
+  },
+  {
+    "code": "KMF",
+    "name": "Comorian Franc ",
+    "countryCode": "KM",
+    "issuer": "Banque Centrale des Comores"
+  },
+  {
+    "code": "CDF",
+    "name": "Congolese Franc",
+    "countryCode": "CD",
+    "issuer": "Banque Centrale du Congo"
+  },
+  {
+    "code": "NZD",
+    "name": "New Zealand Dollar",
+    "countryCode": "NZ",
+    "issuer": "Reserve Bank of New Zealand"
+  },
+  {
+    "code": "CRC",
+    "name": "Costa Rican Colon",
+    "countryCode": "CR",
+    "issuer": "El Banco Central de Costa Rica"
+  },
+  {
+    "code": "CUP",
+    "name": "Cuban Peso",
+    "countryCode": "CU",
+    "issuer": "Banco Central de Cuba"
+  },
+  {
+    "code": "CUC",
+    "name": "Peso Convertible",
+    "countryCode": "CU",
+    "issuer": "Banco Central de Cuba"
+  },
+  {
+    "code": "ANG",
+    "name": "Netherlands Antillean Guilder",
+    "countryCode": "ZZ",
+    "issuer": "Centrale Bank van Curaçao en Sint Maarten"
+  },
+  {
+    "code": "CZK",
+    "name": "Czech Koruna",
+    "countryCode": "CZ",
+    "issuer": "Czech National Bank"
+  },
+  {
+    "code": "DKK",
+    "name": "Danish Krone",
+    "countryCode": "DK",
+    "issuer": "Danmarks Nationalbank"
+  },
+  {
+    "code": "DJF",
+    "name": "Djibouti Franc",
+    "countryCode": "DJ",
+    "issuer": "Banque Centrale de Djibouti"
+  },
+  {
+    "code": "DOP",
+    "name": "Dominican Peso",
+    "countryCode": "DO",
+    "issuer": "Banco Central de la República Dominicana"
+  },
+  {
+    "code": "EGP",
+    "name": "Egyptian Pound",
+    "countryCode": "EG",
+    "issuer": "Central Bank of Egypt"
+  },
+  {
+    "code": "SVC",
+    "name": "El Salvador Colon",
+    "countryCode": "SV",
+    "issuer": null
+  },
+  {
+    "code": "ERN",
+    "name": "Nakfa",
+    "countryCode": "ER",
+    "issuer": "Bank of Eritrea"
+  },
+  {
+    "code": "SZL",
+    "name": "Lilangeni",
+    "countryCode": "SZ",
+    "issuer": null
+  },
+  {
+    "code": "ETB",
+    "name": "Ethiopian Birr",
+    "countryCode": "ET",
+    "issuer": "National Bank of Ethiopia"
+  },
+  {
+    "code": "FKP",
+    "name": "Falkland Islands Pound",
+    "countryCode": "FK",
+    "issuer": "Government of the Falkland Islands"
+  },
+  {
+    "code": "FJD",
+    "name": "Fiji Dollar",
+    "countryCode": "FJ",
+    "issuer": "Reserve Bank of Fiji"
+  },
+  {
+    "code": "XPF",
+    "name": "CFP Franc",
+    "countryCode": "ZZ",
+    "issuer": "L’institut d’émission d’outre-mer"
+  },
+  {
+    "code": "GMD",
+    "name": "Dalasi",
+    "countryCode": "GM",
+    "issuer": "Central Bank of The Gambia"
+  },
+  {
+    "code": "GEL",
+    "name": "Lari",
+    "countryCode": "GE",
+    "issuer": "National Bank of Georgia"
+  },
+  {
+    "code": "GHS",
+    "name": "Ghana Cedi",
+    "countryCode": "GH",
+    "issuer": "Bank of Ghana"
+  },
+  {
+    "code": "GIP",
+    "name": "Gibraltar Pound",
+    "countryCode": "GI",
+    "issuer": "Gibraltar International Bank"
+  },
+  {
+    "code": "GTQ",
+    "name": "Quetzal",
+    "countryCode": "GT",
+    "issuer": "Banco de Guatemala"
+  },
+  {
+    "code": "GBP",
+    "name": "Pound Sterling",
+    "countryCode": "GB",
+    "issuer": "Bank of England"
+  },
+  {
+    "code": "GNF",
+    "name": "Guinean Franc",
+    "countryCode": "GN",
+    "issuer": "Banque Centrale de la République de Guinée"
+  },
+  {
+    "code": "GYD",
+    "name": "Guyana Dollar",
+    "countryCode": "GY",
+    "issuer": "Bank of Guyana"
+  },
+  {
+    "code": "HTG",
+    "name": "Gourde",
+    "countryCode": "HT",
+    "issuer": "Banque de la République d'Haïti"
+  },
+  {
+    "code": "HNL",
+    "name": "Lempira",
+    "countryCode": "HN",
+    "issuer": "Banco Central de Honduras"
+  },
+  {
+    "code": "HKD",
+    "name": "Hong Kong Dollar",
+    "countryCode": "HK",
+    "issuer": "Hong Kong Monetary Authority"
+  },
+  {
+    "code": "HUF",
+    "name": "Forint",
+    "countryCode": "HU",
+    "issuer": "Hungarian National Bank"
+  },
+  {
+    "code": "ISK",
+    "name": "Iceland Krona",
+    "countryCode": "IS",
+    "issuer": "Central Bank of Iceland"
+  },
+  {
+    "code": "IDR",
+    "name": "Rupiah",
+    "countryCode": "ID",
+    "issuer": "Bank Indonesia"
+  },
+  {
+    "code": "XDR",
+    "name": "SDR (Special Drawing Right)",
+    "countryCode": "ZZ",
+    "issuer": "International Monetary Fund"
+  },
+  {
+    "code": "IRR",
+    "name": "Iranian Rial",
+    "countryCode": "IR",
+    "issuer": "Central Bank of Iran"
+  },
+  {
+    "code": "IQD",
+    "name": "Iraqi Dinar",
+    "countryCode": "IQ",
+    "issuer": "Central Bank of Iraq"
+  },
+  {
+    "code": "ILS",
+    "name": "New Israeli Sheqel",
+    "countryCode": "IL",
+    "issuer": "Bank of Israel"
+  },
+  {
+    "code": "JMD",
+    "name": "Jamaican Dollar",
+    "countryCode": "JM",
+    "issuer": "Bank of Jamaica"
+  },
+  {
+    "code": "JPY",
+    "name": "Yen",
+    "countryCode": "JP",
+    "issuer": "Bank of Japan"
+  },
+  {
+    "code": "JOD",
+    "name": "Jordanian Dinar",
+    "countryCode": "JO",
+    "issuer": "Central Bank of Jordan"
+  },
+  {
+    "code": "KZT",
+    "name": "Tenge",
+    "countryCode": "KZ",
+    "issuer": "National Bank of Kazakhstan"
+  },
+  {
+    "code": "KES",
+    "name": "Kenyan Shilling",
+    "countryCode": "KE",
+    "issuer": "Central Bank of Kenya"
+  },
+  {
+    "code": "KPW",
+    "name": "North Korean Won",
+    "countryCode": "KP",
+    "issuer": "Central Bank of the Democratic People's Republic of Korea"
+  },
+  {
+    "code": "KRW",
+    "name": "Won",
+    "countryCode": "KR",
+    "issuer": "Bank of Korea"
+  },
+  {
+    "code": "KWD",
+    "name": "Kuwaiti Dinar",
+    "countryCode": "KW",
+    "issuer": "Central Bank of Kuwait"
+  },
+  {
+    "code": "KGS",
+    "name": "Som",
+    "countryCode": "KG",
+    "issuer": "National Bank of the Kyrgyz Republic"
+  },
+  {
+    "code": "LAK",
+    "name": "Lao Kip",
+    "countryCode": "LA",
+    "issuer": "Bank of the Lao PDR"
+  },
+  {
+    "code": "LBP",
+    "name": "Lebanese Pound",
+    "countryCode": "LB",
+    "issuer": "Banque Du Liban"
+  },
+  {
+    "code": "LSL",
+    "name": "Loti",
+    "countryCode": "LS",
+    "issuer": "Central Bank of Lesotho"
+  },
+  {
+    "code": "ZAR",
+    "name": "Rand",
+    "countryCode": "ZA",
+    "issuer": "South African Reserve Bank"
+  },
+  {
+    "code": "LRD",
+    "name": "Liberian Dollar",
+    "countryCode": "LR",
+    "issuer": "Central Bank of Liberia"
+  },
+  {
+    "code": "LYD",
+    "name": "Libyan Dinar",
+    "countryCode": "LY",
+    "issuer": "Central Bank of Libya"
+  },
+  {
+    "code": "CHF",
+    "name": "Swiss Franc",
+    "countryCode": "CH",
+    "issuer": "Swiss National Bank"
+  },
+  {
+    "code": "MOP",
+    "name": "Pataca",
+    "countryCode": "MO",
+    "issuer": "Monetary Authority of Macao"
+  },
+  {
+    "code": "MKD",
+    "name": "Denar",
+    "countryCode": "MK",
+    "issuer": "National Bank of the Republic of North Macedonia"
+  },
+  {
+    "code": "MGA",
+    "name": "Malagasy Ariary",
+    "countryCode": "MG",
+    "issuer": "Banky Foiben'i Madagasikara"
+  },
+  {
+    "code": "MWK",
+    "name": "Malawi Kwacha",
+    "countryCode": "MW",
+    "issuer": "Reserve Bank of Malawi"
+  },
+  {
+    "code": "MYR",
+    "name": "Malaysian Ringgit",
+    "countryCode": "MY",
+    "issuer": "Bank Negara Malaysia"
+  },
+  {
+    "code": "MVR",
+    "name": "Rufiyaa",
+    "countryCode": "MV",
+    "issuer": "Maldives Monetary Authority"
+  },
+  {
+    "code": "MRU",
+    "name": "Ouguiya",
+    "countryCode": "MR",
+    "issuer": "Banque Central de Mauritanie"
+  },
+  {
+    "code": "MUR",
+    "name": "Mauritius Rupee",
+    "countryCode": "MU",
+    "issuer": "Bank of Mauritius"
+  },
+  {
+    "code": "XUA",
+    "name": "ADB Unit of Account",
+    "countryCode": "ZZ",
+    "issuer": "African Development Bank"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexican Peso",
+    "countryCode": "MX",
+    "issuer": "Bank of Mexico"
+  },
+  {
+    "code": "MXV",
+    "name": "Mexican Unidad de Inversion (UDI)",
+    "countryCode": "MX",
+    "issuer": "Bank of Mexico"
+  },
+  {
+    "code": "MDL",
+    "name": "Moldovan Leu",
+    "countryCode": "MD",
+    "issuer": "National Bank of Moldova"
+  },
+  {
+    "code": "MNT",
+    "name": "Tugrik",
+    "countryCode": "MN",
+    "issuer": "Mongolbank"
+  },
+  {
+    "code": "MAD",
+    "name": "Moroccan Dirham",
+    "countryCode": "MA",
+    "issuer": "Bank Al-Maghrib"
+  },
+  {
+    "code": "MZN",
+    "name": "Mozambique Metical",
+    "countryCode": "MZ",
+    "issuer": "Banco de Moçambique"
+  },
+  {
+    "code": "MMK",
+    "name": "Kyat",
+    "countryCode": "MM",
+    "issuer": "Central Bank of Myanmar"
+  },
+  {
+    "code": "NAD",
+    "name": "Namibia Dollar",
+    "countryCode": "NA",
+    "issuer": "Bank of Namibia"
+  },
+  {
+    "code": "NPR",
+    "name": "Nepalese Rupee",
+    "countryCode": "NP",
+    "issuer": "Nepal Rastra Bank"
+  },
+  {
+    "code": "NIO",
+    "name": "Cordoba Oro",
+    "countryCode": "NI",
+    "issuer": "Banco Central de Nicaragua"
+  },
+  {
+    "code": "NGN",
+    "name": "Naira",
+    "countryCode": "NG",
+    "issuer": "Central Bank of Nigeria"
+  },
+  {
+    "code": "OMR",
+    "name": "Rial Omani",
+    "countryCode": "OM",
+    "issuer": "Central Bank of Oman"
+  },
+  {
+    "code": "PKR",
+    "name": "Pakistan Rupee",
+    "countryCode": "PK",
+    "issuer": null
+  },
+  {
+    "code": "PAB",
+    "name": "Balboa",
+    "countryCode": "PA",
+    "issuer": "Banco Nacional de Panamá"
+  },
+  {
+    "code": "PGK",
+    "name": "Kina",
+    "countryCode": "PG",
+    "issuer": "Bank of Papua New Guinea"
+  },
+  {
+    "code": "PYG",
+    "name": "Guarani",
+    "countryCode": "PY",
+    "issuer": "Banco Central del Paraguay"
+  },
+  {
+    "code": "PEN",
+    "name": "Sol",
+    "countryCode": "PE",
+    "issuer": null
+  },
+  {
+    "code": "PHP",
+    "name": "Philippine Peso",
+    "countryCode": "PH",
+    "issuer": "Bangko Sentral ng Pilipinas"
+  },
+  {
+    "code": "PLN",
+    "name": "Zloty",
+    "countryCode": "PL",
+    "issuer": "State Bank of Pakistan"
+  },
+  {
+    "code": "QAR",
+    "name": "Qatari Rial",
+    "countryCode": "QA",
+    "issuer": "Qatar Central Bank"
+  },
+  {
+    "code": "RON",
+    "name": "Romanian Leu",
+    "countryCode": "RO",
+    "issuer": "Banca Naţională a României"
+  },
+  {
+    "code": "RUB",
+    "name": "Russian Ruble",
+    "countryCode": "RU",
+    "issuer": null
+  },
+  {
+    "code": "RWF",
+    "name": "Rwanda Franc",
+    "countryCode": "RW",
+    "issuer": null
+  },
+  {
+    "code": "SHP",
+    "name": "Saint Helena Pound",
+    "countryCode": "SH",
+    "issuer": null
+  },
+  {
+    "code": "WST",
+    "name": "Tala",
+    "countryCode": "WS",
+    "issuer": "Central Bank of Samoa"
+  },
+  {
+    "code": "STN",
+    "name": "Dobra",
+    "countryCode": "ST",
+    "issuer": null
+  },
+  {
+    "code": "SAR",
+    "name": "Saudi Riyal",
+    "countryCode": "SA",
+    "issuer": null
+  },
+  {
+    "code": "RSD",
+    "name": "Serbian Dinar",
+    "countryCode": "RS",
+    "issuer": "National Bank of Serbia"
+  },
+  {
+    "code": "SCR",
+    "name": "Seychelles Rupee",
+    "countryCode": "SC",
+    "issuer": null
+  },
+  {
+    "code": "SLL",
+    "name": "Leone",
+    "countryCode": "SL",
+    "issuer": null
+  },
+  {
+    "code": "SLE",
+    "name": "Leone",
+    "countryCode": "SL",
+    "issuer": null
+  },
+  {
+    "code": "SGD",
+    "name": "Singapore Dollar",
+    "countryCode": "SG",
+    "issuer": null
+  },
+  {
+    "code": "XSU",
+    "name": "Sucre",
+    "countryCode": "ZZ",
+    "issuer": "Sistema Unitario de Compensación Regional de Pagos"
+  },
+  {
+    "code": "SBD",
+    "name": "Solomon Islands Dollar",
+    "countryCode": "SB",
+    "issuer": null
+  },
+  {
+    "code": "SOS",
+    "name": "Somali Shilling",
+    "countryCode": "SO",
+    "issuer": null
+  },
+  {
+    "code": "SSP",
+    "name": "South Sudanese Pound",
+    "countryCode": "SS",
+    "issuer": null
+  },
+  {
+    "code": "LKR",
+    "name": "Sri Lanka Rupee",
+    "countryCode": "LK",
+    "issuer": "Central Bank of Sri Lanka"
+  },
+  {
+    "code": "SDG",
+    "name": "Sudanese Pound",
+    "countryCode": "SD",
+    "issuer": null
+  },
+  {
+    "code": "SRD",
+    "name": "Surinam Dollar",
+    "countryCode": "SR",
+    "issuer": null
+  },
+  {
+    "code": "SEK",
+    "name": "Swedish Krona",
+    "countryCode": "SE",
+    "issuer": null
+  },
+  {
+    "code": "CHE",
+    "name": "WIR Euro",
+    "countryCode": "CH",
+    "issuer": "WIR Bank"
+  },
+  {
+    "code": "CHW",
+    "name": "WIR Franc",
+    "countryCode": "CH",
+    "issuer": "WIR Bank"
+  },
+  {
+    "code": "SYP",
+    "name": "Syrian Pound",
+    "countryCode": "SY",
+    "issuer": null
+  },
+  {
+    "code": "TWD",
+    "name": "New Taiwan Dollar",
+    "countryCode": "TW",
+    "issuer": null
+  },
+  {
+    "code": "TJS",
+    "name": "Somoni",
+    "countryCode": "TJ",
+    "issuer": null
+  },
+  {
+    "code": "TZS",
+    "name": "Tanzanian Shilling",
+    "countryCode": "TZ",
+    "issuer": null
+  },
+  {
+    "code": "THB",
+    "name": "Baht",
+    "countryCode": "TH",
+    "issuer": null
+  },
+  {
+    "code": "TOP",
+    "name": "Pa’anga",
+    "countryCode": "TO",
+    "issuer": null
+  },
+  {
+    "code": "TTD",
+    "name": "Trinidad and Tobago Dollar",
+    "countryCode": "TT",
+    "issuer": null
+  },
+  {
+    "code": "TND",
+    "name": "Tunisian Dinar",
+    "countryCode": "TN",
+    "issuer": null
+  },
+  {
+    "code": "TRY",
+    "name": "Turkish Lira",
+    "countryCode": "TR",
+    "issuer": null
+  },
+  {
+    "code": "TMT",
+    "name": "Turkmenistan New Manat",
+    "countryCode": "TM",
+    "issuer": null
+  },
+  {
+    "code": "UGX",
+    "name": "Uganda Shilling",
+    "countryCode": "UG",
+    "issuer": null
+  },
+  {
+    "code": "UAH",
+    "name": "Hryvnia",
+    "countryCode": "UA",
+    "issuer": null
+  },
+  {
+    "code": "AED",
+    "name": "UAE Dirham",
+    "countryCode": "AE",
+    "issuer": "CBUAE"
+  },
+  {
+    "code": "USN",
+    "name": "US Dollar (Next day)",
+    "countryCode": "US",
+    "issuer": "Federal Reserve"
+  },
+  {
+    "code": "UYU",
+    "name": "Peso Uruguayo",
+    "countryCode": "UY",
+    "issuer": "Central Bank of Uruguay"
+  },
+  {
+    "code": "UYI",
+    "name": "Uruguay Peso en Unidades Indexadas (UI)",
+    "countryCode": "UY",
+    "issuer": "Central Bank of Uruguay"
+  },
+  {
+    "code": "UYW",
+    "name": "Unidad Previsional",
+    "countryCode": "UY",
+    "issuer": "Central Bank of Uruguay"
+  },
+  {
+    "code": "UZS",
+    "name": "Uzbekistan Sum",
+    "countryCode": "UZ",
+    "issuer": "Central Bank of Uzbekistan"
+  },
+  {
+    "code": "VUV",
+    "name": "Vatu",
+    "countryCode": "VU",
+    "issuer": "Reserve Bank of Vanuatu"
+  },
+  {
+    "code": "VES",
+    "name": "Bolívar Soberano",
+    "countryCode": "VE",
+    "issuer": "Banco Central de Venezuela"
+  },
+  {
+    "code": "VED",
+    "name": "Bolívar Soberano",
+    "countryCode": "VE",
+    "issuer": "Banco Central de Venezuela"
+  },
+  {
+    "code": "VND",
+    "name": "Dong",
+    "countryCode": "VN",
+    "issuer": "State Bank of Vietnam"
+  },
+  {
+    "code": "YER",
+    "name": "Yemeni Rial",
+    "countryCode": "YE",
+    "issuer": "Central Bank Of Yemen"
+  },
+  {
+    "code": "ZMW",
+    "name": "Zambian Kwacha",
+    "countryCode": "ZM",
+    "issuer": "Bank of Zambia"
+  },
+  {
+    "code": "ZWL",
+    "name": "Zimbabwe Dollar",
+    "countryCode": "ZW",
+    "issuer": "Reserve Bank of Zimbabwe"
+  },
+  {
+    "code": "XBA",
+    "name": "Bond Markets Unit European Composite Unit (EURCO)",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XBB",
+    "name": "Bond Markets Unit European Monetary Unit (E.M.U.-6)",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XBC",
+    "name": "Bond Markets Unit European Unit of Account 9 (E.U.A.-9)",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XBD",
+    "name": "Bond Markets Unit European Unit of Account 17 (E.U.A.-17)",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XTS",
+    "name": "Codes specifically reserved for testing purposes",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XXX",
+    "name": "The codes assigned for transactions where no currency is involved",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XAU",
+    "name": "Gold",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XPD",
+    "name": "Palladium",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XPT",
+    "name": "Platinum",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "XAG",
+    "name": "Silver",
+    "countryCode": "ZZ",
+    "issuer": ""
+  },
+  {
+    "code": "ZZZ",
+    "name": "No universal currency",
+    "countryCode": "ZZ",
+    "issuer": ""
+  }
+]

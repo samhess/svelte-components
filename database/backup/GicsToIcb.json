@@ -1,0 +1,1007 @@
+[
+  {
+    "gicsCode": 10101020,
+    "icbCode": 60101030,
+    "yahooIndustry": "Oil & Gas Equipment & Services"
+  },
+  {
+    "gicsCode": 10102010,
+    "icbCode": 60101000,
+    "yahooIndustry": "Oil & Gas Integrated"
+  },
+  {
+    "gicsCode": 10102020,
+    "icbCode": 60101010,
+    "yahooIndustry": "Oil & Gas E&P"
+  },
+  {
+    "gicsCode": 10102030,
+    "icbCode": 60101020,
+    "yahooIndustry": "Oil & Gas Refining & Marketing"
+  },
+  {
+    "gicsCode": 10102040,
+    "icbCode": 60101035,
+    "yahooIndustry": "Oil & Gas Midstream"
+  },
+  {
+    "gicsCode": 10102050,
+    "icbCode": 60101040,
+    "yahooIndustry": "Thermal Coal"
+  },
+  {
+    "gicsCode": 15101030,
+    "icbCode": 55201015,
+    "yahooIndustry": "Agricultural Inputs"
+  },
+  {
+    "gicsCode": 15101050,
+    "icbCode": 55201020,
+    "yahooIndustry": "Specialty Chemicals"
+  },
+  {
+    "gicsCode": 15102010,
+    "icbCode": 50101035,
+    "yahooIndustry": "Building Materials"
+  },
+  {
+    "gicsCode": 15103020,
+    "icbCode": 50203030,
+    "yahooIndustry": "Packaging & Containers"
+  },
+  {
+    "gicsCode": 15104010,
+    "icbCode": 55102035,
+    "yahooIndustry": "Aluminum"
+  },
+  {
+    "gicsCode": 15104020,
+    "icbCode": 55102000,
+    "yahooIndustry": "Other Industrial Metals & Mining"
+  },
+  {
+    "gicsCode": 15104025,
+    "icbCode": 55102040,
+    "yahooIndustry": "Copper"
+  },
+  {
+    "gicsCode": 15104030,
+    "icbCode": 55103025,
+    "yahooIndustry": "Gold"
+  },
+  {
+    "gicsCode": 15104050,
+    "icbCode": 55102010,
+    "yahooIndustry": "Steel"
+  },
+  {
+    "gicsCode": 15105010,
+    "icbCode": 55101010,
+    "yahooIndustry": "Lumber & Wood Production"
+  },
+  {
+    "gicsCode": 15105020,
+    "icbCode": 55101015,
+    "yahooIndustry": "Paper & Paper Products"
+  },
+  {
+    "gicsCode": 20101010,
+    "icbCode": 50201010,
+    "yahooIndustry": "Aerospace & Defense"
+  },
+  {
+    "gicsCode": 20103010,
+    "icbCode": 50101015,
+    "yahooIndustry": "Engineering & Construction"
+  },
+  {
+    "gicsCode": 20104010,
+    "icbCode": 50202010,
+    "yahooIndustry": "Electrical Equipment & Parts"
+  },
+  {
+    "gicsCode": 20105010,
+    "icbCode": 50203000,
+    "yahooIndustry": "Conglomerates"
+  },
+  {
+    "gicsCode": 20106015,
+    "icbCode": 50204010,
+    "yahooIndustry": "Farm & Heavy Construction Machinery"
+  },
+  {
+    "gicsCode": 20106020,
+    "icbCode": 50204050,
+    "yahooIndustry": "Specialty Industrial Machinery"
+  },
+  {
+    "gicsCode": 20107010,
+    "icbCode": 50205010,
+    "yahooIndustry": "Industrial Distribution"
+  },
+  {
+    "gicsCode": 20201050,
+    "icbCode": 65103035,
+    "yahooIndustry": "Waste Management"
+  },
+  {
+    "gicsCode": 20201080,
+    "icbCode": 50205040,
+    "yahooIndustry": "Security & Protection Services"
+  },
+  {
+    "gicsCode": 20202010,
+    "icbCode": 50205025,
+    "yahooIndustry": "Staffing & Employment Services"
+  },
+  {
+    "gicsCode": 20202020,
+    "icbCode": 50205020,
+    "yahooIndustry": "Consulting Services"
+  },
+  {
+    "gicsCode": 20202030,
+    "icbCode": 50205020,
+    "yahooIndustry": "Business Software & Services"
+  },
+  {
+    "gicsCode": 20301010,
+    "icbCode": 50206040,
+    "yahooIndustry": "Integrated Freight & Logistics"
+  },
+  {
+    "gicsCode": 20302010,
+    "icbCode": 40501010,
+    "yahooIndustry": "Airlines"
+  },
+  {
+    "gicsCode": 20303010,
+    "icbCode": 50206030,
+    "yahooIndustry": "Marine Shipping"
+  },
+  {
+    "gicsCode": 20304010,
+    "icbCode": 50206020,
+    "yahooIndustry": "Railroads"
+  },
+  {
+    "gicsCode": 20304030,
+    "icbCode": 50206010,
+    "yahooIndustry": "Trucking"
+  },
+  {
+    "gicsCode": 20305010,
+    "icbCode": 50206060,
+    "yahooIndustry": "Airports & Air Services"
+  },
+  {
+    "gicsCode": 25101010,
+    "icbCode": 40101025,
+    "yahooIndustry": "Auto Parts"
+  },
+  {
+    "gicsCode": 25102010,
+    "icbCode": 40101020,
+    "yahooIndustry": "Auto Manufacturers"
+  },
+  {
+    "gicsCode": 25102020,
+    "icbCode": 40203055,
+    "yahooIndustry": "Recreational Vehicles"
+  },
+  {
+    "gicsCode": 25201010,
+    "icbCode": 40203010,
+    "yahooIndustry": "Consumer Electronics"
+  },
+  {
+    "gicsCode": 25201020,
+    "icbCode": 40202015,
+    "yahooIndustry": "Furnishings, Fixtures & Appliances"
+  },
+  {
+    "gicsCode": 25201030,
+    "icbCode": 40202010,
+    "yahooIndustry": "Residential Construction"
+  },
+  {
+    "gicsCode": 25202010,
+    "icbCode": 40203050,
+    "yahooIndustry": "Leisure"
+  },
+  {
+    "gicsCode": 25203010,
+    "icbCode": 40204020,
+    "yahooIndustry": "Apparel Manufacturing"
+  },
+  {
+    "gicsCode": 25203020,
+    "icbCode": 40204025,
+    "yahooIndustry": "Footwear & Accessories"
+  },
+  {
+    "gicsCode": 25203030,
+    "icbCode": 55101020,
+    "yahooIndustry": "Textile Manufacturing"
+  },
+  {
+    "gicsCode": 25301010,
+    "icbCode": 40501020,
+    "yahooIndustry": "Gambling"
+  },
+  {
+    "gicsCode": 25301040,
+    "icbCode": 40501040,
+    "yahooIndustry": "Restaurants"
+  },
+  {
+    "gicsCode": 25302020,
+    "icbCode": 40201070,
+    "yahooIndustry": "Personal Services"
+  },
+  {
+    "gicsCode": 25503030,
+    "icbCode": 40401010,
+    "yahooIndustry": "Broadline Retail"
+  },
+  {
+    "gicsCode": 25504010,
+    "icbCode": 40401020,
+    "yahooIndustry": "Apparel Retail"
+  },
+  {
+    "gicsCode": 25504030,
+    "icbCode": 40401025,
+    "yahooIndustry": "Home Improvement Retail"
+  },
+  {
+    "gicsCode": 25504040,
+    "icbCode": 40401030,
+    "yahooIndustry": "Specialty Retail"
+  },
+  {
+    "gicsCode": 30101010,
+    "icbCode": 45201015,
+    "yahooIndustry": "Pharmaceutical Retailers"
+  },
+  {
+    "gicsCode": 30101020,
+    "icbCode": 45201010,
+    "yahooIndustry": "Food Distribution"
+  },
+  {
+    "gicsCode": 30201010,
+    "icbCode": 45101010,
+    "yahooIndustry": "Beverages - Brewers"
+  },
+  {
+    "gicsCode": 30201020,
+    "icbCode": 45101015,
+    "yahooIndustry": "Beverages - Wineries & Distilleries"
+  },
+  {
+    "gicsCode": 30201030,
+    "icbCode": 45101020,
+    "yahooIndustry": "Beverages - Non-Alcoholic"
+  },
+  {
+    "gicsCode": 30202010,
+    "icbCode": 45102010,
+    "yahooIndustry": "Farm Products"
+  },
+  {
+    "gicsCode": 30202030,
+    "icbCode": 45102020,
+    "yahooIndustry": "Packaged Foods"
+  },
+  {
+    "gicsCode": 30203010,
+    "icbCode": 45103010,
+    "yahooIndustry": "Tobacco"
+  },
+  {
+    "gicsCode": 35101010,
+    "icbCode": 20102010,
+    "yahooIndustry": "Medical Devices"
+  },
+  {
+    "gicsCode": 35102010,
+    "icbCode": 20102015,
+    "yahooIndustry": "Medical Distribution"
+  },
+  {
+    "gicsCode": 35102015,
+    "icbCode": 20102020,
+    "yahooIndustry": "Diagnostics & Research"
+  },
+  {
+    "gicsCode": 35102020,
+    "icbCode": 20101010,
+    "yahooIndustry": "Medical Care Facilities"
+  },
+  {
+    "gicsCode": 35103010,
+    "icbCode": 20101030,
+    "yahooIndustry": "Health Information Services"
+  },
+  {
+    "gicsCode": 35201010,
+    "icbCode": 20103010,
+    "yahooIndustry": "Biotechnology"
+  },
+  {
+    "gicsCode": 35202010,
+    "icbCode": 20103015,
+    "yahooIndustry": "Drug Manufacturers - General"
+  },
+  {
+    "gicsCode": 40101010,
+    "icbCode": 30202000,
+    "yahooIndustry": "Banks - Diversified"
+  },
+  {
+    "gicsCode": 40101015,
+    "icbCode": 30101010,
+    "yahooIndustry": "Banks - Regional"
+  },
+  {
+    "gicsCode": 40201040,
+    "icbCode": 30205000,
+    "yahooIndustry": "Shell Companies"
+  },
+  {
+    "gicsCode": 40201050,
+    "icbCode": 30201025,
+    "yahooIndustry": "Mortgage Finance"
+  },
+  {
+    "gicsCode": 40202010,
+    "icbCode": 30201020,
+    "yahooIndustry": "Credit Services"
+  },
+  {
+    "gicsCode": 40203010,
+    "icbCode": 30202010,
+    "yahooIndustry": "Asset Management"
+  },
+  {
+    "gicsCode": 40203030,
+    "icbCode": 30202000,
+    "yahooIndustry": "Capital Markets"
+  },
+  {
+    "gicsCode": 40203040,
+    "icbCode": 30202015,
+    "yahooIndustry": "Financial Data & Stock Exchanges"
+  },
+  {
+    "gicsCode": 40204010,
+    "icbCode": 30203000,
+    "yahooIndustry": "REIT - Mortgage"
+  },
+  {
+    "gicsCode": 40301010,
+    "icbCode": 30302015,
+    "yahooIndustry": "Insurance Brokers"
+  },
+  {
+    "gicsCode": 40301020,
+    "icbCode": 30301010,
+    "yahooIndustry": "Insurance - Life"
+  },
+  {
+    "gicsCode": 40301030,
+    "icbCode": 30302010,
+    "yahooIndustry": "Insurance - Diversified"
+  },
+  {
+    "gicsCode": 40301040,
+    "icbCode": 30302025,
+    "yahooIndustry": "Insurance - Property & Casualty"
+  },
+  {
+    "gicsCode": 40301050,
+    "icbCode": 30302020,
+    "yahooIndustry": "Insurance - Reinsurance"
+  },
+  {
+    "gicsCode": 45102010,
+    "icbCode": 10101010,
+    "yahooIndustry": "Information Technology Services"
+  },
+  {
+    "gicsCode": 45103010,
+    "icbCode": 10101015,
+    "yahooIndustry": "Software - Application"
+  },
+  {
+    "gicsCode": 45103020,
+    "icbCode": 10101015,
+    "yahooIndustry": "Software - Infrastructure"
+  },
+  {
+    "gicsCode": 45201020,
+    "icbCode": 15101010,
+    "yahooIndustry": "Communication Equipment"
+  },
+  {
+    "gicsCode": 45202030,
+    "icbCode": 10102030,
+    "yahooIndustry": "Computer Hardware"
+  },
+  {
+    "gicsCode": 45203010,
+    "icbCode": 50202025,
+    "yahooIndustry": "Scientific & Technical Instruments"
+  },
+  {
+    "gicsCode": 45203015,
+    "icbCode": 10102015,
+    "yahooIndustry": "Electronic Components"
+  },
+  {
+    "gicsCode": 45203030,
+    "icbCode": 10102030,
+    "yahooIndustry": "Electronics & Computer Distribution"
+  },
+  {
+    "gicsCode": 45301010,
+    "icbCode": 10102020,
+    "yahooIndustry": "Semiconductor Equipment & Materials"
+  },
+  {
+    "gicsCode": 45301020,
+    "icbCode": 10102010,
+    "yahooIndustry": "Semiconductors"
+  },
+  {
+    "gicsCode": 50101020,
+    "icbCode": 15102015,
+    "yahooIndustry": "Telecom Services"
+  },
+  {
+    "gicsCode": 50201010,
+    "icbCode": 40301020,
+    "yahooIndustry": "Advertising Agencies"
+  },
+  {
+    "gicsCode": 50201020,
+    "icbCode": 40301035,
+    "yahooIndustry": "Broadcasting"
+  },
+  {
+    "gicsCode": 50201040,
+    "icbCode": 40301030,
+    "yahooIndustry": "Publishing"
+  },
+  {
+    "gicsCode": 50202010,
+    "icbCode": 40301010,
+    "yahooIndustry": "Entertainment"
+  },
+  {
+    "gicsCode": 50202020,
+    "icbCode": 40203040,
+    "yahooIndustry": "Electronic Gaming & Multimedia"
+  },
+  {
+    "gicsCode": 50203010,
+    "icbCode": 10101020,
+    "yahooIndustry": "Internet Content & Information"
+  },
+  {
+    "gicsCode": 55101010,
+    "icbCode": 65101015,
+    "yahooIndustry": "Utilities - Regulated Electric"
+  },
+  {
+    "gicsCode": 55102010,
+    "icbCode": 65102020,
+    "yahooIndustry": "Utilities - Regulated Gas"
+  },
+  {
+    "gicsCode": 55103010,
+    "icbCode": 65102000,
+    "yahooIndustry": "Utilities - Diversified"
+  },
+  {
+    "gicsCode": 55104010,
+    "icbCode": 65102030,
+    "yahooIndustry": "Utilities - Regulated Water"
+  },
+  {
+    "gicsCode": 55105020,
+    "icbCode": 65101010,
+    "yahooIndustry": "Utilities - Renewable"
+  },
+  {
+    "gicsCode": 60101010,
+    "icbCode": 35102000,
+    "yahooIndustry": "REIT - Diversified"
+  },
+  {
+    "gicsCode": 60102510,
+    "icbCode": 35102020,
+    "yahooIndustry": "REIT - Industrial"
+  },
+  {
+    "gicsCode": 60103010,
+    "icbCode": 35102015,
+    "yahooIndustry": "REIT - Hotel & Motel"
+  },
+  {
+    "gicsCode": 60104010,
+    "icbCode": 35102030,
+    "yahooIndustry": "REIT - Office"
+  },
+  {
+    "gicsCode": 60105010,
+    "icbCode": 35102010,
+    "yahooIndustry": "REIT - Healthcare Facilities"
+  },
+  {
+    "gicsCode": 60106010,
+    "icbCode": 35102040,
+    "yahooIndustry": "REIT - Residential"
+  },
+  {
+    "gicsCode": 60107010,
+    "icbCode": 35102045,
+    "yahooIndustry": "REIT - Retail"
+  },
+  {
+    "gicsCode": 60108010,
+    "icbCode": 35102070,
+    "yahooIndustry": "REIT - Specialty"
+  },
+  {
+    "gicsCode": 60201010,
+    "icbCode": 35101010,
+    "yahooIndustry": "Real Estate - Diversified"
+  },
+  {
+    "gicsCode": 60201030,
+    "icbCode": 35101010,
+    "yahooIndustry": "Real Estate - Development"
+  },
+  {
+    "gicsCode": 60201040,
+    "icbCode": 35101015,
+    "yahooIndustry": "Real Estate Services"
+  },
+  {
+    "gicsCode": 20106010,
+    "icbCode": 50204020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25101020,
+    "icbCode": 40101015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25302010,
+    "icbCode": 40201010,
+    "yahooIndustry": "Education & Training Services"
+  },
+  {
+    "gicsCode": 30302010,
+    "icbCode": 45201020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40201060,
+    "icbCode": 50205015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 10101010,
+    "icbCode": 60101015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101020,
+    "icbCode": 55201000,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101040,
+    "icbCode": 55201020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15104040,
+    "icbCode": 55103030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15104045,
+    "icbCode": 55103030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20104020,
+    "icbCode": 50202040,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20201010,
+    "icbCode": 50205030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20304040,
+    "icbCode": 40501015,
+    "yahooIndustry": "Travel Services"
+  },
+  {
+    "gicsCode": 20305020,
+    "icbCode": 50206020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20305030,
+    "icbCode": 50206030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25501010,
+    "icbCode": 40201070,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25504020,
+    "icbCode": 40401030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25504060,
+    "icbCode": 40401025,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 30101030,
+    "icbCode": 45201010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 35101020,
+    "icbCode": 20102015,
+    "yahooIndustry": "Medical Instruments & Supplies"
+  },
+  {
+    "gicsCode": 35102030,
+    "icbCode": 20101020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 35203010,
+    "icbCode": 20102020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40201020,
+    "icbCode": 30202000,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40201030,
+    "icbCode": 30202000,
+    "yahooIndustry": "Financial Conglomerates"
+  },
+  {
+    "gicsCode": 40203020,
+    "icbCode": 30202015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 45102030,
+    "icbCode": 10101010,
+    "yahooIndustry": "Infrastructure Operations"
+  },
+  {
+    "gicsCode": 45203020,
+    "icbCode": 10102015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 50101010,
+    "icbCode": 15102015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 50102010,
+    "icbCode": 15102015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 50201030,
+    "icbCode": 15102010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 55105010,
+    "icbCode": 65101015,
+    "yahooIndustry": "Utilities - Independent Power Producers"
+  },
+  {
+    "gicsCode": 60106020,
+    "icbCode": 35102040,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 60108020,
+    "icbCode": 35102050,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 60108030,
+    "icbCode": 35102070,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 60108040,
+    "icbCode": 35102060,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 60108050,
+    "icbCode": 35102070,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15103010,
+    "icbCode": 50203030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25201050,
+    "icbCode": 40202025,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25201040,
+    "icbCode": 40202020,
+    "yahooIndustry": "Tools & Accessories"
+  },
+  {
+    "gicsCode": 25301030,
+    "icbCode": 40501030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25301020,
+    "icbCode": 40501025,
+    "yahooIndustry": "Lodging"
+  },
+  {
+    "gicsCode": 30301010,
+    "icbCode": 45201030,
+    "yahooIndustry": "Household & Personal Products"
+  },
+  {
+    "gicsCode": 30101040,
+    "icbCode": 45201040,
+    "yahooIndustry": "Grocery Stores"
+  },
+  {
+    "gicsCode": 60201020,
+    "icbCode": 35101010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15104020,
+    "icbCode": 55102015,
+    "yahooIndustry": "Metal Fabrication"
+  },
+  {
+    "gicsCode": 40203040,
+    "icbCode": 30201030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40204010,
+    "icbCode": 30203010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40204010,
+    "icbCode": 30203020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 60108010,
+    "icbCode": 35102025,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20201060,
+    "icbCode": 10102035,
+    "yahooIndustry": "Business Equipment & Supplies"
+  },
+  {
+    "gicsCode": 20101010,
+    "icbCode": 50201020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15102010,
+    "icbCode": 50101030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 35102015,
+    "icbCode": 20101025,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25302020,
+    "icbCode": 40201020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 10102050,
+    "icbCode": 60102010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101010,
+    "icbCode": 50203015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101010,
+    "icbCode": 50203020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25202010,
+    "icbCode": 40203045,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 30302010,
+    "icbCode": 40204035,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101010,
+    "icbCode": 55201010,
+    "yahooIndustry": "Chemicals"
+  },
+  {
+    "gicsCode": 15104020,
+    "icbCode": 55102050,
+    "yahooIndustry": "Uranium"
+  },
+  {
+    "gicsCode": 15104020,
+    "icbCode": 55101000,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25504050,
+    "icbCode": 40101010,
+    "yahooIndustry": "Auto & Truck Dealerships"
+  },
+  {
+    "gicsCode": 25504050,
+    "icbCode": 40201040,
+    "yahooIndustry": "Rental & Leasing Services"
+  },
+  {
+    "gicsCode": 25203010,
+    "icbCode": 40204030,
+    "yahooIndustry": "Luxury Goods"
+  },
+  {
+    "gicsCode": 20201070,
+    "icbCode": 40201060,
+    "yahooIndustry": "Specialty Business Services"
+  },
+  {
+    "gicsCode": 25202010,
+    "icbCode": 40203060,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 30202010,
+    "icbCode": 45102030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25302020,
+    "icbCode": 40201030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 30202010,
+    "icbCode": 20103020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40203010,
+    "icbCode": 30204000,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25302020,
+    "icbCode": 40201050,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 30202010,
+    "icbCode": 45102035,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20103010,
+    "icbCode": 50101010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 45203010,
+    "icbCode": 50202020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 45203010,
+    "icbCode": 50202030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15101050,
+    "icbCode": 50203010,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20106020,
+    "icbCode": 50204000,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20106020,
+    "icbCode": 50204030,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20106020,
+    "icbCode": 50204040,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20104010,
+    "icbCode": 60102020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20106010,
+    "icbCode": 50206025,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 40201040,
+    "icbCode": 50206050,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 15104040,
+    "icbCode": 55103020,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 25102010,
+    "icbCode": 50206015,
+    "yahooIndustry": ""
+  },
+  {
+    "gicsCode": 20102010,
+    "icbCode": 50101020,
+    "yahooIndustry": "Building Products & Equipment"
+  },
+  {
+    "gicsCode": 20102010,
+    "icbCode": 50101025,
+    "yahooIndustry": ""
+  }
+]

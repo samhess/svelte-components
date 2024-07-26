@@ -1,0 +1,32 @@
+[
+  {
+    "firstname": "Samuel",
+    "lastname": "Hess",
+    "email": "sam@moontrade.ch",
+    "password": "43e3e325b50c388f6e453361d2610211891eed0a78dc6c7e372fa1220abf92ca",
+    "role": "admin",
+    "status": "enabled",
+    "githubId": 7473906,
+    "googleId": null
+  },
+  {
+    "firstname": null,
+    "lastname": null,
+    "email": "admin@moontrade.ch",
+    "password": "$2a$10$Bq6kPBv69/LzCBJ3D3.65.CPHZps65frU/0LSZ.ManDAy07INvpJa",
+    "role": "admin",
+    "status": "enabled",
+    "githubId": null,
+    "googleId": null
+  },
+  {
+    "firstname": null,
+    "lastname": null,
+    "email": "peter@moontrade.ch",
+    "password": "$2a$10$Z1BE5Kax.JqtquPUOgcVTOq0qxvTBYVsSvgMFG3i9l86RTFeRgpYG",
+    "role": "user",
+    "status": "enabled",
+    "githubId": null,
+    "googleId": null
+  }
+]

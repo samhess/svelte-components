@@ -3,11 +3,16 @@
 	"private": false,
 	"version": "0.0.2",
 	"repository": {
-    "type": "git",
-    "url": "https://github.com/samhess/svelte-components.git"
-  },
-  "homepage": "https://svelte-components-black.vercel.app",
-	"keywords": ["svelte", "component", "datatable", "autocomplete"],
+		"type": "git",
+		"url": "git+https://github.com/samhess/svelte-components.git"
+	},
+	"homepage": "https://svelte-components-black.vercel.app",
+	"keywords": [
+		"svelte",
+		"component",
+		"datatable",
+		"autocomplete"
+	],
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run package",
@@ -40,6 +45,7 @@
 		"@tailwindcss/forms": "^0.5.7",
 		"@tailwindcss/typography": "^0.5.12",
 		"autoprefixer": "^10.4.19",
+		"cheerio": "^1.0.0-rc.12",
 		"postcss": "^8.4.38",
 		"prisma": "^5.12.1",
 		"publint": "^0.1.9",
@@ -48,7 +54,8 @@
 		"tailwindcss": "^3.4.3",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
-		"vite": "^5.0.11"
+		"vite": "^5.0.11",
+		"xlsx": "^0.18.5"
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -59,5 +66,8 @@
 		"chart.js": "^4.4.2",
 		"chartjs-chart-sankey": "^0.12.0",
 		"chartjs-chart-treemap": "^2.3.0"
+	},
+	"prisma": {
+		"seed": "node prisma/seed.js"
 	}
 }

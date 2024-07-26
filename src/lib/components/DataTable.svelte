@@ -1,6 +1,6 @@
 <script>
   import EditDialog from '$lib/components/EditDialog.svelte'
-  import { capitalize } from '$lib/helpers.js'
+  import { capitalize } from '$lib/helpers'
   import { createEventDispatcher } from 'svelte'
   /** @type {Object<string,any>} */
   export let entity
@@ -9,10 +9,20 @@
   const dispatch = createEventDispatcher()
   let {
     name = '', 
-    attributes = [], 
+    attributes = {}, 
     isEditable = false,
-    sorting = {field:'name', direction:'asc'}
+    sorting = {field:'name', direction:'asc'},
+    endpoint = ''
   } = entity
+  // backward compatibility
+  if (Array.isArray(attributes)) {
+    const properties = attributes
+    attributes = {}
+    for (const property of properties) {
+      const {key,...props} = property
+      attributes[key] = props
+    }
+  }
   let caption = ''
   /** @type {EditDialog} */
   let editDialog
@@ -56,7 +66,7 @@
 </script>
 
 {#if isEditable===true}
-  <EditDialog {entity} bind:this={editDialog} on:updateData={()=>dispatch('updateData')}></EditDialog>
+  <EditDialog entity={{name,endpoint,attributes}} bind:this={editDialog} on:updateData={()=>dispatch('updateData')}></EditDialog>
 {/if}
 <table class="table">
   <caption class="text-center">{caption}</caption>
@@ -64,7 +74,7 @@
     <slot name="beforeHeader" {addItem}>
       {#if isEditable===true}
         <tr>
-          <td colspan={attributes.length} class="text-end pb-3">
+          <td colspan={Object.keys(attributes).length} class="text-end pb-3">
             <button class="btn btn-primary" on:click={()=>addItem()}>Add</button>
           </td>
         </tr>
@@ -72,9 +82,9 @@
     </slot>
     <slot name="header">
       <tr>
-        {#each attributes as attribute}
-          {#if attribute.show !== false}
-            <th class:text-end={attribute.align==='right'} on:click={()=>toggleSorting(attribute.key)}>{attribute.name}</th>      
+        {#each Object.entries(attributes) as [key,props]}
+          {#if props.show !== false}
+            <th class:text-end={props.align==='right'} on:click={()=>toggleSorting(key)}>{props.name}</th>
           {/if}
         {/each}
       </tr>

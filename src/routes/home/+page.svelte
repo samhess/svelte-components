@@ -5,16 +5,16 @@
   </p>
   <ul>
     <li>
-      <a href="/charts">Treemap</a>
+      <a href="/components/charts">Treemap</a>
     </li>
     <li>
-      <a href="/forms">AddressInput</a>
+      <a href="/components/forms">AddressInput</a>
     </li>
     <li>
-      <a href="/icons">HeroIcon</a>
+      <a href="/components/icons">HeroIcon</a>
     </li>
     <li>
-      <a href="/tables">DataTable</a>
+      <a href="/components/tables">DataTable</a>
     </li>
   </ul>
 </article>

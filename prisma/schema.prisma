@@ -9,16 +9,16 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Country {
   code         String       @id
   name         String
-  currencyCode String
+  currency     String?
   region       String
-  Currency     Currency     @relation(fields: [currencyCode], references: [code])
+  Currency     Currency?     @relation(fields: [currency], references: [code])
   Event        Event[]
   Exchange     Exchange[]
   Instrument   Instrument[]

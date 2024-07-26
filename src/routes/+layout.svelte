@@ -2,8 +2,9 @@
   import { page } from '$app/stores'
   import HeroIcon from '$lib/components/HeroIcon.svelte'
   import '../main.css'
-  const menu = [ 'Home', 'Charts', 'Forms', 'Icons', 'Tables']
-  
+  export let data
+  $: ({mainMenu, subMenu} = data)
+
   let breadcrumb, currentRoute
   $: breadcrumb = $page.route.id?.slice(1).replaceAll('/',' > ') ?? ''
   $: currentRoute = $page.route.id?.replace(/^\//,'')
@@ -21,13 +22,22 @@
       </div>
       <div class="hidden md:block">
         <div class="flex items-baseline space-x-2 justify-center">
-          {#each menu as item}
+          {#each mainMenu as item}
             <a
               href={`/${item.toLowerCase()}`}
               class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 py-1.5 font-medium" 
-              class:text-white = { currentRoute === item.toLowerCase() }
+              class:text-white = { currentRoute.startsWith(item.toLowerCase()) }
               >{ item }
             </a>
+          {/each}
+        </div>
+        <!-- dynamic sub menu -->
+        <div class="flex items-center space-x-2 justify-center">
+          {#each subMenu as childRoute}
+            <a href={childRoute.path}
+              class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 font-medium"
+              class:text-white = { currentRoute.startsWith(childRoute.path.slice(1)) }
+            >{ childRoute.name }</a>
           {/each}
         </div>
       </div>
