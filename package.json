@@ -15,6 +15,7 @@
 	],
 	"scripts": {
 		"dev": "vite dev",
+		"prebuild": "npx prisma generate",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
