@@ -9,7 +9,7 @@ export async function load({locals, route}) {
   const {id:path} = route
   if (path) {
     const [level1] = path.replace(/^\//,'').split('/')
-    const entries = await readdir(resolve('./src/routes', level1), {withFileTypes:true})
+    const entries = await readdir(resolve(process.cwd(), 'src/routes', level1), {withFileTypes:true})
     const subMenu = entries
       .filter(item => item.isDirectory())
       .map(({name, path}) => ({
