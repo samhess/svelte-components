@@ -1,23 +1,25 @@
 import { PrismaClient } from '@prisma/client'
 import { readFile } from 'fs/promises'
-import { resolve } from 'path'
+import { resolve, format } from 'path'
 
 const prisma = new PrismaClient()
-const backupDir = './database/backup'
+const backupDir = resolve('database','backup')
 
 // order matters
 const entities = [
-  'Currency', 'Country', 'Exchange',
-  'GicsSector','GicsIndustryGroup','GicsIndustry','Gics',
-  'IcbIndustry','IcbSuperSector','IcbSector','Icb',
-  'GicsToIcb',
+  'Currency',
+  'Country',
+  'Exchange',
+  'GicsSector',
+  'GicsIndustryGroup',
+  'GicsIndustry',
+  'Gics',
   'Instrument',
-  'Event',
-  'Listing'
 ]
 
 for (const entityName of entities) {
-  const data = await readFile(resolve(backupDir, `${entityName}.json`))
+  const path = format({dir:backupDir, name:entityName, ext:'json'})
+  const data = await readFile(path)
   const records = JSON.parse(data)
   const entityKey = entityName.replace(/^./, char1=>char1.toLowerCase())
   const isEmpty = await prisma[entityKey].count() === 0
