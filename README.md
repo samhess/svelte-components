@@ -5,6 +5,9 @@
 * [HeroIcons](src/routes/components/icons)
 * [TreeMap](src/routes/components/charts)
 
+## Demo
+Find a [demo](https://svelte-components-black.vercel.app) on Vercel.
+
 ## Installation
 ```bash
 npm install @samhess/svelte-components
@@ -33,18 +36,6 @@ npm install @samhess/svelte-components
       name: 'Switzerland',
       region: 'Europa',
       currency: 'CHF'
-    },
-    {
-      code: 'DE',
-      name: 'Germany',
-      region: 'Europa',
-      currency: 'EUR'
-    },
-    {
-      code: 'US',
-      name: 'United States of America',
-      region: 'America',
-      currency: 'USD'
     }
   ]
 </script>
@@ -88,28 +79,10 @@ npm install @samhess/svelte-components
   import Treemap from '$lib/components/Treemap.svelte'
   const data = [
     {
-      name: 'AAPL',
-      marketCap: 200,
-      performance1d: 1,
-      type: 'stock'
-    },
-    {
       name: 'GOOG',
       marketCap: 200,
       performance1d: 2,
       type: 'stock'
-    },
-    {
-      name: 'TSLA',
-      marketCap: 100,
-      performance1d: -1,
-      type: 'stock'
-    },
-    {
-      name: 'BTC',
-      marketCap: 200,
-      performance1d: 3,
-      type: 'crypto'
     }
   ]
   const evaluation = 'performance1d'

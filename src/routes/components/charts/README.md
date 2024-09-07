@@ -2,6 +2,9 @@
 
 This is a Svelte integration of the **chartjs-chart-treemap** component.
 
+## Demo
+[Demo](https://svelte-components-black.vercel.app/components/charts)
+
 ## Installation
 ```bash
 npm install @samhess/svelte-components
@@ -48,9 +51,6 @@ npm install @samhess/svelte-components
   </Treemap>
 </article>
 ```
-
-## Demo
-[Demo](https://svelte-components-black.vercel.app/components/charts)
 
 ## Properties
 

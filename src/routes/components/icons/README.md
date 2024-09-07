@@ -2,6 +2,9 @@
 
 This is a Svelte integration of some **heroicons** component.
 
+## Demo
+[Demo](https://svelte-components-black.vercel.app/components/icons)
+
 ## Installation
 ```bash
 npm install @samhess/svelte-components
@@ -24,9 +27,6 @@ npm install @samhess/svelte-components
     <HeroIcon name="question-mark-circle" className="w-8 h-8"/>
 </article>
 ```
-
-## Demo
-[Demo](https://svelte-components-black.vercel.app/components/icons)
 
 ## Properties
 

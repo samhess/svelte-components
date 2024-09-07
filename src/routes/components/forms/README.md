@@ -1,9 +1,10 @@
 # Svelte Component for Address Completion
 
 This is a Svelte component for address autocompletion. It integrates with 
-[Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/) and [Tailwind CSS](https://tailwindcss.com/).
+[Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
-A current build of the component can be found in the *dist* directory.
+## Demo
+[Demo](https://svelte-components-black.vercel.app/components/forms).
 
 ## Installation
 ```bash
@@ -33,9 +34,6 @@ npm install @samhess/svelte-components
   }
 </script>
 ```
-
-## Demo
-[Demo](https://samhess.github.io/vue3-address-input/index.html) is hosted on GitHub Pages ([docs](/docs) directory)
 
 ## Properties
 

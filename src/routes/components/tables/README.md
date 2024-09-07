@@ -2,6 +2,9 @@
 
 This is a implementation of a data table component.
 
+## Demo
+[Demo](https://svelte-components-black.vercel.app/components/tables)
+
 ## Installation
 ```bash
 npm install @samhess/svelte-components
@@ -53,9 +56,6 @@ npm install @samhess/svelte-components
   <DataTable {entity} {records}></DataTable>
 </article>
 ```
-
-## Demo
-[Demo](https://svelte-components-black.vercel.app/components/tables)
 
 ## Properties
 
