@@ -20,14 +20,22 @@
   */
   export function editItem(record) {
     mode = 'update'
-    //console.log(`${mode} record`)
-    for (const key in editedItem) {
-      delete editedItem[key]
-    }
+    editedItem = {}
     //console.log(record)
-    for (const [key, props] of Object.entries(entity.attributes)) {
+    for (const [propName, props] of Object.entries(entity.attributes)) {
       if (props.edit !== false) {
-        editedItem[key] = record[key]
+        editedItem[propName] = record[propName]
+        if (/^[A-Z]/.test(propName) && props.key) {
+          if (typeof props.key === 'string') {
+            editedItem[propName] = {
+              value: record[propName][props.key]
+            }
+          } else if (Array.isArray(props.key)) {
+            editedItem[propName] = {
+              value: props.key.map((/**@type {string}*/key)=>record[propName][key]).join(':')
+            }
+          }
+        }
       }
     }
     //console.log(editedItem)
@@ -36,16 +44,14 @@
 
    export function addItem() {
     mode = 'add'
-    for (const key in editedItem) {
-      delete editedItem[key]
-    }
+    editedItem = {}
     //console.log(`${mode} item`)
-    for (const [key, props] of Object.entries(entity.attributes)) {
+    for (const [propName, props] of Object.entries(entity.attributes)) {
       if (props.edit !== false) {
-        if (/^[A-Z]/.test(key)) {
-          editedItem[key] = {value:props.default}
+        if (/^[A-Z]/.test(propName)) {
+          editedItem[propName] = {value:props.default}
         } else {
-          editedItem[key] = props.default
+          editedItem[propName] = props.default
         }
       }
     }
@@ -110,7 +116,7 @@
             <!-- select fields -->
             {#if /^[A-Z]/.test(key)}
             <select id={key} class="form-select" bind:value={editedItem[key].value}>
-              {#await getSelectOptions(key) then options }
+              {#await getSelectOptions(key) then options}
                 {#each options as option}
                   <option value={option.value} selected={option.value===value?.value}>{option.name}</option>
                 {/each}
@@ -124,6 +130,8 @@
               <input class="form-input" id={key} type='text' bind:value={editedItem[key]}/>
             {/if}
         </div>
+      {:else}
+      {key}
       {/if}
     {/each}
   </slot>

@@ -5,7 +5,7 @@
     "acronym": "SIX",
     "yahooIdentifier": "SW",
     "googleIdentifier": "SWX",
-    "countryCode": "CH",
+    "country": "CH",
     "city": "Zurich",
     "website": "www.six-group.com"
   },
@@ -15,7 +15,7 @@
     "acronym": "",
     "yahooIdentifier": "VI",
     "googleIdentifier": "VIE",
-    "countryCode": "AT",
+    "country": "AT",
     "city": "Vienna",
     "website": "www.wienerboerse.at"
   },
@@ -25,7 +25,7 @@
     "acronym": "ASX",
     "yahooIdentifier": "AX",
     "googleIdentifier": "ASX",
-    "countryCode": "AU",
+    "country": "AU",
     "city": "Sydney",
     "website": "www.asx.com.au"
   },
@@ -35,7 +35,7 @@
     "acronym": "",
     "yahooIdentifier": "BR",
     "googleIdentifier": "EBR",
-    "countryCode": "BE",
+    "country": "BE",
     "city": "Brussels",
     "website": "www.euronext.com"
   },
@@ -45,7 +45,7 @@
     "acronym": "TSX",
     "yahooIdentifier": "TO",
     "googleIdentifier": "TSE",
-    "countryCode": "CA",
+    "country": "CA",
     "city": "Toronto",
     "website": "www.tse.com"
   },
@@ -55,7 +55,7 @@
     "acronym": "XETRA",
     "yahooIdentifier": "DE",
     "googleIdentifier": "ETR",
-    "countryCode": "DE",
+    "country": "DE",
     "city": "Frankfurt",
     "website": "www.deutsche-boerse.com"
   },
@@ -65,7 +65,7 @@
     "acronym": "",
     "yahooIdentifier": "CO",
     "googleIdentifier": "CPH",
-    "countryCode": "DK",
+    "country": "DK",
     "city": "Copenhagen",
     "website": "www.nasdaqomxnordic.com"
   },
@@ -75,7 +75,7 @@
     "acronym": "BME",
     "yahooIdentifier": "MC",
     "googleIdentifier": "BME",
-    "countryCode": "ES",
+    "country": "ES",
     "city": "Madrid",
     "website": "www.bolsasymercados.es"
   },
@@ -85,7 +85,7 @@
     "acronym": "",
     "yahooIdentifier": "HE",
     "googleIdentifier": "HEL",
-    "countryCode": "FI",
+    "country": "FI",
     "city": "Helsinki",
     "website": "www.nasdaqomxnordic.com"
   },
@@ -95,7 +95,7 @@
     "acronym": "",
     "yahooIdentifier": "PA",
     "googleIdentifier": "EPA",
-    "countryCode": "FR",
+    "country": "FR",
     "city": "Paris",
     "website": "www.euronext.com"
   },
@@ -105,7 +105,7 @@
     "acronym": "LSE",
     "yahooIdentifier": "L",
     "googleIdentifier": "LON",
-    "countryCode": "GB",
+    "country": "GB",
     "city": "London",
     "website": "www.londonstockexchange.com"
   },
@@ -115,7 +115,7 @@
     "acronym": "HKEX",
     "yahooIdentifier": "HK",
     "googleIdentifier": "HKG",
-    "countryCode": "HK",
+    "country": "HK",
     "city": "Hong kong",
     "website": "www.hkex.com.hk"
   },
@@ -125,7 +125,7 @@
     "acronym": "ISE",
     "yahooIdentifier": "IR",
     "googleIdentifier": "DUB",
-    "countryCode": "IE",
+    "country": "IE",
     "city": "Dublin",
     "website": "www.ise.ie"
   },
@@ -135,7 +135,7 @@
     "acronym": "TASE",
     "yahooIdentifier": "TA",
     "googleIdentifier": "TAE",
-    "countryCode": "IL",
+    "country": "IL",
     "city": "Tel aviv",
     "website": "www.tase.co.il"
   },
@@ -145,7 +145,7 @@
     "acronym": "",
     "yahooIdentifier": "MI",
     "googleIdentifier": "BIT",
-    "countryCode": "IT",
+    "country": "IT",
     "city": "Milan",
     "website": "www.borsaitaliana.it"
   },
@@ -155,7 +155,7 @@
     "acronym": "TSE",
     "yahooIdentifier": "T",
     "googleIdentifier": "TYO",
-    "countryCode": "JP",
+    "country": "JP",
     "city": "Tokyo",
     "website": "www.jpx.co.jp"
   },
@@ -165,7 +165,7 @@
     "acronym": "",
     "yahooIdentifier": "AS",
     "googleIdentifier": "AMS",
-    "countryCode": "NL",
+    "country": "NL",
     "city": "Amsterdam",
     "website": "www.euronext.com"
   },
@@ -175,7 +175,7 @@
     "acronym": "",
     "yahooIdentifier": "OL",
     "googleIdentifier": "OSL",
-    "countryCode": "NO",
+    "country": "NO",
     "city": "Oslo",
     "website": "www.oslobors.no"
   },
@@ -185,7 +185,7 @@
     "acronym": "NZX",
     "yahooIdentifier": "NZ",
     "googleIdentifier": "NZE",
-    "countryCode": "NZ",
+    "country": "NZ",
     "city": "Auckland",
     "website": "www.nzx.com"
   },
@@ -195,7 +195,7 @@
     "acronym": "",
     "yahooIdentifier": "LS",
     "googleIdentifier": "LIS",
-    "countryCode": "PT",
+    "country": "PT",
     "city": "Lisbon",
     "website": "www.euronext.com"
   },
@@ -205,7 +205,7 @@
     "acronym": "",
     "yahooIdentifier": "ST",
     "googleIdentifier": "STO",
-    "countryCode": "SE",
+    "country": "SE",
     "city": "Stockholm",
     "website": "www.nasdaqomxnordic.com"
   },
@@ -215,7 +215,7 @@
     "acronym": "SGX",
     "yahooIdentifier": "SI",
     "googleIdentifier": "SES",
-    "countryCode": "SG",
+    "country": "SG",
     "city": "Singapore",
     "website": "www.sgx.com"
   },
@@ -225,7 +225,7 @@
     "acronym": "NASDAQ",
     "yahooIdentifier": "",
     "googleIdentifier": "NASDAQ",
-    "countryCode": "US",
+    "country": "US",
     "city": "New york",
     "website": "www.nasdaq.com"
   },
@@ -235,7 +235,7 @@
     "acronym": "NYSE",
     "yahooIdentifier": "",
     "googleIdentifier": "NYSE",
-    "countryCode": "US",
+    "country": "US",
     "city": "New york",
     "website": "www.nyse.com"
   },
@@ -245,7 +245,7 @@
     "acronym": "CBOE",
     "yahooIdentifier": "",
     "googleIdentifier": "BATS",
-    "countryCode": "US",
+    "country": "US",
     "city": "Chicago",
     "website": "markets.cboe.com"
   },
@@ -255,7 +255,7 @@
     "acronym": "SSE",
     "yahooIdentifier": "SS",
     "googleIdentifier": "SHA",
-    "countryCode": "CN",
+    "country": "CN",
     "city": "Shanghai",
     "website": "www.sse.com.cn"
   },
@@ -265,7 +265,7 @@
     "acronym": "",
     "yahooIdentifier": "SZ",
     "googleIdentifier": "SHE",
-    "countryCode": "CN",
+    "country": "CN",
     "city": "Shenzhen",
     "website": "www.szse.cn"
   },
@@ -275,7 +275,7 @@
     "acronym": "KRX SM",
     "yahooIdentifier": "KS",
     "googleIdentifier": "KRX",
-    "countryCode": "KR",
+    "country": "KR",
     "city": "Seoul",
     "website": "eng.krx.co.kr"
   },
@@ -285,7 +285,7 @@
     "acronym": "",
     "yahooIdentifier": "SR",
     "googleIdentifier": "TADAWUL",
-    "countryCode": "SA",
+    "country": "SA",
     "city": "Riyadh",
     "website": "www.tadawul.com.sa"
   },
@@ -295,7 +295,7 @@
     "acronym": "NSE",
     "yahooIdentifier": "NS",
     "googleIdentifier": "NSE",
-    "countryCode": "IN",
+    "country": "IN",
     "city": "Mumbai",
     "website": "www.nseindia.com"
   },
@@ -305,7 +305,7 @@
     "acronym": "",
     "yahooIdentifier": "",
     "googleIdentifier": "",
-    "countryCode": "ZZ",
+    "country": "ZZ",
     "city": "n/a",
     "website": ""
   },
@@ -315,7 +315,7 @@
     "acronym": "XOFF",
     "yahooIdentifier": "",
     "googleIdentifier": "",
-    "countryCode": "ZZ",
+    "country": "ZZ",
     "city": "n/a",
     "website": ""
   }

@@ -27,9 +27,9 @@ for (const currency of currencies) {
     const countryName = currency.issuer.toLowerCase().replace(/\u2019/g,"'").replace(/\u0307/g,'').replace(/^tanzania.*$/,'tanzania')
     const country = await prisma.country.findFirst({where: {name: {startsWith:capitalize(countryName)}}})
     if (country) {
-      currency.countryCode = country.code
+      currency.country = country.code
     } else {
-      currency.countryCode = 'ZZ'
+      currency.country = 'ZZ'
       //console.log(`${currency.alphabeticCode}: ${countryName}`)
     }
     currency.numericCode = parseInt(currency.numericCode)
@@ -41,7 +41,7 @@ for (const currency of currencies) {
 
 const countries = await prisma.country.findMany()
 for (const country of countries) {
-  const officialCurrency = currencies.find(item => item.countryCode === country.code)
+  const officialCurrency = currencies.find(item => item.country === country.code)
   if (officialCurrency) {
     if (country.currency !== officialCurrency.alphabeticCode) {
       console.log(`${country.name} currency is ${country.currency} but might be ${officialCurrency.alphabeticCode}`)

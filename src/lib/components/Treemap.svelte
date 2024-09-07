@@ -25,40 +25,9 @@
   }
 
   /**
-   * @param {number} level
-   * @param {Record<string, number>} item
+   * @param {Object<string,any>} item
    */
-  function setBackground(level, item) {
-    if (grouping.length === 2) {
-      switch (level) {
-        case 0: return '#444'
-        case 1: return colorBackground(item) || '#999'
-        default: return '#999'
-      }
-    }
-    else if (grouping.length === 3) {
-      switch (level) {
-        case 0: return '#444'
-        case 1: return '#555'
-        case 2: return colorBackground(item) || '#999'
-        default: return '#999'
-      }
-    }
-    else if (grouping.length === 3) {
-      switch (level) {
-        case 0: return '#444'
-        case 1: return '#555'
-        case 2: return '#666'
-        case 3: return colorBackground(item) || '#999'
-        default: return '#999'
-      }
-    }
-  }
-
-  /**
-   * @param {Record<string, number>} item
-   */
-  function colorBackground(item) {
+  function getBackground(item) {
     const value = item[evaluation]
     if (evaluation.startsWith('performance')) {
       if (value >= 2) return colors.darkgreen
@@ -89,134 +58,121 @@
     }
   }
 
-  /** @type {Object<string, any>} */
-  const config = {
-    type: 'treemap',
-    data: {
-      datasets: [
-        {
-          key: structure,
-          tree: data,
-          groups: grouping,
-          borderColor: 'black',
-          borderWidth: 1,
-          spacing: 0,
-          /** @param {Record<string, any>} ctx */
-          backgroundColor: (ctx) => {
-            if (ctx.type === 'data' && ctx.raw !== undefined) {
-              let level = ctx.raw.l
-              let item = ctx.raw._data.children[0]
-              return setBackground(level, item)
-            }
-          },
-          captions: {
-            display: true,
-            color: 'white',
-            /** @param {Record<string, any>} ctx */
-            font: (ctx) => {
-              if (ctx.type !== 'data') return
-              if (ctx.raw.l === 0) return {size: 16, weight: 'bold'}
-              if (ctx.raw.l === 1) return {size: 14, weight: 'normal'}
-              return {}
-            },
-          },
-          labels: {
-            display: true,
-            color: 'black',
-            font: {
-              size: 16,
-              weight: 'normal',
-              lineHeight: 1.5
-            },
-            /** @param {Record<string, any>} ctx */
-            formatter: (ctx) => {
-              let item  = ctx.raw._data.children[0]
-              let value
-              if (evaluation.startsWith('performance')) {
-                value = formatPercent(item[evaluation]/100)
-              } else if (evaluation === 'positionWeight') {
-                value = formatPercent(item[evaluation])
-              } else {
-                value = formatNumber(item[evaluation])
-              }
-              return [
-                item.ticker ? item.ticker.split('.').shift() : '',
-                value
-              ]
+  function initChart() {
+    Chart.register(LinearScale, TreemapElement, TreemapController, Title, Tooltip, Legend)
+    // @ts-ignore
+    chart = new Chart(canvas, {type:'treemap'})
+    chart.options.responsive = true
+    chart.options.maintainAspectRatio = false
+    chart.options.plugins = {}
+    chart.options.plugins.legend = {
+      display: false, 
+      position: 'top',
+    },
+    chart.options.plugins.title = {
+      display: false,
+      text: '',
+      font: {size:24, weight:'bold'}
+    },
+    chart.options.plugins.tooltip = {
+      enabled: true,
+      position: 'nearest',
+      callbacks: {
+        title: () => 'Value',
+        /** @param {Record<string, any>} ctx */
+        label: (ctx) => {
+          const {raw} = ctx
+          if (raw) {
+            const group = grouping.length-1===raw.l 
+              ? raw._data.children[0].name 
+              : raw.g
+            if (raw.v > 1_000_000_000) {
+              return `${group}: USD ${(raw.v/1_000_000_000).toFixed(0)} B`
+            } else if (raw.v > 1_000_000) {
+              return `${group}: USD ${(raw.v/1_000_000).toFixed(0)} M`
+            } else {
+              return `${group}: USD ${(raw.v).toFixed(0)}`
             }
           }
         }
-      ],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-            display: false,
-            position: 'top',
-        },
-        title: {
-          display: false,
-          text: 'Crypto Index 200',
-          font: {
-              size: 24,
-              weight: 'bold',
-            }
-        },
-        tooltip: {
-          enabled: true,
-          position: 'nearest',
-          callbacks: {
-            /** @param {Record<string, any>} ctx */
-            label: (ctx) => {
-              if (ctx.raw === undefined) return
-              let description = ctx.raw.g
-              if (grouping.length === 2 && ctx.raw.l === 1) {
-                description = ctx.raw._data.children[0].Instrument.name
-              }
-              if (grouping.length === 3 && ctx.raw.l === 2) {
-                description = ctx.raw._data.children[0].name
-              }
-              if (ctx.raw.v > 1_000_000_000) {
-                return description + ': USD ' + (ctx.raw.v/1_000_000_000).toFixed(0) + 'B'
-              } else if (ctx.raw.v > 1_000_000) {
-                return description + ': USD ' + (ctx.raw.v/1_000_000).toFixed(0) + 'M'
-              } else {
-                return description + ': USD ' + (ctx.raw.v).toFixed(0)
-              }
-            },
-            title: () => {
-              return 'Market Capitalization'
-            },
+      }
+    }
+    chart.data.datasets[0] = {
+      key: structure,
+      tree: data,
+      groups: grouping,
+      borderColor: 'black',
+      borderWidth: 1,
+      spacing: 0,
+      /** @param {Object<string,any>} ctx */
+      backgroundColor: (ctx) => {
+        const {raw} = ctx
+        if (raw) {
+          const level = raw.l
+          if (level === grouping.length-1) {
+            return getBackground(raw._data.children[0]) ?? '#999'
+          } else {
+            return `#${111*(level+5)}` // gray levels
+          }
+        }
+      },
+      captions: {
+        display: true,
+        color: 'white',
+        /** @param {Object<string,any>} ctx */
+        // @ts-ignore
+        font: (ctx) => {
+          const {raw} = ctx
+          if (raw) {
+            if (ctx.raw.l === 0) return {size: 16, weight: 'bold'}
+            if (ctx.raw.l === 1) return {size: 14, weight: 'normal'}
           }
         },
+      },
+      labels: {
+        display: true,
+        color: 'black',
+        font: {lineHeight:1.5, size:16, weight:'normal'},
+        /** @param {Object<string,any>} ctx */
+        formatter: (ctx) => {
+          const item  = ctx.raw._data.children[0]
+          if (item) {
+            const label = [
+              item.ticker?.split('.').shift() ?? '',
+              item[evaluation] ?? ''
+            ]
+            if (evaluation.startsWith('performance')) {
+              label[1] = formatPercent(item[evaluation]/100)
+            } else if (evaluation === 'weight') {
+              label[1] = formatPercent(item[evaluation])
+            } else {
+              label[1] = formatNumber(item[evaluation])
+            }
+            return label
+          }
+        }
       }
     }
   }
 
-
-  function init() {
-    Chart.register(LinearScale, TreemapElement, TreemapController, Title, Tooltip, Legend)
-    // @ts-ignore
-    chart = new Chart(canvas, config)
-  }
-
-  function updateChartData() {
-    config.data.datasets[0].tree = data
-    config.data.datasets[0].key = structure
-    config.data.datasets[0].groups = grouping
+  function updateChart() {
     if (chart) {
-     chart.update()
+      // @ts-ignore
+      chart.data.datasets[0].tree = data
+      // @ts-ignore
+      chart.data.datasets[0].key = structure
+      // @ts-ignore
+      chart.data.datasets[0].groups = grouping
+      chart.update()
     }
   }
 
-  onMount(init)
+  onMount(initChart)
 
-  $: data, updateChartData()
-  $: structure, updateChartData()
-  $: grouping, updateChartData()
-  $: evaluation, updateChartData()
+  $: data, updateChart()
+  $: structure, updateChart()
+  $: grouping, updateChart()
+  $: evaluation, updateChart()
 
 </script>
 

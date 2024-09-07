@@ -17,11 +17,11 @@
       {#each records as record}
         <tr on:dblclick={()=>rowDblClick(record)}>
           <td>{record.code}</td>
-          <td>{record.GicsSector.name}</td>
-          <td>{record.GicsIndustryGroup.name}</td>
-          <td>{record.GicsIndustry.name}</td>
           <td>{record.name}</td>
           <td>{record.description}</td>
+          <td>{record.Industry.name}</td>
+          <td>{record.IndustryGroup.name}</td>
+          <td>{record.Sector.name}</td>
         </tr>
       {/each}
     </svelte:fragment>

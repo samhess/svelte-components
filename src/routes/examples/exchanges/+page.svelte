@@ -18,7 +18,7 @@
           <td>{record.acronym}</td>
           <td>{record.yahooIdentifier}</td>
           <td>{record.googleIdentifier}</td>
-          <td>{record.countryCode}</td>
+          <td>{record.country}</td>
           <td>{record.city}</td>
           <td><a href="http://{record.website}" target="_blank">{record.website}</a></td>
         </tr>

@@ -44,11 +44,16 @@
   }
 
   function sortRecords({field='name', direction='asc'}) {
-    let sortCode = direction==='asc' ? 1 : -1
+    //console.log(`sorting ${field} ${direction}`)
+    const sortCode = direction==='asc' ? 1 : -1
     if (Array.isArray(records)) {
       return records.sort((A,B) => {
-        const a = A[field] ?? ''
-        const b = B[field] ?? ''
+        let a = A[field] ?? ''
+        let b = B[field] ?? ''
+        if (typeof a === 'object' && typeof b === 'object') {
+          a = a.name
+          b = b.name
+        }
         if (typeof a === 'string' && typeof b === 'string') {
           const compareResult = a.localeCompare(b, undefined, {sensitivity:'base'})
           return compareResult * sortCode

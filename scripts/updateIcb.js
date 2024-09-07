@@ -1,82 +1,74 @@
+import {writeFile} from 'fs/promises'
+import {format, resolve} from 'node:path'
+import {download,downloadFile} from '../src/lib/server/helpers.js'
+import {capitalize} from '../src/lib/helpers.js'
 import XLSX from 'xlsx'
-import { writeFile } from 'fs/promises'
-import { existsSync } from 'fs'
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
-const url = new URL('https://content.ftserussell.com/sites/default/files/icb_structure_and_definitions_0.xlsx')
-const inputFile = './data/icb.xlsx'
-//const outputDir = '../database/backup'
-const outputDir = './data'
+const {sheet_to_json} = XLSX.utils
 
-const keepUnique = (element,index,array) => array.findIndex(item => item.code === element.code) === index
+const source = new URL('content/dam/ftse-russell/en_us/documents/other/icb-structure-and-definitions.xlsx','https://www.lseg.com')
+const tmpFile = resolve('data','icb.xlsx')
+const outputPath = resolve('..','database','backup')
+const headers = [
+  'industryCode',
+  'industry',
+  'superSectorCode',
+  'superSector',
+  'sectorCode',
+  'sector',
+  'subSectorCode',
+  'subSector',
+  'description'
+]
 
-async function saveJSON(data, name) {
-  await writeFile(`${outputDir}/${name}.json`, JSON.stringify(data, undefined, 2))
+function getEntities(taxonomy) {
+  const keepUnique = (item,index,items) => items.findIndex(({code})=>code===item.code)===index
+  const subSectors = taxonomy
+    .map(item => ({
+      code: item.subSectorCode, 
+      name: item.subSector, 
+      description: item.description,
+      sector: item.sectorCode,
+      superSector: item.superSectorCode,
+      industry: item.industryCode
+    }))
+  const sectors = taxonomy
+    .map(({sectorCode,sector}) => ({code:sectorCode, name:sector}))
+    .filter(keepUnique)
+  const superSectors = taxonomy
+    .map(({superSectorCode,superSector}) => ({code:superSectorCode, name:superSector}))
+    .filter(keepUnique)
+  const industries = taxonomy
+    .map(({industryCode,industry}) => ({code:industryCode, name:industry}))
+    .filter(keepUnique)
+  return {subSectors,sectors,superSectors,industries}
 }
 
-async function upsertIcb(subsectors) {
-  for (const subsector of subsectors) {
-    if (subsector.code) {
-      const upserted = await prisma.icb.upsert({
-        where: { code: subsector.code },
-        create: subsector,
-        update: subsector
-      })
-      console.log(`Upserted ${upserted.code} ${upserted.name}`)
-    } else {
-      console.log(`${subsector.name} has no code`)
-    }
+const data = await download(source)
+//const result = await downloadFile(source,tmpFile)
+if (data instanceof Error === false) {
+  const wb = XLSX.read(data, {type:'buffer'})
+  const ws = wb.Sheets[wb.SheetNames[0]]
+
+  // get json and trim items
+  const json = sheet_to_json(ws, {range:'B3:J175', header:headers})
+    .map(item=>{
+      const {description,industry,sector,subSector,superSector} = item
+      item.description = description.trim().replace(/(\")/g,'').replace(/\u2019/g,'\u0027'),
+      item.industry = industry.trim()
+      item.sector = sector.trim()
+      item.subSector = subSector.trim()
+      item.superSector = superSector.trim()
+      return item
+    })
+
+  const entities = getEntities(json)
+  for (const entity in entities) {
+    const name = capitalize(entity.replace('subSectors','').replace(/ies$/,'y').replace(/s$/,''))
+    const path = format({dir:outputPath, name:`Icb${name}`, ext:'json'})
+    await writeFile(path, JSON.stringify(entities[entity],undefined,2))
   }
+
+} else {
+  console.log(data.message)
 }
 
-if (!existsSync(inputFile)) {
-  const response = await fetch(url)
-  if (response.ok) {
-    const data = await response.arrayBuffer()
-    await writeFile(inputFile, Buffer.from(data))
-  } else {
-    console.error(response.statusText)
-    throw new Error(response.statusText)
-  }
-}
-const wb = XLSX.readFile(inputFile)
-const ws = wb.Sheets[wb.SheetNames[0]]
-const header = ['industryCode', 'industry', 'supersectorCode', 'supersector', 'sectorCode', 'sector', 'subsectorCode', 'subsector', 'description']
-const icb = XLSX.utils.sheet_to_json(ws, { range: 'A2:I174', defval: null, header })
-
-// clean items
-for (const item of icb) {
-  item.subsector = item.subsector.replace(/\s$/, '')
-  item.description = item.description.replace(/\s*$/, '').replace(/(\")/g, '').replace('’',"'")
-  item.sector = item.sector.replace(/\s$/, '')
-  item.supersector = item.supersector.replace(/\s*$/, '')
-  item.industry = item.industry.replace(/\s$/, '')
-}
-
-const subsectors = icb
-  .map(item => ({
-    code: item.subsectorCode, 
-    name: item.subsector, 
-    description: item.description,
-    sectorCode: item.sectorCode,
-    supersectorCode: item.supersectorCode,
-    industryCode: item.industryCode
-  }))
-await saveJSON(subsectors, 'Icb')
-
-const sectors = icb
-  .map(({sectorCode, sector, supersectorCode}) => ({code:sectorCode, name:sector, supersectorCode}))
-  .filter(keepUnique)
-await saveJSON(sectors, 'IcbSector')
-
-const supersectors = icb
-  .map(({supersectorCode, supersector, industryCode}) => ({code:supersectorCode, name:supersector, industryCode}))
-  .filter(keepUnique)
-await saveJSON(supersectors, 'IcbSupersector')
-
-const industries = icb
-  .map(({industryCode, industry}) => ({code:industryCode, name:industry}))
-  .filter(keepUnique)
-await saveJSON(industries, 'IcbIndustry')
-
-// await upsertIcb(subsectors)

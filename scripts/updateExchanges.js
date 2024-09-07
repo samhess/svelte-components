@@ -7,7 +7,8 @@ async function getLocalExchanges() {
 }
 
 async function getRemoteExchanges() {
-  const response = await fetch('https://www.iso20022.org/sites/default/files/ISO10383_MIC/ISO10383_MIC.csv')
+  const source = new URL('sites/default/files/ISO10383_MIC/ISO10383_MIC.csv','https://www.iso20022.org')
+  const response = await fetch(source)
   const csv = await response.text()
   return parseCsv(csv)
 }
@@ -21,10 +22,8 @@ async function updateExchange(record) {
   console.log(`updated ${mic} ${updated.name}`)
 }
 
-function getWebsite(website) {
-  if (!website || website === 'N/A') {
-    return ''
-  } 
+function getHost(website) {
+  if (!website || website === 'N/A') return ''
   else {
     website = website.toLowerCase()
     if (!website.startsWith('http')) {
@@ -58,12 +57,10 @@ for (const localExchange of localExchanges){
   const record = {
     mic: remoteExchange.mic,
     acronym: remoteExchange.acronym,
-    name: getName(remoteExchange['market-name-institution-description']),
-    countryCode: remoteExchange['iso-country-code-(iso-3166)'],
-    website: getWebsite(remoteExchange.website),
+    name: getName(remoteExchange.marketNameInstitutionDescription),
+    country: remoteExchange.isoCountryCode,
+    website: getHost(remoteExchange.website),
     city: remoteExchange.city === 'N/A' ? 'n/a' : capitalize(remoteExchange.city.toLowerCase())
   }
-await updateExchange(record)
+  await updateExchange(record)
 }
-
-process.exit(0)

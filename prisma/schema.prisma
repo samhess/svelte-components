@@ -1,35 +1,29 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url      = env("DATABASE_URL")
 }
 
 model Country {
-  code         String       @id
-  name         String
-  currency     String?
-  region       String
-  Currency     Currency?     @relation(fields: [currency], references: [code])
-  Event        Event[]
-  Exchange     Exchange[]
-  Instrument   Instrument[]
+  code       String       @id
+  name       String
+  currency   String
+  region     String
+  Currency   Currency     @relation(fields: [currency], references: [code])
+  Event      Event[]
+  Exchange   Exchange[]
+  Instrument Instrument[]
 }
 
 model Currency {
-  code        String    @id
-  name        String
-  countryCode String
-  issuer      String?
-  Country     Country[]
+  code    String    @id
+  name    String
+  country String
+  issuer  String?
+  Country Country[]
 }
 
 model Event {
@@ -40,12 +34,12 @@ model Event {
   coordinator String?
   category    String?
   isOnline    Boolean?
-  countryCode String?
+  country     String?
   location    String?
   venue       String?
   instrument  String
-  Country     Country?   @relation(fields: [countryCode], references: [code])
-  Instrument  Instrument @relation(fields: [instrument], references: [isin], onDelete: Cascade, onUpdate: Cascade)
+  Country     Country?   @relation(fields: [country], references: [code])
+  Instrument  Instrument @relation(fields: [instrument], references: [isin], onDelete: Cascade)
 
   @@id([name, instrument, date])
 }
@@ -56,80 +50,74 @@ model Exchange {
   acronym          String?
   yahooIdentifier  String?
   googleIdentifier String?
-  countryCode      String
+  country          String
   city             String
   website          String?
-  Country          Country      @relation(fields: [countryCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
+  Country          Country      @relation(fields: [country], references: [code], onDelete: Cascade)
   Instrument       Instrument[]
   Listing          Listing[]
 }
 
 model Gics {
-  code              Int               @id
-  name              String
-  description       String
-  industryCode      Int
-  industrygroupCode Int
-  sectorCode        Int
-  GicsSector        GicsSector        @relation(fields: [sectorCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  GicsIndustry      GicsIndustry      @relation(fields: [industryCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  GicsIndustryGroup GicsIndustryGroup @relation(fields: [industrygroupCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  GicsToIcb         GicsToIcb[]
-  Instrument        Instrument[]
+  code          Int               @id @default(autoincrement())
+  name          String
+  description   String
+  industry      Int
+  industryGroup Int
+  sector        Int
+  Sector        GicsSector        @relation(fields: [sector], references: [code], onDelete: Cascade)
+  Industry      GicsIndustry      @relation(fields: [industry], references: [code], onDelete: Cascade)
+  IndustryGroup GicsIndustryGroup @relation(fields: [industryGroup], references: [code], onDelete: Cascade)
+  GicsToIcb     GicsToIcb[]
+  Instrument    Instrument[]
 }
 
 model GicsSector {
-  code              Int                 @id
-  name              String
-  Gics              Gics[]
-  GicsIndustryGroup GicsIndustryGroup[]
+  code Int    @id @default(autoincrement())
+  name String
+  Gics Gics[]
 }
 
 model GicsIndustry {
-  code              Int               @id
-  name              String
-  industrygroupCode Int
-  Gics              Gics[]
-  GicsIndustryGroup GicsIndustryGroup @relation(fields: [industrygroupCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
+  code Int    @id @default(autoincrement())
+  name String
+  Gics Gics[]
 }
 
 model GicsIndustryGroup {
-  code         Int            @id
-  name         String
-  sectorCode   Int
-  Gics         Gics[]
-  GicsIndustry GicsIndustry[]
-  GicsSector   GicsSector     @relation(fields: [sectorCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
+  code Int    @id @default(autoincrement())
+  name String
+  Gics Gics[]
 }
 
 model Icb {
-  code            Int            @id
-  name            String
-  description     String
-  sectorCode      Int
-  supersectorCode Int
-  industryCode    Int
-  GicsToIcb       GicsToIcb[]
-  IcbSector       IcbSector      @relation(fields: [sectorCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  IcbSupersector  IcbSupersector @relation(fields: [supersectorCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  IcbIndustry     IcbIndustry    @relation(fields: [industryCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  Instrument      Instrument[]
+  code        Int            @id @default(autoincrement())
+  name        String
+  description String
+  sector      Int
+  superSector Int
+  industry    Int
+  GicsToIcb   GicsToIcb[]
+  Sector      IcbSector      @relation(fields: [sector], references: [code], onDelete: Cascade)
+  SuperSector IcbSuperSector @relation(fields: [superSector], references: [code], onDelete: Cascade)
+  Industry    IcbIndustry    @relation(fields: [industry], references: [code], onDelete: Cascade)
+  Instrument  Instrument[]
 }
 
 model IcbIndustry {
-  code Int    @id
+  code Int    @id @default(autoincrement())
   name String
   Icb  Icb[]
 }
 
 model IcbSector {
-  code Int    @id
+  code Int    @id @default(autoincrement())
   name String
   Icb  Icb[]
 }
 
-model IcbSupersector {
-  code Int    @id
+model IcbSuperSector {
+  code Int    @id @default(autoincrement())
   name String
   Icb  Icb[]
 }
@@ -138,8 +126,8 @@ model GicsToIcb {
   gicsCode      Int
   icbCode       Int
   yahooIndustry String?
-  Icb           Icb     @relation(fields: [icbCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  Gics          Gics    @relation(fields: [gicsCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
+  Icb           Icb     @relation(fields: [icbCode], references: [code], onDelete: Cascade)
+  Gics          Gics    @relation(fields: [gicsCode], references: [code], onDelete: Cascade)
 
   @@id([gicsCode, icbCode])
 }
@@ -150,8 +138,8 @@ model Listing {
   instrument   String
   yahooTicker  String
   googleTicker String
-  Exchange     Exchange   @relation(fields: [exchange], references: [mic], onDelete: Cascade, onUpdate: Cascade)
-  Instrument   Instrument @relation(fields: [instrument], references: [isin], onDelete: Cascade, onUpdate: Cascade)
+  Instrument   Instrument @relation(fields: [instrument], references: [isin], onDelete: Cascade)
+  Exchange     Exchange   @relation(fields: [exchange], references: [mic], onDelete: Cascade)
 
   @@id([ticker, exchange, instrument])
   @@unique([ticker, exchange])
@@ -174,19 +162,19 @@ model Session {
   id        String   @id
   userId    String
   expiresAt DateTime
-  user      User     @relation(fields: [userId], references: [email], onDelete: Cascade, onUpdate: Cascade)
+  user      User     @relation(fields: [userId], references: [email], onDelete: Cascade)
 }
 
 model Portfolio {
   ticker                String
   name                  String
   custodian             String                  @default("self")
-  type                  String                  @default("portfolio")
+  objective             String                  @default("portfolio")
   assetclass            String                  @default("equity")
   visibility            String                  @default("private")
   weighting             String                  @default("marketcap")
   user                  String
-  User                  User                    @relation(fields: [user], references: [email], onDelete: Cascade, onUpdate: Cascade)
+  User                  User                    @relation(fields: [user], references: [email], onDelete: Cascade)
   PortfolioToInstrument PortfolioToInstrument[]
 
   @@id([user, ticker])
@@ -196,43 +184,44 @@ model Instrument {
   isin                  String                  @id
   ticker                String
   name                  String
-  exchangeId            String
+  exchange              String
   gicsCode              Int?
   icbCode               Int?
-  countryCode           String
-  assetclass            String                  @default("equity")
+  country               String
+  type                  String?
+  assetclass            String?
   website               String?
   ter                   Float?
   sharesOut             Float?
+  ArticleToInstrument   ArticleToInstrument[]
   Event                 Event[]
-  Country               Country                 @relation(fields: [countryCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  Icb                   Icb?                    @relation(fields: [icbCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  Gics                  Gics?                   @relation(fields: [gicsCode], references: [code], onDelete: Cascade, onUpdate: Cascade)
-  Exchange              Exchange                @relation(fields: [exchangeId], references: [mic], onDelete: Cascade, onUpdate: Cascade)
+  Exchange              Exchange                @relation(fields: [exchange], references: [mic], onDelete: Cascade)
+  Gics                  Gics?                   @relation(fields: [gicsCode], references: [code], onDelete: Cascade)
+  Icb                   Icb?                    @relation(fields: [icbCode], references: [code], onDelete: Cascade)
+  Country               Country                 @relation(fields: [country], references: [code], onDelete: Cascade)
   Listing               Listing[]
   PortfolioToInstrument PortfolioToInstrument[]
-  ArticleToInstrument   ArticleToInstrument[]
 
-  @@unique([ticker, exchangeId])
+  @@unique([ticker, exchange])
 }
 
 model PortfolioToInstrument {
-  ticker       String
-  user         String
-  instrumentId String
-  weight       Float?
-  shares       Float?
-  Portfolio    Portfolio  @relation(fields: [user, ticker], references: [user, ticker], onDelete: Cascade, onUpdate: Cascade)
-  Instrument   Instrument @relation(fields: [instrumentId], references: [isin], onDelete: Cascade, onUpdate: Cascade)
+  ticker     String
+  user       String
+  instrument String
+  weight     Float?
+  shares     Float?
+  Portfolio  Portfolio  @relation(fields: [user, ticker], references: [user, ticker], onDelete: Cascade)
+  Instrument Instrument @relation(fields: [instrument], references: [isin], onDelete: Cascade)
 
-  @@id([ticker, user, instrumentId])
+  @@id([ticker, user, instrument])
 }
 
 model Article {
   author              String?
   source              String?
   published           DateTime?
-  url                 String                @id()
+  url                 String                @id
   title               String
   description         String
   image               String
@@ -245,8 +234,8 @@ model ArticleToInstrument {
   article    String
   ticker     String
   exchange   String
-  Article    Article    @relation(fields: [article], references: [url], onDelete: Cascade, onUpdate: Cascade)
-  Instrument Instrument @relation(fields: [ticker, exchange], references: [ticker, exchangeId], onDelete: Cascade, onUpdate: Cascade)
+  Instrument Instrument @relation(fields: [ticker, exchange], references: [ticker, exchange], onDelete: Cascade)
+  Article    Article    @relation(fields: [article], references: [url], onDelete: Cascade)
 
   @@id([ticker, exchange, article])
 }

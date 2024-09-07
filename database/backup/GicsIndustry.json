@@ -1,382 +1,306 @@
 [
   {
     "code": 101010,
-    "name": "Energy Equipment & Services",
-    "industrygroupCode": 1010
+    "name": "Energy Equipment & Services"
   },
   {
     "code": 101020,
-    "name": "Oil, Gas & Consumable Fuels",
-    "industrygroupCode": 1010
+    "name": "Oil, Gas & Consumable Fuels"
   },
   {
     "code": 151010,
-    "name": "Chemicals",
-    "industrygroupCode": 1510
+    "name": "Chemicals"
   },
   {
     "code": 151020,
-    "name": "Construction Materials",
-    "industrygroupCode": 1510
+    "name": "Construction Materials"
   },
   {
     "code": 151030,
-    "name": "Containers & Packaging",
-    "industrygroupCode": 1510
+    "name": "Containers & Packaging"
   },
   {
     "code": 151040,
-    "name": "Metals & Mining",
-    "industrygroupCode": 1510
+    "name": "Metals & Mining"
   },
   {
     "code": 151050,
-    "name": "Paper & Forest Products",
-    "industrygroupCode": 1510
+    "name": "Paper & Forest Products"
   },
   {
     "code": 201010,
-    "name": "Aerospace & Defense",
-    "industrygroupCode": 2010
+    "name": "Aerospace & Defense"
   },
   {
     "code": 201020,
-    "name": "Building Products",
-    "industrygroupCode": 2010
+    "name": "Building Products"
   },
   {
     "code": 201030,
-    "name": "Construction & Engineering",
-    "industrygroupCode": 2010
+    "name": "Construction & Engineering"
   },
   {
     "code": 201040,
-    "name": "Electrical Equipment",
-    "industrygroupCode": 2010
+    "name": "Electrical Equipment"
   },
   {
     "code": 201050,
-    "name": "Industrial Conglomerates",
-    "industrygroupCode": 2010
+    "name": "Industrial Conglomerates"
   },
   {
     "code": 201060,
-    "name": "Machinery",
-    "industrygroupCode": 2010
+    "name": "Machinery"
   },
   {
     "code": 201070,
-    "name": "Trading Companies & Distributors",
-    "industrygroupCode": 2010
+    "name": "Trading Companies & Distributors"
   },
   {
     "code": 202010,
-    "name": "Commercial Services & Supplies",
-    "industrygroupCode": 2020
+    "name": "Commercial Services & Supplies"
   },
   {
     "code": 202020,
-    "name": "Professional Services",
-    "industrygroupCode": 2020
+    "name": "Professional Services"
   },
   {
     "code": 203010,
-    "name": "Air Freight & Logistics",
-    "industrygroupCode": 2030
+    "name": "Air Freight & Logistics"
   },
   {
     "code": 203020,
-    "name": "Passenger Airlines",
-    "industrygroupCode": 2030
+    "name": "Passenger Airlines"
   },
   {
     "code": 203030,
-    "name": "Marine Transportation",
-    "industrygroupCode": 2030
+    "name": "Marine Transportation"
   },
   {
     "code": 203040,
-    "name": "Ground Transportation",
-    "industrygroupCode": 2030
+    "name": "Ground Transportation"
   },
   {
     "code": 203050,
-    "name": "Transportation Infrastructure",
-    "industrygroupCode": 2030
+    "name": "Transportation Infrastructure"
   },
   {
     "code": 251010,
-    "name": "Automobile Components",
-    "industrygroupCode": 2510
+    "name": "Automobile Components"
   },
   {
     "code": 251020,
-    "name": "Automobiles",
-    "industrygroupCode": 2510
+    "name": "Automobiles"
   },
   {
     "code": 252010,
-    "name": "Household Durables",
-    "industrygroupCode": 2520
+    "name": "Household Durables"
   },
   {
     "code": 252020,
-    "name": "Leisure Products",
-    "industrygroupCode": 2520
+    "name": "Leisure Products"
   },
   {
     "code": 252030,
-    "name": "Textiles, Apparel & Luxury Goods",
-    "industrygroupCode": 2520
+    "name": "Textiles, Apparel & Luxury Goods"
   },
   {
     "code": 253010,
-    "name": "Hotels, Restaurants & Leisure",
-    "industrygroupCode": 2530
+    "name": "Hotels, Restaurants & Leisure"
   },
   {
     "code": 253020,
-    "name": "Diversified Consumer Services",
-    "industrygroupCode": 2530
+    "name": "Diversified Consumer Services"
   },
   {
     "code": 255010,
-    "name": "Distributors",
-    "industrygroupCode": 2550
+    "name": "Distributors"
   },
   {
     "code": 255020,
-    "name": "Internet & Direct Marketing Retail (Discontinued)",
-    "industrygroupCode": 2550
+    "name": "Internet & Direct Marketing Retail (Discontinued)"
   },
   {
     "code": 255030,
-    "name": "Broadline Retail",
-    "industrygroupCode": 2550
+    "name": "Broadline Retail"
   },
   {
     "code": 255040,
-    "name": "Specialty Retail",
-    "industrygroupCode": 2550
+    "name": "Specialty Retail"
   },
   {
     "code": 301010,
-    "name": "Consumer Staples Distribution & Retail",
-    "industrygroupCode": 3010
+    "name": "Consumer Staples Distribution & Retail"
   },
   {
     "code": 302010,
-    "name": "Beverages",
-    "industrygroupCode": 3020
+    "name": "Beverages"
   },
   {
     "code": 302020,
-    "name": "Food Products",
-    "industrygroupCode": 3020
+    "name": "Food Products"
   },
   {
     "code": 302030,
-    "name": "Tobacco",
-    "industrygroupCode": 3020
+    "name": "Tobacco"
   },
   {
     "code": 303010,
-    "name": "Household Products",
-    "industrygroupCode": 3030
+    "name": "Household Products"
   },
   {
     "code": 303020,
-    "name": "Personal Care Products",
-    "industrygroupCode": 3030
+    "name": "Personal Care Products"
   },
   {
     "code": 351010,
-    "name": "Health Care Equipment & Supplies",
-    "industrygroupCode": 3510
+    "name": "Health Care Equipment & Supplies"
   },
   {
     "code": 351020,
-    "name": "Health Care Providers & Services",
-    "industrygroupCode": 3510
+    "name": "Health Care Providers & Services"
   },
   {
     "code": 351030,
-    "name": "Health Care Technology",
-    "industrygroupCode": 3510
+    "name": "Health Care Technology"
   },
   {
     "code": 352010,
-    "name": "Biotechnology",
-    "industrygroupCode": 3520
+    "name": "Biotechnology"
   },
   {
     "code": 352020,
-    "name": "Pharmaceuticals",
-    "industrygroupCode": 3520
+    "name": "Pharmaceuticals"
   },
   {
     "code": 352030,
-    "name": "Life Sciences Tools & Services",
-    "industrygroupCode": 3520
+    "name": "Life Sciences Tools & Services"
   },
   {
     "code": 401010,
-    "name": "Banks",
-    "industrygroupCode": 4010
+    "name": "Banks"
   },
   {
     "code": 401020,
-    "name": "Thrifts & Mortgage Finance (Discontinued)",
-    "industrygroupCode": 4010
+    "name": "Thrifts & Mortgage Finance (Discontinued)"
   },
   {
     "code": 402010,
-    "name": "Financial Services",
-    "industrygroupCode": 4020
+    "name": "Financial Services"
   },
   {
     "code": 402020,
-    "name": "Consumer Finance",
-    "industrygroupCode": 4020
+    "name": "Consumer Finance"
   },
   {
     "code": 402030,
-    "name": "Capital Markets",
-    "industrygroupCode": 4020
+    "name": "Capital Markets"
   },
   {
     "code": 402040,
-    "name": "Mortgage Real Estate Investment Trusts (REITs)",
-    "industrygroupCode": 4020
+    "name": "Mortgage Real Estate Investment Trusts (REITs)"
   },
   {
     "code": 403010,
-    "name": "Insurance",
-    "industrygroupCode": 4030
+    "name": "Insurance"
   },
   {
     "code": 451020,
-    "name": "IT Services",
-    "industrygroupCode": 4510
+    "name": "IT Services"
   },
   {
     "code": 451030,
-    "name": "Software",
-    "industrygroupCode": 4510
+    "name": "Software"
   },
   {
     "code": 452010,
-    "name": "Communications Equipment",
-    "industrygroupCode": 4520
+    "name": "Communications Equipment"
   },
   {
     "code": 452020,
-    "name": "Technology Hardware, Storage & Peripherals",
-    "industrygroupCode": 4520
+    "name": "Technology Hardware, Storage & Peripherals"
   },
   {
     "code": 452030,
-    "name": "Electronic Equipment, Instruments & Components",
-    "industrygroupCode": 4520
+    "name": "Electronic Equipment, Instruments & Components"
   },
   {
     "code": 453010,
-    "name": "Semiconductors & Semiconductor Equipment",
-    "industrygroupCode": 4530
+    "name": "Semiconductors & Semiconductor Equipment"
   },
   {
     "code": 501010,
-    "name": "Diversified Telecommunication Services",
-    "industrygroupCode": 5010
+    "name": "Diversified Telecommunication Services"
   },
   {
     "code": 501020,
-    "name": "Wireless Telecommunication Services",
-    "industrygroupCode": 5010
+    "name": "Wireless Telecommunication Services"
   },
   {
     "code": 502010,
-    "name": "Media",
-    "industrygroupCode": 5020
+    "name": "Media"
   },
   {
     "code": 502020,
-    "name": "Entertainment",
-    "industrygroupCode": 5020
+    "name": "Entertainment"
   },
   {
     "code": 502030,
-    "name": "Interactive Media & Services",
-    "industrygroupCode": 5020
+    "name": "Interactive Media & Services"
   },
   {
     "code": 551010,
-    "name": "Electric Utilities",
-    "industrygroupCode": 5510
+    "name": "Electric Utilities"
   },
   {
     "code": 551020,
-    "name": "Gas Utilities",
-    "industrygroupCode": 5510
+    "name": "Gas Utilities"
   },
   {
     "code": 551030,
-    "name": "Multi-Utilities",
-    "industrygroupCode": 5510
+    "name": "Multi-Utilities"
   },
   {
     "code": 551040,
-    "name": "Water Utilities",
-    "industrygroupCode": 5510
+    "name": "Water Utilities"
   },
   {
     "code": 551050,
-    "name": "Independent Power and Renewable Electricity Producers",
-    "industrygroupCode": 5510
+    "name": "Independent Power and Renewable Electricity Producers"
   },
   {
     "code": 601010,
-    "name": "Diversified REITs",
-    "industrygroupCode": 6010
+    "name": "Diversified REITs"
   },
   {
     "code": 601025,
-    "name": "Industrial REITs",
-    "industrygroupCode": 6010
+    "name": "Industrial REITs"
   },
   {
     "code": 601030,
-    "name": "Hotel & Resort REITs",
-    "industrygroupCode": 6010
+    "name": "Hotel & Resort REITs"
   },
   {
     "code": 601040,
-    "name": "Office REITs",
-    "industrygroupCode": 6010
+    "name": "Office REITs"
   },
   {
     "code": 601050,
-    "name": "Health Care REITs",
-    "industrygroupCode": 6010
+    "name": "Health Care REITs"
   },
   {
     "code": 601060,
-    "name": "Residential REITs",
-    "industrygroupCode": 6010
+    "name": "Residential REITs"
   },
   {
     "code": 601070,
-    "name": "Retail REITs",
-    "industrygroupCode": 6010
+    "name": "Retail REITs"
   },
   {
     "code": 601080,
-    "name": "Specialized REITs",
-    "industrygroupCode": 6010
+    "name": "Specialized REITs"
   },
   {
     "code": 602010,
-    "name": "Real Estate Management & Development",
-    "industrygroupCode": 6020
+    "name": "Real Estate Management & Development"
   }
 ]

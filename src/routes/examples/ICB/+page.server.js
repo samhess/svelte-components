@@ -3,28 +3,22 @@ import db from '$lib/server/database.js'
 export async function load({locals}) {
   const {session, user} = locals
   const entity = { 
-    attributes: [
-      { key: 'code', name: 'Code'},
-      { key: 'IcbIndustry', name: 'Industry'},
-      { key: 'IcbSupersector', name: 'Supersector'},
-      { key: 'IcbSector', name: 'Sector'},
-      { key: 'name', name: 'Subsector'},
-      { key: 'description', name: 'Description'}
-    ],
+    attributes: {
+      code: {name:'Code', edit:false},
+      name: {name:'Subsector'},
+      description: {name:'Description'},
+      Sector: {name:'Sector', key:'code'},
+      SuperSector: {name:'Supersector', key:'code'},
+      Industry: {name:'Industry', key:'code'}
+    },
+    endpoint: 'icb',
+    isEditable: session ? user.role==='admin' : false,
     name: 'ICB Taxonomy',
     sorting: {field:'code'},
-    isEditable: session ? user.role==='admin' : false
   }
+  /** @type {Object<string,any>[]} */
   const records = await db.icb.findMany(
-    {include: {IcbIndustry:true, IcbSupersector:true, IcbSector:true}}
+    {include: {Industry:true, SuperSector:true, Sector:true}}
   )
-  for (const record of records) {
-    // @ts-ignore
-    record.IcbSector.value = record.IcbSector.code
-    // @ts-ignore
-    record.IcbIndustry.value = record.IcbIndustry.code
-    // @ts-ignore
-    record.IcbSupersector.value = record.IcbSupersector.code
-  }
-  return { entity, records }
+  return {entity, records}
 }

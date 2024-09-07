@@ -13,7 +13,6 @@ const countries = lines.slice(1).map(country => {
   }
 })
 countries.push({code:'ZZ', name:'Unknown or unspecified country'})
-//await writeFile('./data/countries.json', JSON.stringify(countries,  null, 2))
 
 for (const country of countries) {
   let currentCountry = await prisma.country.findUnique({where: {code: country.code}})
@@ -25,7 +24,7 @@ for (const country of countries) {
 }
 
 async function getRegions() {
-  const url = new URL('https://en.wikipedia.org/wiki/List_of_countries_by_the_United_Nations_geoscheme')
+  const url = new URL('https://en.wikipedia.org/wiki/List_of_countries_and_territories_by_the_United_Nations_geoscheme')
   const response = await fetch(url)
   if (response.ok) {
     const text = await response.text()

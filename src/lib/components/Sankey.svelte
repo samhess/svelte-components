@@ -1,9 +1,9 @@
 <script>
-  import { onMount } from 'svelte'
-  import { Chart, LinearScale, Tooltip, Title, Legend } from 'chart.js'
-  import sankeyChart from 'chartjs-chart-sankey'
-  const {SankeyController, Flow} = sankeyChart
-  /** @type {Object.<string,any>} */
+  import {onMount} from 'svelte'
+  import {Chart, LinearScale, Tooltip, Title, Legend} from 'chart.js'
+  import {SankeyController, Flow} from 'chartjs-chart-sankey'
+  // const {SankeyController, Flow} = {sankeyChart}
+  /** @type {Object<string,any>} */
   export let data
   export let caption = ''
   /** @type {HTMLCanvasElement} */

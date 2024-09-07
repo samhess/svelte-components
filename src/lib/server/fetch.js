@@ -18,7 +18,7 @@ export async function fetchWrapper(url, options={headers: new Headers()}) {
     if (response.ok) {
       return response
     } else {
-      console.error(`HTTP error: ${response.status} - ${response.statusText} ${url.pathname}`)
+      //console.error(`HTTP error: ${response.status} - ${response.statusText} ${url.pathname}`)
       return new Error('HTTP error', {cause: response})
     }
   } catch (/** @type {*} */error) {

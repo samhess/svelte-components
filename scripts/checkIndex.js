@@ -10,8 +10,7 @@ const ARGS = process.argv.slice(2)
 const supportedIndexes = [
   'SMI', 
   'SLI', 
-  //'SXGE',
-  //'SSIRT',
+  'SPIX',
   'DAX', 
   'SX5E', 
   'SX5R', 
@@ -26,22 +25,27 @@ const supportedIndexes = [
 
 async function getRemoteTitles(indexTicker) {
   let remmoteTitles = []
-  if (['SMI', 'SLI', 'SXGE', 'SSIRT'].includes(indexTicker)) {
-    const response = await quoteIndexSix(indexTicker, ['ShortName','ValorSymbol','ISIN','Currency', 'NumberInIssue', 'ClosingPrice','TradingSegmentId'])
-    if (!(response instanceof Error)) {
+  if (['SMI', 'SLI', 'SPIX'].includes(indexTicker)) {
+    const fields = ['ClosingPrice','ISIN','NumberInIssue','ShortName','SecTypeCode','TradingSegmentId','ValorSymbol']
+    const response = await quoteIndexSix(indexTicker, fields)
+    if (response instanceof Error === false) {
       if (Array.isArray(response)) {
         remmoteTitles = response
-          .map(title => ({
-            name: title.ShortName,
-            isin: title.ISIN,
-            ticker: title.ValorSymbol,
-            exchangeId: 'XSWX',
-            marketCap: normalizeCurrency(title.NumberInIssue * title.ClosingPrice, 'CHF', 'USD'),
-            countryCode: title.ISIN.slice(0,2),
+          .map(({ClosingPrice,ISIN,NumberInIssue,ShortName,SecTypeCode,TradingSegmentId,ValorSymbol}) => ({
             assetclass: 'equity',
-            TradingSegmentId: parseInt(title.TradingSegmentId)
+            country: ISIN.slice(0,2),
+            exchange: 'XSWX',
+            isin: ISIN,
+            marketCap: normalizeCurrency(NumberInIssue * ClosingPrice, 'CHF', 'USD'),
+            name: ShortName,
+            ticker: ValorSymbol,
+            type: 'cash',
+            SecTypeCode: SecTypeCode,
+            TradingSegmentId: parseInt(TradingSegmentId)
           }))
-          .filter(instrument => instrument.TradingSegmentId !== 597) // no second line
+          .filter(({SecTypeCode,TradingSegmentId}) => {
+            return SecTypeCode!=='SW' && TradingSegmentId!==597
+          }) // no warrants and no second line
       }
     } else {
       throw new Error(`Query ${indexTicker} failed: ${response.message}`)
@@ -52,13 +56,14 @@ async function getRemoteTitles(indexTicker) {
     if (!(response instanceof Error)) {
       if (Array.isArray(response)) {
         remmoteTitles = response.map(quote => ({
+          assetclass: 'equity',
+          country: quote.isin.slice(0,2),
+          exchange: 'XETR',
           isin: quote.isin,
+          marketCap: normalizeCurrency(quote.keyData.marketCapitalisation, 'EUR', 'USD'),
           name: quote.name.originalValue,
           ticker: quote.wkn, 
-          exchangeId: 'XETR',
-          marketCap: normalizeCurrency(quote.keyData.marketCapitalisation, 'EUR', 'USD'),
-          countryCode: quote.isin.slice(0,2),
-          assetclass: 'equity'
+          type: 'cash',
         }))
       }
     } else {
@@ -73,13 +78,14 @@ async function getRemoteTitles(indexTicker) {
     if (!(response instanceof Error)) {
       if (Array.isArray(response)) {
         remmoteTitles = response.map(quote => ({
+          assetclass: 'cryptocurrency',
+          country: 'ZZ', 
+          exchange: 'XOFF',
           isin: `ZZXOFF${quote.symbol}`,
           name: quote.name,
+          marketCap: quote.circulating_supply * quote.quote.USD.price,
           ticker: quote.symbol,
-          exchangeId: 'XOFF',
-          countryCode: 'ZZ', 
-          assetclass: 'cryptocurrency',
-          marketCap: quote.circulating_supply * quote.quote.USD.price
+          type: 'cash'
         }))
       }
     } else {
@@ -105,24 +111,24 @@ async function updatePositions(indexTicker, remmoteTitles) {
     position.weight = remmoteTitle.weight ?? remmoteTitle.marketCap/marketCap
     let instrument = await db.instrument.findUnique({where: {isin:remmoteTitle.isin}})
     if (!instrument) {
-      const decision = await askUser(`Add ${remmoteTitle.name} (${remmoteTitle.ticker}:${remmoteTitle.exchangeId}) to database and index?`, 'y')
+      const decision = await askUser(`Add ${remmoteTitle.name} (${remmoteTitle.ticker}:${remmoteTitle.exchange}) ${remmoteTitle.isin} to database and index?`, 'y')
       if (decision)  {
-        const {isin,ticker,exchangeId,name,countryCode,assetclass} = remmoteTitle
+        const {assetclass,country,exchange,isin,name,ticker,type} = remmoteTitle
         instrument = await db.instrument.create({
-          data: {isin, ticker, exchangeId,name, countryCode, assetclass}
+          data: {assetclass,country,exchange,isin,name,ticker,type}
         })
       } else continue
     }
-    position.instrumentId = instrument.isin
+    position.instrument = instrument.isin
     //console.log(`Upserting ${instrument.name} (${instrument.isin}) position (${(100*position.weight).toFixed(2)}%)`)
     await upsertMember(position) 
   }  
 }
 
-async function upsertMember({user, ticker, instrumentId, weight}) {
+async function upsertMember({user, ticker, instrument, weight}) {
   await db.portfolioToInstrument.upsert({
-    where: {ticker_user_instrumentId: {ticker, user, instrumentId}},
-    create: {user, ticker, instrumentId, weight},
+    where: {ticker_user_instrument: {ticker, user, instrument}},
+    create: {user, ticker, instrument, weight},
     update: {weight}
   })
 }
@@ -131,14 +137,14 @@ async function checkUnnecessary(indexTicker, remmoteTitles) {
   const indexMembers = await getIndexMembers(indexTicker)
   const unnecessaryMembers = indexMembers.filter(member => !remmoteTitles.map(title => title.isin).includes(member.Instrument.isin))
   for (const unnecessaryMember of unnecessaryMembers) {
-    const decision = await askUser(`Remove ${unnecessaryMember.Instrument.name} (${unnecessaryMember.Instrument.ticker}:${unnecessaryMember.Instrument.exchangeId}) from ${indexTicker}?`, 'y')
+    const decision = await askUser(`Remove ${unnecessaryMember.Instrument.name} (${unnecessaryMember.Instrument.ticker}:${unnecessaryMember.Instrument.exchange}) from ${indexTicker}?`, 'y')
     if (decision)  {
-      await db.portfolioToInstrument.delete({
-        where:{
-          ticker_user_instrumentId: {
+      const result = await db.portfolioToInstrument.delete({
+        where: {
+          ticker_user_instrument: {
             user: 'admin@moontrade.ch',
             ticker: indexTicker, 
-            instrumentId: unnecessaryMember.Instrument.isin}
+            instrument: unnecessaryMember.Instrument.isin}
           }
         })
       console.log(`Unnecessary instrument ${unnecessaryMember.Instrument.ticker} removed`)

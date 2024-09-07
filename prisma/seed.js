@@ -7,14 +7,12 @@ const backupDir = './database/backup'
 
 // order matters
 const entities = [
-  'User', 'Currency', 'Country', 'Exchange',
+  'Currency', 'Country', 'Exchange',
   'GicsSector','GicsIndustryGroup','GicsIndustry','Gics',
-  'IcbIndustry','IcbSupersector','IcbSector','Icb',
+  'IcbIndustry','IcbSuperSector','IcbSector','Icb',
   'GicsToIcb',
   'Instrument',
   'Event',
-  //'Portfolio',
-  //'PortfolioToInstrument',
   'Listing'
 ]
 
@@ -25,23 +23,12 @@ for (const entityName of entities) {
   const isEmpty = await prisma[entityKey].count() === 0
   if (isEmpty) {
     for (const record of records) {
-      if (entityKey==='country') {
-        const {currencyCode, ...scalars} = record
-        await prisma.country.create({
-          data: {
-            ...scalars,
-            Currency: {connect:{code:currencyCode}}
-          }
-        })
-      } else {
-        await prisma[entityKey].create({data:record})
-      }
+      await prisma[entityKey].create({data:record})
     }
-    console.log(`created ${records.length} records in ${entityName} table`)
-  }
-  const count = await prisma[entityKey].count()
-  if (count !== records.length) {
-    console.log(`incomplete seeding of ${entityName} table (${count} of ${records.length})`)
+    const count = await prisma[entityKey].count()
+    console.log(`${count} of ${records.length} ${entityName} records seeded`)
+  } else {
+    console.log(`skip seeding of non-empty table ${entityName} `)
   }
 }
 await prisma.$disconnect()

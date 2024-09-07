@@ -547,10 +547,10 @@
   },
   {
     "ticker": "CPB",
-    "exchange": "XNYS",
+    "exchange": "XNAS",
     "instrument": "US1344291091",
     "yahooTicker": "CPB",
-    "googleTicker": "CPB:NYSE"
+    "googleTicker": "CPB:NASDAQ"
   },
   {
     "ticker": "COF",
@@ -1344,11 +1344,11 @@
     "googleTicker": "FCX:NYSE"
   },
   {
-    "ticker": "GPS",
+    "ticker": "GAP",
     "exchange": "XNYS",
     "instrument": "US3647601083",
-    "yahooTicker": "GPS",
-    "googleTicker": "GPS:NYSE"
+    "yahooTicker": "GAP",
+    "googleTicker": "GAP:NYSE"
   },
   {
     "ticker": "GRMN",
@@ -3591,13 +3591,6 @@
     "googleTicker": "NU:NYSE"
   },
   {
-    "ticker": "UPST",
-    "exchange": "XNAS",
-    "instrument": "US91680M1071",
-    "yahooTicker": "UPST",
-    "googleTicker": "UPST:NASDAQ"
-  },
-  {
     "ticker": "BNTX",
     "exchange": "XNAS",
     "instrument": "US09075V1026",
@@ -4739,13 +4732,6 @@
     "googleTicker": "BSLN:SWX"
   },
   {
-    "ticker": "BLKB",
-    "exchange": "XSWX",
-    "instrument": "CH0001473559",
-    "yahooTicker": "BLKB.SW",
-    "googleTicker": "BLKB:SWX"
-  },
-  {
     "ticker": "BEAN",
     "exchange": "XSWX",
     "instrument": "CH1101098163",
@@ -4842,13 +4828,6 @@
     "instrument": "CH0011115703",
     "yahooTicker": "CLXN.SW",
     "googleTicker": "CLXN:SWX"
-  },
-  {
-    "ticker": "DAE",
-    "exchange": "XSWX",
-    "instrument": "CH0030486770",
-    "yahooTicker": "DAE.SW",
-    "googleTicker": "DAE:SWX"
   },
   {
     "ticker": "DKSH",
@@ -5061,13 +5040,6 @@
     "googleTicker": "GLKBN:SWX"
   },
   {
-    "ticker": "GRKP",
-    "exchange": "XSWX",
-    "instrument": "CH0001340204",
-    "yahooTicker": "GRKP.SW",
-    "googleTicker": "GRKP:SWX"
-  },
-  {
     "ticker": "GMI",
     "exchange": "XSWX",
     "instrument": "CH0012949464",
@@ -5087,13 +5059,6 @@
     "instrument": "CH0239518779",
     "yahooTicker": "HIAG.SW",
     "googleTicker": "HIAG:SWX"
-  },
-  {
-    "ticker": "HLEE",
-    "exchange": "XSWX",
-    "instrument": "CH0003583256",
-    "yahooTicker": "HLEE.SW",
-    "googleTicker": "HLEE:SWX"
   },
   {
     "ticker": "HOCN",
@@ -5194,13 +5159,6 @@
     "googleTicker": "LAND:SWX"
   },
   {
-    "ticker": "LMN",
-    "exchange": "XSWX",
-    "instrument": "NL0010733960",
-    "yahooTicker": "LMN.SW",
-    "googleTicker": "LMN:SWX"
-  },
-  {
     "ticker": "LECN",
     "exchange": "XSWX",
     "instrument": "CH0110303119",
@@ -5259,7 +5217,7 @@
   {
     "ticker": "MBTN",
     "exchange": "XSWX",
-    "instrument": "CH0108503795",
+    "instrument": "CH1357065999",
     "yahooTicker": "MBTN.SW",
     "googleTicker": "MBTN:SWX"
   },
@@ -5332,13 +5290,6 @@
     "instrument": "CH0118530366",
     "yahooTicker": "PEAN.SW",
     "googleTicker": "PEAN:SWX"
-  },
-  {
-    "ticker": "PEDU",
-    "exchange": "XSWX",
-    "instrument": "CH0252620700",
-    "yahooTicker": "PEDU.SW",
-    "googleTicker": "PEDU:SWX"
   },
   {
     "ticker": "PMN",
@@ -5495,13 +5446,6 @@
     "googleTicker": "TECN:SWX"
   },
   {
-    "ticker": "TKBP",
-    "exchange": "XSWX",
-    "instrument": "CH0231351104",
-    "yahooTicker": "TKBP.SW",
-    "googleTicker": "TKBP:SWX"
-  },
-  {
     "ticker": "TIBN",
     "exchange": "XSWX",
     "instrument": "CH0527044959",
@@ -5600,13 +5544,6 @@
     "googleTicker": "ZUGN:SWX"
   },
   {
-    "ticker": "ZWM",
-    "exchange": "XSWX",
-    "instrument": "CH0002661731",
-    "yahooTicker": "ZWM.SW",
-    "googleTicker": "ZWM:SWX"
-  },
-  {
     "ticker": "AFP",
     "exchange": "XSWX",
     "instrument": "CH0453226893",
@@ -5670,13 +5607,6 @@
     "googleTicker": "NREN:SWX"
   },
   {
-    "ticker": "PKTM",
-    "exchange": "XSWX",
-    "instrument": "AT0000KTMI02",
-    "yahooTicker": "PKTM.SW",
-    "googleTicker": "PKTM:SWX"
-  },
-  {
     "ticker": "PPGN",
     "exchange": "XSWX",
     "instrument": "CH1110760852",
@@ -5710,13 +5640,6 @@
     "instrument": "CH0496451508",
     "yahooTicker": "SWON.SW",
     "googleTicker": "SWON:SWX"
-  },
-  {
-    "ticker": "THAG",
-    "exchange": "XSWX",
-    "instrument": "CH0010819867",
-    "yahooTicker": "THAG.SW",
-    "googleTicker": "THAG:SWX"
   },
   {
     "ticker": "VZUG",
@@ -5887,16 +5810,9 @@
     "googleTicker": "BALL:NYSE"
   },
   {
-    "ticker": "CFT",
-    "exchange": "XSWX",
-    "instrument": "CH0014345117",
-    "yahooTicker": "CFT.SW",
-    "googleTicker": "CFT:SWX"
-  },
-  {
     "ticker": "NOVO-B",
     "exchange": "XCSE",
-    "instrument": "DK0060534915",
+    "instrument": "DK0062498333",
     "yahooTicker": "NOVO-B.CO",
     "googleTicker": "NOVO-B:CPH"
   },
@@ -6160,13 +6076,6 @@
     "googleTicker": "PACB:NASDAQ"
   },
   {
-    "ticker": "DNA",
-    "exchange": "XNYS",
-    "instrument": "US37611X1000",
-    "yahooTicker": "DNA",
-    "googleTicker": "DNA:NYSE"
-  },
-  {
     "ticker": "VCYT",
     "exchange": "XNAS",
     "instrument": "US92337F1075",
@@ -6209,11 +6118,25 @@
     "googleTicker": "RHM:ETR"
   },
   {
+    "ticker": "IVV",
+    "exchange": "XNYS",
+    "instrument": "US4642872000",
+    "yahooTicker": "IVV",
+    "googleTicker": "IVV:NYSE"
+  },
+  {
     "ticker": "BRK.A",
     "exchange": "XNYS",
     "instrument": "US0846701086",
     "yahooTicker": "BRK-A",
     "googleTicker": "BRK.A:NYSE"
+  },
+  {
+    "ticker": "IXUS",
+    "exchange": "XNAS",
+    "instrument": "US46432F8344",
+    "yahooTicker": "IXUS",
+    "googleTicker": "IXUS:NASDAQ"
   },
   {
     "ticker": "HBMN",
@@ -6237,13 +6160,6 @@
     "googleTicker": "NBEN:SWX"
   },
   {
-    "ticker": "EEII",
-    "exchange": "XSWX",
-    "instrument": "CH0007162958",
-    "yahooTicker": "EEII.SW",
-    "googleTicker": "EEII:SWX"
-  },
-  {
     "ticker": "CPEN",
     "exchange": "XSWX",
     "instrument": "CH0048854746",
@@ -6251,18 +6167,116 @@
     "googleTicker": "CPEN:SWX"
   },
   {
+    "ticker": "SPY",
+    "exchange": "XNYS",
+    "instrument": "US78462F1030",
+    "yahooTicker": "SPY",
+    "googleTicker": "SPY:NYSE"
+  },
+  {
+    "ticker": "QQQ",
+    "exchange": "XNAS",
+    "instrument": "US46090E1038",
+    "yahooTicker": "QQQ",
+    "googleTicker": "QQQ:NASDAQ"
+  },
+  {
+    "ticker": "VTV",
+    "exchange": "XNYS",
+    "instrument": "US9229087443",
+    "yahooTicker": "VTV",
+    "googleTicker": "VTV:NYSE"
+  },
+  {
+    "ticker": "IEFA",
+    "exchange": "XCBO",
+    "instrument": "US46432F8427",
+    "yahooTicker": "IEFA",
+    "googleTicker": "IEFA:BATS"
+  },
+  {
+    "ticker": "IWF",
+    "exchange": "XNYS",
+    "instrument": "US4642876142",
+    "yahooTicker": "IWF",
+    "googleTicker": "IWF:NYSE"
+  },
+  {
+    "ticker": "VUG",
+    "exchange": "XNYS",
+    "instrument": "US9229087369",
+    "yahooTicker": "VUG",
+    "googleTicker": "VUG:NYSE"
+  },
+  {
+    "ticker": "VO",
+    "exchange": "XNYS",
+    "instrument": "US9229086296",
+    "yahooTicker": "VO",
+    "googleTicker": "VO:NYSE"
+  },
+  {
+    "ticker": "VEA",
+    "exchange": "XNYS",
+    "instrument": "US9219438580",
+    "yahooTicker": "VEA",
+    "googleTicker": "VEA:NYSE"
+  },
+  {
+    "ticker": "IWD",
+    "exchange": "XNYS",
+    "instrument": "US4642875987",
+    "yahooTicker": "IWD",
+    "googleTicker": "IWD:NYSE"
+  },
+  {
+    "ticker": "IJH",
+    "exchange": "XNYS",
+    "instrument": "US4642875078",
+    "yahooTicker": "IJH",
+    "googleTicker": "IJH:NYSE"
+  },
+  {
+    "ticker": "VOO",
+    "exchange": "XNYS",
+    "instrument": "US9229083632 ",
+    "yahooTicker": "VOO",
+    "googleTicker": "VOO:NYSE"
+  },
+  {
+    "ticker": "XLE",
+    "exchange": "XNYS",
+    "instrument": "US81369Y5069",
+    "yahooTicker": "XLE",
+    "googleTicker": "XLE:NYSE"
+  },
+  {
+    "ticker": "XLF",
+    "exchange": "XNYS",
+    "instrument": "US81369Y6059",
+    "yahooTicker": "XLF",
+    "googleTicker": "XLF:NYSE"
+  },
+  {
+    "ticker": "VIG",
+    "exchange": "XNYS",
+    "instrument": "US9219088443",
+    "yahooTicker": "VIG",
+    "googleTicker": "VIG:NYSE"
+  },
+  {
+    "ticker": "IJR",
+    "exchange": "XNYS",
+    "instrument": "US4642878049",
+    "yahooTicker": "IJR",
+    "googleTicker": "IJR:NYSE"
+  },
+  {
     "ticker": "ALPN",
     "exchange": "XSWX",
     "instrument": "CH0019199550",
     "yahooTicker": "ALPN.SW",
     "googleTicker": "ALPN:SWX"
-  },
-  {
-    "ticker": "YTME",
-    "exchange": "XSWX",
-    "instrument": "CH0006326851",
-    "yahooTicker": "YTME.SW",
-    "googleTicker": "YTME:SWX"
   },
   {
     "ticker": "SPHR",
@@ -6314,11 +6328,25 @@
     "googleTicker": "RVTY:NYSE"
   },
   {
+    "ticker": "EFA",
+    "exchange": "XNYS",
+    "instrument": "US4642874659",
+    "yahooTicker": "EFA",
+    "googleTicker": "EFA:NYSE"
+  },
+  {
     "ticker": "TSM",
     "exchange": "XNYS",
     "instrument": "US8740391003",
     "yahooTicker": "TSM",
     "googleTicker": "TSM:NYSE"
+  },
+  {
+    "ticker": "XLU",
+    "exchange": "XNYS",
+    "instrument": "US81369Y8865",
+    "yahooTicker": "XLU",
+    "googleTicker": "XLU:NYSE"
   },
   {
     "ticker": "DGE",
@@ -6354,6 +6382,20 @@
     "instrument": "NL00150001Q9",
     "yahooTicker": "STLAM.MI",
     "googleTicker": "STLAM:BIT"
+  },
+  {
+    "ticker": "CHSPI",
+    "exchange": "XSWX",
+    "instrument": "CH0237935652",
+    "yahooTicker": "CHSPI.SW",
+    "googleTicker": "CHSPI:SWX"
+  },
+  {
+    "ticker": "0P0001CCXR",
+    "exchange": "XSWX",
+    "instrument": "CH0389550945",
+    "yahooTicker": "0P0001CCXR.SW",
+    "googleTicker": "0P0001CCXR:SWX"
   },
   {
     "ticker": "TTD",
@@ -6827,7 +6869,7 @@
   {
     "ticker": "FERG",
     "exchange": "XNYS",
-    "instrument": "JE00BJVNSS43",
+    "instrument": "US31488V1070",
     "yahooTicker": "FERG",
     "googleTicker": "FERG:NYSE"
   },
@@ -11648,6 +11690,76 @@
     "googleTicker": "VRT:NYSE"
   },
   {
+    "ticker": "SRECHA",
+    "exchange": "XSWX",
+    "instrument": "CH0105994401",
+    "yahooTicker": "SRECHA.SW",
+    "googleTicker": "SRECHA:SWX"
+  },
+  {
+    "ticker": "EQQQ",
+    "exchange": "XSWX",
+    "instrument": "IE0032077012",
+    "yahooTicker": "EQQQ.SW",
+    "googleTicker": "EQQQ:SWX"
+  },
+  {
+    "ticker": "0P00014A6I",
+    "exchange": "XSWX",
+    "instrument": "CH0215804714",
+    "yahooTicker": "0P00014A6I.SW",
+    "googleTicker": "0P00014A6I:SWX"
+  },
+  {
+    "ticker": "0P0000TZ04",
+    "exchange": "XSWX",
+    "instrument": "CH0132501898",
+    "yahooTicker": "0P0000TZ04.SW",
+    "googleTicker": "0P0000TZ04:SWX"
+  },
+  {
+    "ticker": "0P0000S0O0",
+    "exchange": "XSWX",
+    "instrument": "CH0117044658",
+    "yahooTicker": "0P0000S0O0.SW",
+    "googleTicker": "0P0000S0O0:SWX"
+  },
+  {
+    "ticker": "0P0000S0O9",
+    "exchange": "XTSE",
+    "instrument": "CH0117044864",
+    "yahooTicker": "0P0000S0O9.TO",
+    "googleTicker": "0P0000S0O9:TSE"
+  },
+  {
+    "ticker": "0P0000S0O4",
+    "exchange": "XNYS",
+    "instrument": "CH0117044732",
+    "yahooTicker": "0P0000S0O4",
+    "googleTicker": "0P0000S0O4:NYSE"
+  },
+  {
+    "ticker": "0P0000S0O7",
+    "exchange": "XSWX",
+    "instrument": "CH0117044831",
+    "yahooTicker": "0P0000S0O7.SW",
+    "googleTicker": "0P0000S0O7:SWX"
+  },
+  {
+    "ticker": "0P0001IHG4",
+    "exchange": "XTKS",
+    "instrument": "CH0489405321",
+    "yahooTicker": "0P0001IHG4.T",
+    "googleTicker": "0P0001IHG4:TYO"
+  },
+  {
+    "ticker": "0P0000S0OE",
+    "exchange": "XSWX",
+    "instrument": "CH0117044971",
+    "yahooTicker": "0P0000S0OE.SW",
+    "googleTicker": "0P0000S0OE:SWX"
+  },
+  {
     "ticker": "SYENS",
     "exchange": "XBRU",
     "instrument": "BE0974464977",
@@ -11716,6 +11828,13 @@
     "instrument": "US36828A1016",
     "yahooTicker": "GEV",
     "googleTicker": "GEV:NYSE"
+  },
+  {
+    "ticker": "CURN",
+    "exchange": "XSWX",
+    "instrument": "CH1330780979",
+    "yahooTicker": "CURN.SW",
+    "googleTicker": "CURN:SWX"
   },
   {
     "ticker": "MSTR",
@@ -11795,6 +11914,13 @@
     "googleTicker": "RDDT:NYSE"
   },
   {
+    "ticker": "NEAG",
+    "exchange": "XSWX",
+    "instrument": "CH0039651184",
+    "yahooTicker": "NEAG.SW",
+    "googleTicker": "NEAG:SWX"
+  },
+  {
     "ticker": "NSIS-B",
     "exchange": "XCSE",
     "instrument": "DK0060336014",
@@ -11821,5 +11947,201 @@
     "instrument": "IE00028FXN24",
     "yahooTicker": "SW",
     "googleTicker": "SW:NYSE"
+  },
+  {
+    "ticker": "CADN",
+    "exchange": "XSWX",
+    "instrument": "ARP290071876",
+    "yahooTicker": "CADN.SW",
+    "googleTicker": "CADN:SWX"
+  },
+  {
+    "ticker": "EPH",
+    "exchange": "XSWX",
+    "instrument": "CY0109992111",
+    "yahooTicker": "EPH.SW",
+    "googleTicker": "EPH:SWX"
+  },
+  {
+    "ticker": "SCR",
+    "exchange": "XSWX",
+    "instrument": "FR0010411983",
+    "yahooTicker": "SCR.SW",
+    "googleTicker": "SCR:SWX"
+  },
+  {
+    "ticker": "STLN",
+    "exchange": "XSWX",
+    "instrument": "CH1351577726",
+    "yahooTicker": "STLN.SW",
+    "googleTicker": "STLN:SWX"
+  },
+  {
+    "ticker": "PBR",
+    "exchange": "XNYS",
+    "instrument": "US71654V4086",
+    "yahooTicker": "PBR",
+    "googleTicker": "PBR:NYSE"
+  },
+  {
+    "ticker": "BLKB",
+    "exchange": "XSWX",
+    "instrument": "CH0001473559",
+    "yahooTicker": "BLKB.SW",
+    "googleTicker": "BLKB:SWX"
+  },
+  {
+    "ticker": "CIE",
+    "exchange": "XSWX",
+    "instrument": "CH0001625810",
+    "yahooTicker": "CIE.SW",
+    "googleTicker": "CIE:SWX"
+  },
+  {
+    "ticker": "DAE",
+    "exchange": "XSWX",
+    "instrument": "CH0030486770",
+    "yahooTicker": "DAE.SW",
+    "googleTicker": "DAE:SWX"
+  },
+  {
+    "ticker": "GRKP",
+    "exchange": "XSWX",
+    "instrument": "CH0001340204",
+    "yahooTicker": "GRKP.SW",
+    "googleTicker": "GRKP:SWX"
+  },
+  {
+    "ticker": "HLEE",
+    "exchange": "XSWX",
+    "instrument": "CH0003583256",
+    "yahooTicker": "HLEE.SW",
+    "googleTicker": "HLEE:SWX"
+  },
+  {
+    "ticker": "PEDU",
+    "exchange": "XSWX",
+    "instrument": "CH0252620700",
+    "yahooTicker": "PEDU.SW",
+    "googleTicker": "PEDU:SWX"
+  },
+  {
+    "ticker": "TKBP",
+    "exchange": "XSWX",
+    "instrument": "CH0231351104",
+    "yahooTicker": "TKBP.SW",
+    "googleTicker": "TKBP:SWX"
+  },
+  {
+    "ticker": "ZWM",
+    "exchange": "XSWX",
+    "instrument": "CH0002661731",
+    "yahooTicker": "ZWM.SW",
+    "googleTicker": "ZWM:SWX"
+  },
+  {
+    "ticker": "CFT",
+    "exchange": "XSWX",
+    "instrument": "CH0014345117",
+    "yahooTicker": "CFT.SW",
+    "googleTicker": "CFT:SWX"
+  },
+  {
+    "ticker": "EEII",
+    "exchange": "XSWX",
+    "instrument": "CH0007162958",
+    "yahooTicker": "EEII.SW",
+    "googleTicker": "EEII:SWX"
+  },
+  {
+    "ticker": "RUS",
+    "exchange": "XSWX",
+    "instrument": "CH0034476959",
+    "yahooTicker": "RUS.SW",
+    "googleTicker": "RUS:SWX"
+  },
+  {
+    "ticker": "RSGW",
+    "exchange": "XSWX",
+    "instrument": "CH1108008082",
+    "yahooTicker": "RSGW.SW",
+    "googleTicker": "RSGW:SWX"
+  },
+  {
+    "ticker": "YTME",
+    "exchange": "XSWX",
+    "instrument": "CH0006326851",
+    "yahooTicker": "YTME.SW",
+    "googleTicker": "YTME:SWX"
+  },
+  {
+    "ticker": "ADDT-B",
+    "exchange": "XSTO",
+    "instrument": "SE0014781795",
+    "yahooTicker": "ADDT-B.ST",
+    "googleTicker": "ADDT-B:STO"
+  },
+  {
+    "ticker": "ZEAL",
+    "exchange": "XCSE",
+    "instrument": "DK0060257814",
+    "yahooTicker": "ZEAL.CO",
+    "googleTicker": "ZEAL:CPH"
+  },
+  {
+    "ticker": "6525",
+    "exchange": "XTKS",
+    "instrument": "JP3293330001",
+    "yahooTicker": "6525.T",
+    "googleTicker": "6525:TYO"
+  },
+  {
+    "ticker": "BABA",
+    "exchange": "XNYS",
+    "instrument": "US01609W1027",
+    "yahooTicker": "BABA",
+    "googleTicker": "BABA:NYSE"
+  },
+  {
+    "ticker": "BIDU",
+    "exchange": "XNAS",
+    "instrument": "US0567521085",
+    "yahooTicker": "BIDU",
+    "googleTicker": "BIDU:NASDAQ"
+  },
+  {
+    "ticker": "BLDP",
+    "exchange": "XNAS",
+    "instrument": "CA0585861085",
+    "yahooTicker": "BLDP",
+    "googleTicker": "BLDP:NASDAQ"
+  },
+  {
+    "ticker": "GME",
+    "exchange": "XNYS",
+    "instrument": "US36467W1099",
+    "yahooTicker": "GME",
+    "googleTicker": "GME:NYSE"
+  },
+  {
+    "ticker": "OTLY",
+    "exchange": "XNAS",
+    "instrument": "US67421J1088",
+    "yahooTicker": "OTLY",
+    "googleTicker": "OTLY:NASDAQ"
+  },
+  {
+    "ticker": "RDC",
+    "exchange": "XETR",
+    "instrument": "NL0012044747",
+    "yahooTicker": "RDC.DE",
+    "googleTicker": "RDC:ETR"
+  },
+  {
+    "ticker": "TCOM",
+    "exchange": "XNAS",
+    "instrument": "US89677Q1076",
+    "yahooTicker": "TCOM",
+    "googleTicker": "TCOM:NASDAQ"
   }
 ]

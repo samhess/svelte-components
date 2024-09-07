@@ -16,15 +16,28 @@ export function capitalize(input) {
 */
 export function parseCsv(csv) {
   const lines = csv.trim().split(/\n/) // split at line endings
-  if (lines.length>1) {
-    let headers = lines[0].trim().split(',')
-    headers = headers.map(header => header.replace(/^"/, '').replace(/"$/, '').replace(/ /g,'-').toLowerCase())
+  if (Array.isArray(lines) && lines.length>1) {
+    const headers = lines[0]
+      .trim()
+      .split(',')
+      .map(header => {
+        return header
+          .trim()
+          .toLowerCase()
+          .replace(/(\/)/, '')
+          .replace(/^"/, '')
+          .replace(/"$/, '')
+          .replace(/\(.*\)/, '')
+          .replace(/\s./g,c=>c.trim().toUpperCase())
+          .replace(/-./g,c=>c.slice(1).toUpperCase())
+          .trim()
+      })
     const data = lines.slice(1)
     return data.map(row => {
       // replace commas outside quotation marks with semicolon
       let regex = new RegExp('(,)(?=(?:[^"]|"[^"]*")*$)','g')
       let fields = row.replace(regex,';;;!').split(';;;!')
-      /** @type {Object.<string, string>} */
+      /** @type {Object<string,string>} */
       let record = {}
       for (const [index,key] of headers.entries()) {
         record[key] = fields[index].replace(/^"/, '').replace(/"$/, '').trim()
@@ -32,5 +45,4 @@ export function parseCsv(csv) {
       return record
     })
   }
-
 }

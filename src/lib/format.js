@@ -10,7 +10,8 @@ export function formatCurrency(amount, currency, maximumFractionDigits=2, curren
   return Intl.NumberFormat('default', {
               style:'currency', 
               currency: currency, 
-              currencyDisplay: currencyDisplay,
+              // @ts-ignore
+              currencyDisplay,
               notation: 'standard',
               useGrouping: true,
               maximumFractionDigits: maximumFractionDigits

@@ -17,7 +17,7 @@ export async function load({locals}) {
   }
   const records = await db.country.findMany({
     orderBy: {code: 'asc'},
-    include: {Currency:true}
+    include:{Currency:true}
   })
   for (const record of records) {
     // @ts-ignore

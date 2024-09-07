@@ -15,7 +15,7 @@
           <td>{record.code}</td> 
           <td>{record.name}</td>
           <td>{record.region}</td>
-          <td>{record.Currency.name} ({record.Currency.code})</td>
+          <td>{record.Currency.name} ({record.currency})</td>
         </tr>
       {/each}
     </svelte:fragment>
