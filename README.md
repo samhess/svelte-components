@@ -1,9 +1,9 @@
 # Sam's Svelte Components
 
-* [Address autocompletion](https://github.com/samhess/svelte-components/tree/main/src/routes/forms)
-* [DataTable](https://github.com/samhess/svelte-components/tree/main/src/routes/tables)
-* [Heroicons](https://github.com/samhess/svelte-components/tree/main/src/routes/icons)
-* [TreeMap](https://github.com/samhess/svelte-components/tree/main/src/routes/charts)
+* [Address Autocompletion](src/routes/components/forms)
+* [DataTable](src/routes/components/tables)
+* [HeroIcons](src/routes/components/icons)
+* [TreeMap](src/routes/components/charts)
 
 ## Installation
 ```bash
@@ -62,7 +62,7 @@ npm install @samhess/svelte-components
 ```html
 <AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
 
-<script setup>
+<script>
   import {AddressInput} from '@samhess/svelte-components'
   let postcode,city,state,country
 
