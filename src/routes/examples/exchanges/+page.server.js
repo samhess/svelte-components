@@ -8,9 +8,9 @@ export async function load({ locals, fetch }) {
       mic: {name:'MIC'},
       name: {name:'Name'},
       acronym: {name:'Acronym'},
-      yahooIdentifier: {name:'Yahoo Identifier'},
-      googleIdentifier: {name:'Google Identifier'},
-      Country: {name:'Country', default:'US'},
+      yahooIdentifier: {name:'Yahoo Code'},
+      googleIdentifier: {name:'Google Code'},
+      Country: {name:'Country', default:'US', key:'code'},
       city: {name:'City'},
       website: {name:'Website'},
     },
@@ -23,9 +23,5 @@ export async function load({ locals, fetch }) {
     orderBy: {mic: 'asc'},
     include: {Country:true}
   })
-  for (const record of records) {
-    // @ts-ignore
-    record.Country.value = record.Country.code
-  }
   return {entity, records}
 }

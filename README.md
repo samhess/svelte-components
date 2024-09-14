@@ -76,7 +76,7 @@ npm install @samhess/svelte-components
 ### TreeMap
 ```html
 <script>
-  import Treemap from '$lib/components/Treemap.svelte'
+  import {Treemap} from '@samhess/svelte-components'
   const data = [
     {
       name: 'GOOG',

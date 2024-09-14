@@ -1,8 +1,9 @@
 <script>
+  // @ts-nocheck
   import { invalidateAll } from '$app/navigation'
   import DataTable from '$lib/components/DataTable.svelte'
-  /** @type {Object.<string, any>} */
-  export let data 
+
+  export let data
   $: ({entity, records} = data)
 </script>
 
@@ -14,12 +15,8 @@
         <tr on:dblclick={()=>rowDblClick(record)}>
           <td>{record.code}</td>
           <td>{record.name}</td>
-          <td>
-            {#each record.Country as country, index}
-              {country.name}{index === record.Country.length-1 ?  '': ', '}
-            {/each}
-          </td>
           <td>{record.issuer}</td>
+          <td>{record.Country.map(({code})=>code).join(', ')}</td>
         </tr>
       {/each}
     </svelte:fragment>

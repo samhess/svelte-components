@@ -5,10 +5,10 @@ export async function load({locals}) {
   const {session, user} = locals
   const entity = {
     attributes: {
-      code: {name:'Alpha-2 code', align:'left'},
+      code: {name:'Code', align:'left'},
       name: {name:'Name'},
       region: {name:'Region'},
-      Currency: {name:'Primary currency', default:'USD'}
+      Currency: {name:'Main Currency', default:'USD', key:'code'}
     },
     endpoint: 'country',
     name: 'Countries',
@@ -17,11 +17,7 @@ export async function load({locals}) {
   }
   const records = await db.country.findMany({
     orderBy: {code: 'asc'},
-    include:{Currency:true}
+    include: {Currency:true}
   })
-  for (const record of records) {
-    // @ts-ignore
-    record.Currency.value = record.Currency.code
-  }
   return {entity, records}
 }

@@ -7,8 +7,8 @@ export async function load({locals}) {
     attributes: [
       { key: 'code', name: 'Code', align: 'left' },
       { key: 'name', name: 'Name' },
-      { key: 'countries', name: 'Official currency in', edit:false },
-      { key: 'issuer', name: 'Issuer' }
+      { key: 'issuer', name: 'Issuer' },
+      { key: 'countries', name: 'Main currency in', edit:false },
     ],
     endpoint: 'currency',
     name: 'Currencies',
