@@ -74,7 +74,7 @@
   <EditDialog entity={{name,endpoint,attributes}} bind:this={editDialog} on:updateData={()=>dispatch('updateData')}></EditDialog>
 {/if}
 <table class="table">
-  <caption class="text-center">{caption}</caption>
+  <caption class="caption-bottom">{caption}</caption>
   <thead>
     <slot name="beforeHeader" {addItem}>
       {#if isEditable===true}
