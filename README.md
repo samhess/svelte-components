@@ -2,8 +2,9 @@
 
 * [Address Autocompletion](src/routes/components/forms)
 * [DataTable](src/routes/components/tables)
-* [HeroIcons](src/routes/components/icons)
 * [TreeMap](src/routes/components/charts)
+
+The components code can be found in [src/lib/components](src/lib/components)
 
 ## Demo
 Find a [demo](https://svelte-components-black.vercel.app) on Vercel.
@@ -14,30 +15,39 @@ npm install @samhess/svelte-components
 ```
 
 ## Usage
+### Address Autocompletion
+```html
+<script>
+  import {AddressInput} from '@samhess/svelte-components'
+  
+  /** @type {Props} */
+  let {data} = $props()
+  let {mapbox} = $derived(data)
+
+  let address = $state({
+    postcode: '', 
+    city: '', 
+    state: '', 
+    country: ''
+  })
+</script>
+
+<form>
+  <AddressInput mapboxOptions={mapbox} deliver={(results={})=>{Object.assign(address,results)}}>
+  </AddressInput>
+</form>
+```
+
 ### DataTable
 ```html
 <script>
-  import {DataTable} from '@samhess/svelte-components'
-  const entity = {
-    attributes: [
-      { key:'code', name:'Alpha-2 code', align:'left' },
-      { key:'name', name:'Name' },
-      { key:'region', name:'Region' },
-      { key:'currency', name:'Currency' }
-    ],
-    endpoint: 'country',
-    name: 'Countries',
-    sorting: {field:'code'},
-    isEditable: true
-  }
-  const records = [
-    {
-      code: 'CH',
-      name: 'Switzerland',
-      region: 'Europa',
-      currency: 'CHF'
-    }
-  ]
+  import DataTable from '$lib/components/DataTable.svelte'
+  import {invalidateAll} from '$app/navigation'
+
+  /** @type {Props} */
+  let {data} = $props()
+  let {entity, records} = $derived(data)
+
 </script>
 <article class="prose">
   <h1>Tables</h1>
@@ -45,32 +55,9 @@ npm install @samhess/svelte-components
   <p>
     This is a sortable (click on column in table header) and optionally editable (double click on table row) data table.
   </p>
-  <DataTable {entity} {records}></DataTable>
+  <DataTable {entity} {records} update={()=>invalidateAll()}>
+  </DataTable>
 </article>
-```
-
-### AddressInput
-```html
-<AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
-
-<script>
-  import {AddressInput} from '@samhess/svelte-components'
-  let postcode,city,state,country
-
-  // mapbox options as per https://docs.mapbox.com/api/search/geocoding
-  const mapboxOptions = {
-    access_token : 'YOUR_TOKEN',
-    limit : 5,
-    language: 'en'
-  }
-  function getAddress(event) {
-    const {address} = event.detail
-    postcode = address.postcode
-    city = address.city
-    state = address.state
-    country = address.country
-  }
-</script>
 ```
 
 ### TreeMap

@@ -13,40 +13,39 @@ npm install @samhess/svelte-components
 
 ## Usage 
 ```html
-<AddressInput {mapboxOptions} on:addressSelect={(address)=>getAddress(address)}></AddressInput>
+<script>
+  import {AddressInput} from '@samhess/svelte-components'
+  
+  /** @type {Props} */
+  let {data} = $props()
+  let {mapbox} = $derived(data)
 
-<script setup>
-  import AddressInput from '@samhess/svelte-components'
-  let postcode,city,state,country
-
-  // mapbox options as per https://docs.mapbox.com/api/search/geocoding
-  const mapboxOptions = {
-    access_token : 'YOUR_TOKEN',
-    limit : 5,
-    language: 'en'
-  }
-  function getAddress(event) {
-    const {address} = event.detail
-    postcode = address.postcode
-    city = address.city
-    state = address.state
-    country = address.country
-  }
+  let address = $state({
+    postcode: '', 
+    city: '', 
+    state: '', 
+    country: ''
+  })
 </script>
+
+<form>
+  <AddressInput mapboxOptions={mapbox} deliver={(results={})=>{Object.assign(address,results)}}>
+  </AddressInput>
+</form>
 ```
 
 ## Properties
 
-| Property      | Subproperty   | Type    | Description                        | Required | Default |
+| Property      | Attribute     | Type    | Description                        | Required | Default |
 | :------:      | :-------:     | :---:   | :---------:                        | :------: | :-----: |
 | mapboxOptions |               | Object  | Mapbox options as indicated below  | Yes      |         |
-|               | .access_token | String  | Mapbox access token                | Yes      | ''      |
-|               | .limit        | String  | Limit of suggestions               | No       | 10      |
-|               | .proximity    | String  | Search near                        | No       |'ip'     |
-|               | .autocomplete | Boolean | Autocomplete search input          | No       | true    |
-|               | .fuzzyMatch   | Boolean | Not only exact match               | No       | true    |
-|               | .country      | String  | Limit to certain countries         | No       | ''   |
-|               | .language     | String  | Language for search and results    | No       | 'en'    |
+|               | access_token  | String  | Mapbox access token                | Yes      | ''      |
+|               | limit         | String  | Limit of suggestions               | No       | 10      |
+|               | proximity     | String  | Search near                        | No       |'ip'     |
+|               | autocomplete  | Boolean | Autocomplete search input          | No       | true    |
+|               | fuzzyMatch    | Boolean | Not only exact match               | No       | true    |
+|               | country       | String  | Limit to certain countries         | No       | ''      |
+|               | language      | String  | Language for search and results    | No       | 'en'    |
 
 Please refer to [Mapbox Geocoding API documentation](https://docs.mapbox.com/api/search/geocoding) for further information
 
@@ -54,4 +53,4 @@ Please refer to [Mapbox Geocoding API documentation](https://docs.mapbox.com/api
 
 | Event | Description |
 | :---: | :---------: |
-| **@addressSelect** | Triggered when user selects address. Returns object with selected address containing street, postcode, city state and country |
+| **deliver** | Triggered when user selects address. Returns object with selected address containing street, postcode, city state and country |

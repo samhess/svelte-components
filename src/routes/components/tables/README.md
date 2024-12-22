@@ -13,39 +13,13 @@ npm install @samhess/svelte-components
 ## Usage 
 ```html
 <script>
-  import {DataTable} from '@samhess/svelte-components'
-  const entity = {
-    attributes: [
-      { key:'code', name:'Alpha-2 code', align:'left' },
-      { key:'name', name:'Name' },
-      { key:'region', name:'Region' },
-      { key:'currency', name:'Currency' }
-    ],
-    endpoint: 'country',
-    name: 'Countries',
-    sorting: {field:'code'},
-    isEditable: true
-  }
-  const records = [
-    {
-      code: 'CH',
-      name: 'Switzerland',
-      region: 'Europa',
-      currency: 'CHF'
-    },
-    {
-      code: 'DE',
-      name: 'Germany',
-      region: 'Europa',
-      currency: 'EUR'
-    },
-    {
-      code: 'US',
-      name: 'United States of America',
-      region: 'America',
-      currency: 'USD'
-    }
-  ]
+  import DataTable from '$lib/components/DataTable.svelte'
+  import {invalidateAll} from '$app/navigation'
+
+  /** @type {Props} */
+  let {data} = $props()
+  let {entity, records} = $derived(data)
+
 </script>
 <article class="prose">
   <h1>Tables</h1>
@@ -53,7 +27,18 @@ npm install @samhess/svelte-components
   <p>
     This is a sortable (click on column in table header) and optionally editable (double click on table row) data table.
   </p>
-  <DataTable {entity} {records}></DataTable>
+  <DataTable {entity} {records} update={()=>invalidateAll()}>
+    {#snippet children({records, rowDblClick})}
+      {#each records as record}
+        <tr ondblclick={()=>rowDblClick(record)}>
+          <td>{record.code}</td> 
+          <td>{record.name}</td>
+          <td>{record.region}</td>
+          <td>{record.Currency.name} ({record.currency})</td>
+        </tr>
+      {/each}
+    {/snippet}
+  </DataTable>
 </article>
 ```
 

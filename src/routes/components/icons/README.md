@@ -1,6 +1,6 @@
 # Svelte Component for Treemap Chart
 
-This is a Svelte integration of some **heroicons** component.
+This is a Svelte integration of some [heroicons](https://heroicons.com) component.
 
 ## Demo
 [Demo](https://svelte-components-black.vercel.app/components/icons)
@@ -32,9 +32,7 @@ npm install @samhess/svelte-components
 
 | Property      | Type     | Description                                    | Required | Default |
 | :------:      | :---:    | :---------:                                    | :------: | :-----: |
-| data          | Object[] | Array with data object                         | Yes      |         |
-| evaluation    | string   | The value that is displayed                    | Yes      | ''      |
-| grouping      | string[] | The grouping levels of the map                 | Yes      | ''      |
-| structure     | string   | This data property is used structure the map   | Yes      | ''      |
+| name          | string   | Name of the heroicon                           | Yes      |         |
+| className     | string   | Tailwind classes to be applied                 | Yes      | ''      |
 
 Please refer to [heroicons](https://heroicons.com) for further information.

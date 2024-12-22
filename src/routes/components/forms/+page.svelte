@@ -2,12 +2,14 @@
 <script>
   import AddressInput from '$lib/components/AddressInput.svelte'
 
-  // mapbox options as per https://docs.mapbox.com/api/search/geocoding
-  const mapboxOptions = {
-    access_token : 'pk.eyJ1Ijoic2FtaGVzcyIsImEiOiJjbDJhYXFpYTUwM21iM2tzMXo2ejg5YWltIn0.klumhVZ4oeembZPkcgtJ6g',
-    limit : 5,
-    language: 'de'
-  }
+  /**
+   * @typedef {Object} Props
+   * @property {Object.<string, any>} data
+  */
+
+  /** @type {Props} */
+  let {data} = $props()
+  let {mapbox} = $derived(data)
 
   let address = $state({
     postcode: '', 
@@ -25,7 +27,7 @@
     <div>
       <div class="mb-2 w-1/2">
         <label class="form-label" for="street">Street</label>
-        <AddressInput {mapboxOptions} deliver={(results={})=>{Object.assign(address,results)}}></AddressInput>
+        <AddressInput mapboxOptions={mapbox} deliver={(results={})=>{Object.assign(address,results)}}></AddressInput>
       </div>
     </div>
     <div class="flex justify-normal">
