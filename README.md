@@ -4,20 +4,22 @@
 * [DataTable](src/routes/components/tables)
 * [TreeMap](src/routes/components/charts)
 
-The components code can be found in [src/lib/components](src/lib/components)
+The components code can be found in 
 
 ## Demo
 Find a [demo](https://svelte-components-black.vercel.app) on Vercel.
 
 ## Integration
-Probably you just want to copy the the svelte component file and create your own version.
+Probably you just want to copy the the svelte component file from [src/lib/components](src/lib/components), create your own version and import it as follows:
 ```js
 import AddressInput from '$lib/components/AddressInput.svelte'
 ```
-Or, if you want to install the library, you can do so using *npm*
-```
+Or, if you want to install the library, you can do so using *npm* and then import it.
 ```bash
 npm install @samhess/svelte-components
+```
+```js
+import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 ```
 
 ## Usage
