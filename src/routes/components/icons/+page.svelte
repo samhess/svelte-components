@@ -1,5 +1,14 @@
 <script>
   import HeroIcon from '$lib/components/HeroIcon.svelte'
+  const icons = [
+    'check',
+    'chevron-double-left',
+    'chevron-double-right',
+    'envelope',
+    'plus-small',
+    'xmark',
+    'question-mark-circle'
+  ]
 </script>
 
 <article class="prose">
@@ -10,32 +19,23 @@
     so I put the fiew icons I am using into my own component.
   </p>
   <div class="flex flex-col">
+    <h3>Black Icons</h3>
     <div class="flex justify-between my-2">
-      <HeroIcon name="check" className="w-8 h-8"/>
-      <HeroIcon name="chevron-double-left" className="w-8 h-8"/>
-      <HeroIcon name="chevron-double-right" className="w-8 h-8"/>
-      <HeroIcon name="envelope" className="w-8 h-8"/>
-      <HeroIcon name="plus-small" className="w-8 h-8"/>
-      <HeroIcon name="xmark" className="w-8 h-8"/>
-      <HeroIcon name="question-mark-circle" className="w-8 h-8"/>
+      {#each icons as iconName}
+        <HeroIcon name={iconName} className="w-8 h-8"/>
+      {/each}
     </div>
+    <h3>Green Icons</h3>
     <div class="flex justify-between my-2">
-      <HeroIcon name="check" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="chevron-double-left" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="chevron-double-right" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="envelope" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="plus-small" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="xmark" className="w-8 h-8 text-green-500"/>
-      <HeroIcon name="question-mark-circle" className="w-8 h-8 text-green-500"/>
+      {#each icons as iconName}
+        <HeroIcon name={iconName} className="w-8 h-8 text-green-500"/>
+      {/each}
     </div>
+    <h3>Red Icons</h3>
     <div class="flex justify-between my-2">
-      <HeroIcon name="check" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="chevron-double-left" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="chevron-double-right" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="envelope" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="plus-small" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="xmark" className="w-8 h-8 text-red-500"/>
-      <HeroIcon name="question-mark-circle" className="w-8 h-8 text-red-500"/>
+      {#each icons as iconName}
+        <HeroIcon name={iconName} className="w-8 h-8 text-red-500"/>
+      {/each}
     </div>
   </div>
 </article>

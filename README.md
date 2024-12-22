@@ -9,7 +9,13 @@ The components code can be found in [src/lib/components](src/lib/components)
 ## Demo
 Find a [demo](https://svelte-components-black.vercel.app) on Vercel.
 
-## Installation
+## Integration
+Probably you just want to copy the the svelte component file and create your own version.
+```js
+import AddressInput from '$lib/components/AddressInput.svelte'
+```
+Or, if you want to install the library, you can do so using *npm*
+```
 ```bash
 npm install @samhess/svelte-components
 ```
