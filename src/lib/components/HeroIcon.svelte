@@ -1,7 +1,19 @@
 <script>
-  export let name = 'question-mark-circle'
-  export let className = 'w-5 h-5'
-  let data = ''
+  /**
+   * @typedef {Object} Props
+   * @property {string} [name]
+   * @property {string} [className]
+   * @property {function} [onclick]
+   */
+
+  /** @type {Props} */
+  let { 
+    name = 'question-mark-circle', 
+    className = 'w-5 h-5',
+    onclick 
+  } = $props()
+  let data = $state('')
+
   switch (name) {
     case 'check':
       data = "M4.5 12.75l6 6 9-13.5"
@@ -28,7 +40,14 @@
   }
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class={className}>
+<svg 
+  xmlns="http://www.w3.org/2000/svg" 
+  fill="none" 
+  viewBox="0 0 24 24" 
+  stroke-width="1" 
+  stroke="currentColor" 
+  class={className}>
+  onclick={onclick}
   <path stroke-linecap="round" stroke-linejoin="round" d={data}/>
 </svg>
 

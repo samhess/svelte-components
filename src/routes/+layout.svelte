@@ -1,13 +1,12 @@
 <script lang="js">
-  import { page } from '$app/stores'
+  import { page } from '$app/state'
   import HeroIcon from '$lib/components/HeroIcon.svelte'
   import '../main.css'
-  export let data
-  $: ({mainMenu, subMenu} = data)
+  let {data, children} = $props()
+  let {mainMenu, subMenu} = $derived(data)
 
-  let breadcrumb, currentRoute
-  $: breadcrumb = $page.route.id?.slice(1).replaceAll('/',' > ') ?? ''
-  $: currentRoute = $page.route.id?.replace(/^\//,'')
+  let breadcrumb = $derived(page.route.id?.slice(1).replaceAll('/',' > ') ?? '')
+  let currentRoute = $derived(page.route.id?.replace(/^\//,'') ?? '') 
 </script>
 
 <svelte:head>
@@ -51,7 +50,7 @@
 
 <!-- main content -->
 <main class="mx-auto max-w-7xl pt-10 px-2 md:px-4">
-  <slot />
+  {@render children?.()}
   <!-- footer -->
   <hr class="mt-10 mb-2">
   <footer class="flex justify-between pb-10">

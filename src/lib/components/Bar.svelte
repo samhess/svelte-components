@@ -1,18 +1,30 @@
 <script>
   import { onMount } from 'svelte'
   import { Chart, LinearScale, CategoryScale, BarController, BarElement, Legend, Title, Tooltip } from 'chart.js'
-  /** @type {Object.<string,any>[]} */
-  export let data = []
-  export let caption = ''
-  /** @type {Object.<string,any>} */
-  export let title = { name:'', ticker:'' }
-  export let period = ''
+  
+  
+  /**
+   * @typedef {Object} Props
+   * @property {Object.<string,any>[]} [data]
+   * @property {string} [caption]
+   * @property {Object.<string,any>} [title]
+   * @property {string} [period]
+   */
+
+  /** @type {Props} */
+  let {
+    data = [],
+    caption = '',
+    title = { name:'', ticker:'' },
+    period = ''
+  } = $props()
   /** @type {HTMLCanvasElement} */
   let canvas
   /** @type {Chart} */
   let chart
 
-  $: caption = `${title.name} (${title.ticker}) ${period} income statement`
+  let caption1 = $derived(`${title.name} (${title.ticker}) ${period} income statement`) 
+
 
   const chartData = {
     labels: [ '2019', '2020', '2021', '2022' ],
@@ -76,7 +88,9 @@
     chart = new Chart(canvas, config)
   }
 
-  function updateChartData() {
+  onMount(init)
+
+  $effect(() => {
     if (chart) {
       if (Array.isArray(data)) {
         chartData.datasets[0].data = [
@@ -104,18 +118,14 @@
     } else {
       console.log('Chart is not ready')
     }
-  }
-
-  onMount(init)
-
-  $: data, updateChartData()
+	})
 </script>
 
 <figure>
   <div class="max-h-60 min-h-[40vh] mt-5">
     <canvas bind:this={canvas}></canvas>
   </div>
-  <figcaption class="figure-caption">{caption}</figcaption>
+  <figcaption class="figure-caption">{caption1}</figcaption>
 </figure>
 
 

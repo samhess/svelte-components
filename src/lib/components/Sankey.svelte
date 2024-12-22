@@ -3,9 +3,15 @@
   import {Chart, LinearScale, Tooltip, Title, Legend} from 'chart.js'
   import {SankeyController, Flow} from 'chartjs-chart-sankey'
   // const {SankeyController, Flow} = {sankeyChart}
-  /** @type {Object<string,any>} */
-  export let data
-  export let caption = ''
+  
+  /**
+   * @typedef {Object} Props
+   * @property {Object<string,any>} data
+   * @property {string} [caption]
+   */
+
+  /** @type {Props} */
+  let { data, caption = '' } = $props();
   /** @type {HTMLCanvasElement} */
   let canvas
   /** @type {Chart} */
@@ -77,7 +83,10 @@
     chart = new Chart(canvas, config)
   }
 
-  function updateChartData() {
+  onMount(init)
+
+  $effect(() => {
+    //console.log(`something has changed: ${Date.now()}`)
     if (chart) {
       if (Array.isArray(data)) {
         // @ts-ignore
@@ -88,11 +97,7 @@
     } else {
       console.log('Chart is not ready')
     }
-  }
-
-  onMount(init)
-
-  $: data, updateChartData()
+	})
 </script>
 
 <figure>

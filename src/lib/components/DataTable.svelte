@@ -1,31 +1,38 @@
 <script>
   import EditDialog from '$lib/components/EditDialog.svelte'
   import { capitalize } from '$lib/helpers'
-  import { createEventDispatcher } from 'svelte'
-  /** @type {Object<string,any>} */
-  export let entity
-  /** @type {Object<string,any>[]} */
-  export let records
-  const dispatch = createEventDispatcher()
+  
+  /**
+   * @typedef {Object} Props
+   * @property {Object<string,any>} entity
+   * @property {Object<any,any>[]} records
+   * @property {import('svelte').Snippet<[any]>} [beforeHeader]
+   * @property {import('svelte').Snippet} [header]
+   * @property {import('svelte').Snippet<[any]>} [children]
+   * @property {import('svelte').Snippet} [footer]
+   * @property {function} update
+   */
+
+  /** @type {Props} */
+  let {
+    entity,
+    records,
+    beforeHeader,
+    header,
+    children,
+    footer,
+    update
+  } = $props()
   let {
     name = '', 
     attributes = {}, 
     isEditable = false,
     sorting = {field:'name', direction:'asc'},
     endpoint = ''
-  } = entity
-  // backward compatibility
-  if (Array.isArray(attributes)) {
-    const properties = attributes
-    attributes = {}
-    for (const property of properties) {
-      const {key,...props} = property
-      attributes[key] = props
-    }
-  }
-  let caption = ''
-  /** @type {EditDialog} */
-  let editDialog
+  } = $state(entity)
+  let caption = $derived(`${capitalize(name)} (${records.length})`)
+  let sortedRecords = $derived(sortRecords(sorting))
+  let editDialog = $state()
 
   function rowDblClick(record={}) {
     if (isEditable) {
@@ -39,15 +46,15 @@
 
   function toggleSorting(field='name') {
     sorting.field = field
-    // switch direction
     sorting.direction = sorting.direction==='asc' ? 'desc' : 'asc'
   }
 
   function sortRecords({field='name', direction='asc'}) {
+    //$inspect(records)
     //console.log(`sorting ${field} ${direction}`)
     const sortCode = direction==='asc' ? 1 : -1
     if (Array.isArray(records)) {
-      return records.sort((A,B) => {
+      return records.toSorted((A,B) => {
         let a = A[field] ?? ''
         let b = B[field] ?? ''
         if (typeof a === 'object' && typeof b === 'object') {
@@ -62,51 +69,49 @@
         return (a > b) ? sortCode : -sortCode
       })
     } else {
+      console.log(`empty records`)
       return []
     }
   }
-
-  $: records = sortRecords(sorting)
-  $: caption = `${capitalize(name)} (${records.length})`
 </script>
 
 {#if isEditable===true}
-  <EditDialog entity={{name,endpoint,attributes}} bind:this={editDialog} on:updateData={()=>dispatch('updateData')}></EditDialog>
+  <EditDialog entity={{name,endpoint,attributes}} bind:this={editDialog} edit={update}></EditDialog>
 {/if}
 <table class="table">
-  <caption class="caption-bottom">{caption}</caption>
+  <caption class="text-center">{caption}</caption>
   <thead>
-    <slot name="beforeHeader" {addItem}>
+    {#if beforeHeader}{@render beforeHeader({ addItem, })}{:else}
       {#if isEditable===true}
         <tr>
           <td colspan={Object.keys(attributes).length} class="text-end pb-3">
-            <button class="btn btn-primary" on:click={()=>addItem()}>Add</button>
+            <button class="btn btn-primary" onclick={()=>addItem()}>Add</button>
           </td>
         </tr>
       {/if}
-    </slot>
-    <slot name="header">
+    {/if}
+    {#if header}{@render header()}{:else}
       <tr>
         {#each Object.entries(attributes) as [key,props]}
           {#if props.show !== false}
-            <th class:text-end={props.align==='right'} on:click={()=>toggleSorting(key)}>{props.name}</th>
+            <th class:text-end={props.align==='right'} onclick={()=>toggleSorting(key)}>{props.name}</th>
           {/if}
         {/each}
       </tr>
-    </slot>
+    {/if}
   </thead>
   <tbody>
-    <slot {records} {rowDblClick}>
-      {#each records as record}
-        <tr on:dblclick={()=>rowDblClick(record)}>
+    {#if children}{@render children({records:sortedRecords, rowDblClick})}{:else}
+      {#each sortedRecords as record}
+        <tr ondblclick={()=>rowDblClick(record)}>
           {#each Object.values(record) as value}
             <td>{value}</td>
           {/each}
         </tr>
       {/each}
-    </slot>
+    {/if}
   </tbody>
   <tfoot>
-    <slot name="footer"></slot>
+    {@render footer?.()}
   </tfoot>
 </table>

@@ -1,7 +1,13 @@
 <script>
   import DataTable from '$lib/components/DataTable.svelte'
-  /** @type {Object.<string, any>} */
-  export let data
+  
+  /**
+   * @typedef {Object} Props
+   * @property {Object.<string, any>} data
+   */
+
+  /** @type {Props} */
+  let { data } = $props();
   let {entity, records} = data
 </script>
 
@@ -12,10 +18,10 @@
     into which S&P has categorized all major public companies. 
     The system is similar to <a href="/taxonomy/ICB">Industry Classification Benchmark (ICB)</a>.
   </p>
-  <DataTable {entity} {records}>
-    <svelte:fragment let:records let:rowDblClick>
+  <DataTable {entity} {records} update={()=>{}}>
+    {#snippet children({ records, rowDblClick })}
       {#each records as record}
-        <tr on:dblclick={()=>rowDblClick(record)}>
+        <tr ondblclick={()=>rowDblClick(record)}>
           <td>{record.code}</td>
           <td>{record.name}</td>
           <td>{record.description}</td>
@@ -24,6 +30,6 @@
           <td>{record.Sector.name}</td>
         </tr>
       {/each}
-    </svelte:fragment>
+    {/snippet}
   </DataTable>
 </article>

@@ -1,12 +1,26 @@
 <script>
-  import { createEventDispatcher } from 'svelte'
   import { capitalize } from '$lib/helpers'
-  const dispatch = createEventDispatcher()
+  
+  /**
+   * @typedef {Object} Props
+   * @property {Object<string, any>} [entity]
+   * @property {import('svelte').Snippet} [header]
+   * @property {import('svelte').Snippet} [children]
+   * @property {import('svelte').Snippet} [footer]
+   * @property {function} edit
+   */
+
+  /** @type {Props} */
+  let {
+    entity = { name:'', endpoint:'', attributes:{} },
+    header,
+    children,
+    footer,
+    edit
+  } = $props()
   /** @type {Object<string, any>} */
-  export let entity = { name:'', endpoint:'', attributes:{} }
-  /** @type {Object<string, any>} */
-  let editedItem = {}
-  let mode = 'update'
+  let editedItem = $state({})
+  let mode = $state('update')
   /** @type {HTMLDialogElement} */
   let dialog
   const numnberFields = [
@@ -25,7 +39,15 @@
     for (const [propName, props] of Object.entries(entity.attributes)) {
       if (props.edit !== false) {
         editedItem[propName] = record[propName]
+        if (/^[A-Z]/.test(propName) && propName in record === false) {
+          editedItem[propName] = {
+              value: record[propName.toLowerCase()]
+            }
+        }
         if (/^[A-Z]/.test(propName) && props.key) {
+          if (record[propName] === null || record[propName] === undefined) {
+            record[propName] = {}
+          }
           if (typeof props.key === 'string') {
             editedItem[propName] = {
               value: record[propName][props.key]
@@ -74,7 +96,7 @@
     const body = JSON.stringify(editedItem)
     const response = await fetch(`/api/${entity.endpoint}`, { method:'POST', body })
     if (response.ok) {
-      dispatch('updateData')
+      edit('create')
     } else {
       console.log(response.statusText)
     }
@@ -85,7 +107,7 @@
     const body = JSON.stringify(editedItem)
     const response = await fetch(`/api/${entity.endpoint}`, { method:'PUT', body })
     if (response.ok) {
-      dispatch('updateData')
+      edit('update')
     } else {
       console.log(response.statusText)
     }
@@ -96,7 +118,7 @@
     const body = JSON.stringify(editedItem)
     const response = await fetch(`/api/${entity.endpoint}`, { method:'DELETE', body })
     if (response.ok) {
-      dispatch('updateData')
+      edit('delete')
     } else {
       console.log(response.statusText)
     }
@@ -105,10 +127,10 @@
 </script>
   
 <dialog bind:this={dialog}>
-  <slot name="header">
+  {#if header}{@render header()}{:else}
     <h2 class="h3 text-center">{`${capitalize(mode)} ${capitalize(entity.name)}`}</h2>
-  </slot>
-  <slot>
+  {/if}
+  {#if children}{@render children()}{:else}
     {#each Object.entries(editedItem) as [key,value]}
       {#if entity.attributes[key]}
         <div class="m-3" >
@@ -134,18 +156,18 @@
       {key}
       {/if}
     {/each}
-  </slot>
-  <slot name="footer">
+  {/if}
+  {#if footer}{@render footer()}{:else}
     <div class="flex justify-between my-4 mx-4">
-      <button class="btn btn-danger" on:click={deleteItem}>Delete</button>
+      <button class="btn btn-danger" onclick={deleteItem}>Delete</button>
       <div>
-        <button class="btn btn-secondary" on:click={()=>dialog.close()}>Cancel</button>
-        {#if mode==='add' }
-          <button class="btn btn-primary text-white"on:click={createItem}>Add</button>
-        {:else if mode==='update' }
-          <button class="btn btn-primary text-white"on:click={updateItem}>Update</button>
+        <button class="btn btn-secondary" onclick={()=>dialog.close()}>Cancel</button>
+        {#if mode==='add'}
+          <button class="btn btn-primary text-white"onclick={createItem}>Add</button>
+        {:else if mode==='update'}
+          <button class="btn btn-primary text-white"onclick={updateItem}>Update</button>
         {/if}
       </div>
     </div>
-  </slot>
+  {/if}
 </dialog>

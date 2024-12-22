@@ -4,11 +4,23 @@
   import { TreemapController, TreemapElement } from 'chartjs-chart-treemap'
   import { formatPercent, formatNumber } from '$lib/format.js'
 
-  export let data = {}
-  export let structure = 'marketCap'
-  export let grouping = ['gicsSector', 'gicsIndustry', 'ticker']
-  export let evaluation = 'performance1d'
-  export let height = '60vh'
+  /**
+   * @typedef {Object} Props
+   * @property {any} [data]
+   * @property {string} [structure]
+   * @property {any} [grouping]
+   * @property {string} [evaluation]
+   * @property {string} [height]
+   */
+
+  /** @type {Props} */
+  let {
+    data = {},
+    structure = 'marketCap',
+    grouping = ['gicsSector', 'gicsIndustry', 'ticker'],
+    evaluation = 'performance1d',
+    height = '60vh'
+  } = $props()
   /** @type {HTMLCanvasElement} */
   let canvas
   /** @type {Chart} */
@@ -64,16 +76,14 @@
     chart = new Chart(canvas, {type:'treemap'})
     chart.options.responsive = true
     chart.options.maintainAspectRatio = false
-    chart.options.plugins = {}
-    chart.options.plugins.legend = {
-      display: false, 
-      position: 'top',
-    },
-    chart.options.plugins.title = {
-      display: false,
-      text: '',
-      font: {size:24, weight:'bold'}
-    },
+    chart.options.plugins ??= {}
+    chart.options.plugins.legend ??= {}
+    chart.options.plugins.legend.display = false
+    chart.options.plugins.legend.position = 'top'
+    chart.options.plugins.title ??= {}
+    chart.options.plugins.title.display = false
+    chart.options.plugins.title.text = ''
+    chart.options.plugins.title.font = {size:24, weight:'bold'}
     chart.options.plugins.tooltip = {
       enabled: true,
       position: 'nearest',
@@ -155,7 +165,10 @@
     }
   }
 
-  function updateChart() {
+  onMount(initChart)
+
+  $effect(() => {
+    //console.log(`something has changed: ${Date.now()}`)
     if (chart) {
       // @ts-ignore
       chart.data.datasets[0].tree = data
@@ -165,15 +178,7 @@
       chart.data.datasets[0].groups = grouping
       chart.update()
     }
-  }
-
-  onMount(initChart)
-
-  $: data, updateChart()
-  $: structure, updateChart()
-  $: grouping, updateChart()
-  $: evaluation, updateChart()
-
+	})
 </script>
 
 <div class="chart-container w-100" style="height:{height};">

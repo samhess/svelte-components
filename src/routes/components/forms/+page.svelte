@@ -1,6 +1,6 @@
+
 <script>
   import AddressInput from '$lib/components/AddressInput.svelte'
-  let postcode,city,state,country
 
   // mapbox options as per https://docs.mapbox.com/api/search/geocoding
   const mapboxOptions = {
@@ -9,13 +9,12 @@
     language: 'de'
   }
 
-  function updateAddress(event) {
-    const {address} = event.detail
-    postcode = address.postcode
-    city = address.city
-    state = address.state
-    country = address.country
-  }
+  let address = $state({
+    postcode: '', 
+    city: '', 
+    state: '', 
+    country: ''
+  })
 </script>
 
 <article class="prose">
@@ -26,25 +25,25 @@
     <div>
       <div class="mb-2 w-1/2">
         <label class="form-label" for="street">Street</label>
-        <AddressInput {mapboxOptions} on:addressSelect={updateAddress}></AddressInput>
+        <AddressInput {mapboxOptions} deliver={(results={})=>{Object.assign(address,results)}}></AddressInput>
       </div>
     </div>
     <div class="flex justify-normal">
       <div class="me-5">
         <label class="form-label" for="postcode">Postcode</label>
-        <input class="form-input" bind:value={postcode}/>
+        <input class="form-input" bind:value={address.postcode}/>
       </div>
       <div class="me-5">
         <label class="form-label" for="city">City</label>
-        <input class="form-input" bind:value={city}/>
+        <input class="form-input" bind:value={address.city}/>
       </div>
       <div class="me-5">
-        <label class="form-label" for="state">State</label>
-        <input class="form-input" bind:value={state}/>
+        <label class="form-label" for="county">County</label>
+        <input class="form-input" bind:value={address.state}/>
       </div>
       <div class="me-5">
-        <label class="form-label" for="state">Country</label>
-        <input class="form-input" bind:value={country}/>
+        <label class="form-label" for="county">Country</label>
+        <input class="form-input" bind:value={address.country}/>
       </div>
     </div>
   </form>
