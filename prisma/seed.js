@@ -25,9 +25,7 @@ for (const entityName of entities) {
   const entityKey = entityName.replace(/^./, char1=>char1.toLowerCase())
   const isEmpty = await prisma[entityKey].count() === 0
   if (isEmpty) {
-    for (const record of records) {
-      await prisma[entityKey].create({data:record})
-    }
+    await prisma[entityKey].createMany({data:records})
     const count = await prisma[entityKey].count()
     console.log(`${count} of ${records.length} ${entityName} records seeded`)
   } else {
