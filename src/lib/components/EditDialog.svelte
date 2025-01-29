@@ -128,7 +128,7 @@
   
 <dialog bind:this={dialog}>
   {#if header}{@render header()}{:else}
-    <h2 class="h3 text-center">{`${capitalize(mode)} ${capitalize(entity.name)}`}</h2>
+    <h2 class="mt-4 text-center">{`${capitalize(mode)} ${capitalize(entity.name)}`}</h2>
   {/if}
   {#if children}{@render children()}{:else}
     {#each Object.entries(editedItem) as [key,value]}
@@ -159,13 +159,13 @@
   {/if}
   {#if footer}{@render footer()}{:else}
     <div class="flex justify-between my-4 mx-4">
-      <button class="btn btn-danger" onclick={deleteItem}>Delete</button>
+      <button class="btn-danger" onclick={deleteItem}>Delete</button>
       <div>
-        <button class="btn btn-secondary" onclick={()=>dialog.close()}>Cancel</button>
+        <button class="btn-secondary" onclick={()=>dialog.close()}>Cancel</button>
         {#if mode==='add'}
-          <button class="btn btn-primary text-white"onclick={createItem}>Add</button>
+          <button class="btn-primary text-white"onclick={createItem}>Add</button>
         {:else if mode==='update'}
-          <button class="btn btn-primary text-white"onclick={updateItem}>Update</button>
+          <button class="btn-primary text-white"onclick={updateItem}>Update</button>
         {/if}
       </div>
     </div>

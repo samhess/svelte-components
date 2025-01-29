@@ -14,6 +14,7 @@ const entities = [
   'GicsIndustryGroup',
   'GicsIndustry',
   'Gics',
+  'Company',
   'Instrument',
 ]
 

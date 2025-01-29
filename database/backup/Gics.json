@@ -4,6 +4,7 @@
     "name": "Oil & Gas Drilling",
     "description": "Drilling contractors or owners of drilling rigs that contract their services for drilling wells.",
     "industry": 101010,
+    "key": "oil-gas-drilling",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -12,6 +13,7 @@
     "name": "Oil & Gas Equipment & Services",
     "description": "Manufacturers of equipment, including drilling rigs and equipment, and providers of supplies and services to companies involved in the drilling, evaluation and completion of oil and gas wells.",
     "industry": 101010,
+    "key": "oil-gas-equipment-services",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -20,6 +22,7 @@
     "name": "Integrated Oil & Gas",
     "description": "Integrated oil companies engaged in the exploration & production of oil and gas, as well as at least one other significant activity in either refining, marketing and transportation, or chemicals.",
     "industry": 101020,
+    "key": "oil-gas-integrated",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -28,6 +31,7 @@
     "name": "Oil & Gas Exploration & Production",
     "description": "Companies engaged in the exploration and production of oil and gas not classified elsewhere.",
     "industry": 101020,
+    "key": "oil-gas-e-p",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -36,6 +40,7 @@
     "name": "Oil & Gas Refining & Marketing",
     "description": "Companies engaged in the refining and marketing of oil, gas and/or refined products not classified in the Integrated Oil & Gas or Independent Power Producers & Energy Traders Sub-Industries.",
     "industry": 101020,
+    "key": "oil-gas-refining-marketing",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -44,6 +49,7 @@
     "name": "Oil & Gas Storage & Transportation",
     "description": "Companies engaged in the storage and/or transportation of oil, gas and/or refined products. Includes diversified midstream natural gas companies, oil and refined product pipelines, coal slurry pipelines and oil & gas shipping companies.",
     "industry": 101020,
+    "key": "oil-gas-midstream",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -52,6 +58,7 @@
     "name": "Coal & Consumable Fuels",
     "description": "Companies primarily involved in the production and mining of coal, related products and other consumable fuels related to the generation of energy. Excludes companies primarily producing gases classified in the Industrial Gases Sub-Industry and companies primarily mining for metallurgical (coking) coal used for steel production.",
     "industry": 101020,
+    "key": "thermal-coal",
     "industryGroup": 1010,
     "sector": 10
   },
@@ -60,6 +67,7 @@
     "name": "Commodity Chemicals",
     "description": "Companies that primarily produce industrial chemicals and basic chemicals. Including but not limited to plastics, synthetic fibers, films, commodity-based paints & pigments, explosives and petrochemicals. Excludes chemical companies classified in the Diversified Chemicals, Fertilizers & Agricultural Chemicals, Industrial Gases, or Specialty Chemicals Sub-Industries.",
     "industry": 151010,
+    "key": "chemicals",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -68,6 +76,7 @@
     "name": "Diversified Chemicals",
     "description": "Manufacturers of a diversified range of chemical products not classified in the Industrial Gases, Commodity Chemicals, Specialty Chemicals or Fertilizers & Agricultural Chemicals Sub-Industries.",
     "industry": 151010,
+    "key": "diversified-chemicals",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -76,6 +85,7 @@
     "name": "Fertilizers & Agricultural Chemicals",
     "description": "Producers of fertilizers, pesticides, potash or other agriculture-related chemicals not classified elsewhere.",
     "industry": 151010,
+    "key": "agricultural-inputs",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -84,6 +94,7 @@
     "name": "Industrial Gases",
     "description": "Manufacturers of industrial gases.",
     "industry": 151010,
+    "key": "industrial-gases",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -92,6 +103,7 @@
     "name": "Specialty Chemicals",
     "description": "Companies that primarily produce high value-added chemicals used in the manufacture of a wide variety of products, including but not limited to fine chemicals, additives, advanced polymers, adhesives, sealants and specialty paints, pigments and coatings.",
     "industry": 151010,
+    "key": "specialty-chemicals",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -100,6 +112,7 @@
     "name": "Construction Materials",
     "description": "Manufacturers of construction materials including sand, clay, gypsum, lime, aggregates, cement, concrete and bricks. Other finished or semi-finished building materials are classified in the Building Products Sub-Industry.",
     "industry": 151020,
+    "key": "building-materials",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -108,6 +121,7 @@
     "name": "Metal, Glass & Plastic Containers",
     "description": "Manufacturers of metal, glass or plastic containers. Includes corks and caps.",
     "industry": 151030,
+    "key": "metal-fabrication",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -116,6 +130,7 @@
     "name": "Paper & Plastic Packaging Products & Materials",
     "description": "Manufacturers of paper and cardboard containers and packaging.",
     "industry": 151030,
+    "key": "packaging-containers",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -124,6 +139,7 @@
     "name": "Aluminum",
     "description": "Producers of aluminum and related products, including companies that mine or process bauxite and companies that recycle aluminum to produce finished or semi-finished products. Excludes companies that primarily produce aluminum building materials classified in the Building Products Sub-Industry.",
     "industry": 151040,
+    "key": "aluminum",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -132,6 +148,7 @@
     "name": "Diversified Metals & Mining",
     "description": "Companies engaged in the diversified production or extraction of metals and minerals not classified elsewhere. Including, but not limited to, nonferrous metal mining (except bauxite), salt and borate mining, phosphate rock mining, and diversified mining operations. Excludes iron ore mining, classified in the Steel Sub-Industry, bauxite mining, classified in the Aluminum Sub-Industry, and coal mining, classified in either the Steel or Coal & Consumable Fuels Sub-Industries.",
     "industry": 151040,
+    "key": "other-industrial-metals-mining",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -140,6 +157,7 @@
     "name": "Copper",
     "description": "Companies involved primarily in copper ore mining.",
     "industry": 151040,
+    "key": "copper",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -148,6 +166,7 @@
     "name": "Gold",
     "description": "Producers of gold and related products, including companies that mine or process gold and the South African finance houses which primarily invest in, but do not operate, gold mines.",
     "industry": 151040,
+    "key": "gold",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -156,6 +175,7 @@
     "name": "Precious Metals & Minerals",
     "description": "Companies mining precious metals and minerals not classified in the Gold Sub-Industry. Includes companies primarily mining platinum.",
     "industry": 151040,
+    "key": "other-precious-metals-mining",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -164,6 +184,7 @@
     "name": "Silver",
     "description": "Companies primarily mining silver. Excludes companies classified in the Gold or Precious Metals & Minerals Sub-Industries.",
     "industry": 151040,
+    "key": "silver",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -172,6 +193,7 @@
     "name": "Steel",
     "description": "Producers of iron and steel and related products, including metallurgical (coking) coal mining used for steel production.",
     "industry": 151040,
+    "key": "steel",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -180,6 +202,7 @@
     "name": "Forest Products",
     "description": "Manufacturers of timber and related wood products. Includes lumber for the building industry.",
     "industry": 151050,
+    "key": "lumber-wood-production",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -188,6 +211,7 @@
     "name": "Paper Products",
     "description": "Manufacturers of all grades of paper. Excludes companies specializing in paper packaging classified in the Paper & Plastic Packaging Products & Materials Sub-Industry.",
     "industry": 151050,
+    "key": "paper-paper-products",
     "industryGroup": 1510,
     "sector": 15
   },
@@ -196,6 +220,7 @@
     "name": "Aerospace & Defense",
     "description": "Manufacturers of civil or military aerospace and defense equipment, parts or products. Includes defense electronics and space equipment.",
     "industry": 201010,
+    "key": "aerospace-defense",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -204,6 +229,7 @@
     "name": "Building Products",
     "description": "Manufacturers of building components and home improvement products and equipment. Excludes lumber and plywood classified under Forest Products and cement and other materials classified in the Construction Materials Sub-Industry.",
     "industry": 201020,
+    "key": "building-products-equipment",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -212,6 +238,7 @@
     "name": "Construction & Engineering",
     "description": "Companies engaged in primarily non-residential construction. Includes civil engineering companies and large-scale contractors. Excludes companies classified in the Homebuilding Sub-Industry.",
     "industry": 201030,
+    "key": "engineering-construction",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -220,6 +247,7 @@
     "name": "Electrical Components & Equipment",
     "description": "Companies that produce electric cables and wires, electrical components or equipment not classified in the Heavy Electrical Equipment Sub-Industry.",
     "industry": 201040,
+    "key": "electrical-equipment-parts",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -228,6 +256,7 @@
     "name": "Heavy Electrical Equipment",
     "description": "Manufacturers of power-generating equipment and other heavy electrical equipment, including power turbines, heavy electrical machinery intended for fixed-use and large electrical systems. Excludes cables and wires, classified in the Electrical Components & Equipment Sub-Industry.",
     "industry": 201040,
+    "key": "heavy-electrical-equipment",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -236,6 +265,7 @@
     "name": "Industrial Conglomerates",
     "description": "Diversified industrial companies with business activities in three or more sectors, none of which contributes a majority of revenues. Stakes held are predominantly of a controlling nature and stake holders maintain an operational interest in the running of the subsidiaries.",
     "industry": 201050,
+    "key": "conglomerates",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -244,6 +274,7 @@
     "name": "Construction Machinery & Heavy Transportation Equipment",
     "description": "Manufacturers of heavy duty trucks, rolling machinery, earth-moving and construction equipment, and manufacturers of related parts. Includes non-military shipbuilding.",
     "industry": 201060,
+    "key": "farm-heavy-construction-machinery",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -252,6 +283,7 @@
     "name": "Agricultural & Farm Machinery",
     "description": "Companies manufacturing agricultural machinery, farm machinery, and their related parts. Includes machinery used for the production of crops and agricultural livestock, agricultural tractors, planting and fertilizing machinery, fertilizer and chemical application equipment, and grain dryers and blowers.",
     "industry": 201060,
+    "key": "farm-machinery",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -260,6 +292,7 @@
     "name": "Industrial Machinery & Supplies & Components",
     "description": "Manufacturers of industrial machinery and industrial components. Includes companies that manufacture presses, machine tools, compressors, pollution control equipment, elevators, escalators, insulators, pumps, roller bearings and other metal fabrications.",
     "industry": 201060,
+    "key": "specialty-industrial-machinery",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -268,6 +301,7 @@
     "name": "Trading Companies & Distributors",
     "description": "Trading companies and other distributors of industrial equipment and products.",
     "industry": 201070,
+    "key": "industrial-distribution",
     "industryGroup": 2010,
     "sector": 20
   },
@@ -276,6 +310,7 @@
     "name": "Commercial Printing",
     "description": "Companies providing commercial printing services. Includes printers primarily serving the media industry.",
     "industry": 202010,
+    "key": "commercial-printing",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -284,6 +319,7 @@
     "name": "Environmental & Facilities Services",
     "description": "Companies providing environmental and facilities maintenance services. Includes waste management, facilities management and pollution control services. Excludes large-scale water treatment systems classified in the Water Utilities Sub-Industry.",
     "industry": 202010,
+    "key": "waste-management",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -292,6 +328,7 @@
     "name": "Office Services & Supplies",
     "description": "Providers of office services and manufacturers of office supplies and equipment not classified elsewhere.",
     "industry": 202010,
+    "key": "business-equipment-supplies",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -300,6 +337,7 @@
     "name": "Diversified Support Services",
     "description": "Companies primarily providing labor oriented support services to businesses and governments. Includes commercial cleaning services, dining & catering services, equipment repair services, industrial maintenance services, industrial auctioneers, storage & warehousing, transaction services, uniform rental services, and other business support services.",
     "industry": 202010,
+    "key": "specialty-business-services",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -308,6 +346,7 @@
     "name": "Security & Alarm Services",
     "description": "Companies providing security and protection services to business and governments. Includes companies providing services such as correctional facilities, security & alarm services, armored transportation & guarding. Excludes companies providing security software classified under the Systems Software Sub-Industry and home security services classified under the Specialized Consumer Services Sub-Industry. Also excludes companies manufacturing security system equipment classified under the Electronic Equipment & Instruments Sub-Industry.",
     "industry": 202010,
+    "key": "security-protection-services",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -316,6 +355,7 @@
     "name": "Human Resource & Employment Services",
     "description": "Companies providing business support services relating to human capital management. This Sub-Industry includes employment agencies, employee training, payroll processing, benefit & retirement support services, corporate & job seeker recruitment services, and online job portals generating revenue from fees or commissions for offering recruitment services to companies or job seekers.",
     "industry": 202020,
+    "key": "staffing-employment-services",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -324,6 +364,7 @@
     "name": "Research & Consulting Services",
     "description": "Companies primarily providing research and consulting services to businesses and governments not classified elsewhere. Includes companies involved in management consulting services, architectural design, business information or scientific research, marketing, and testing & certification services. Excludes companies providing information technology consulting services classified in the IT Consulting & Other Services Sub-Industry.",
     "industry": 202020,
+    "key": "consulting-services",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -332,6 +373,7 @@
     "name": "Data Processing & Outsourced Services",
     "description": "Providers of commercial data processing and/or business process outsourcing services. This Sub-Industry includes companies providing services for customer experience management, back-office automation, call center management, and investor communications.",
     "industry": 202020,
+    "key": "outsourcing",
     "industryGroup": 2020,
     "sector": 20
   },
@@ -340,6 +382,7 @@
     "name": "Air Freight & Logistics",
     "description": "Companies providing air freight transportation, courier and logistics services, including package and mail delivery and customs agents. Excludes those companies classified in the Passenger Airlines, Marine Transportation, Cargo Ground Transportation and Passenger Ground Transportation Sub-Industries.",
     "industry": 203010,
+    "key": "integrated-freight-logistics",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -348,6 +391,7 @@
     "name": "Passenger Airlines",
     "description": "Companies providing primarily passenger air transportation.",
     "industry": 203020,
+    "key": "airlines",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -356,6 +400,7 @@
     "name": "Marine Transportation",
     "description": "Companies providing goods or passenger maritime transportation. Excludes cruise-ships classified in the Hotels, Resorts & Cruise Lines Sub-Industry.",
     "industry": 203030,
+    "key": "marine-shipping",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -364,14 +409,7 @@
     "name": "Rail Transportation",
     "description": "Companies providing primarily goods and passenger rail transportation.",
     "industry": 203040,
-    "industryGroup": 2030,
-    "sector": 20
-  },
-  {
-    "code": 20304020,
-    "name": "Trucking (Discontinued)",
-    "description": "Companies providing primarily goods and passenger land transportation. Includes vehicle rental and taxi companies.",
-    "industry": 203040,
+    "key": "railroads",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -380,6 +418,7 @@
     "name": "Cargo Ground Transportation",
     "description": "Companies providing ground transportation services for goods and freight.",
     "industry": 203040,
+    "key": "trucking",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -388,6 +427,7 @@
     "name": "Passenger Ground Transportation",
     "description": "Companies providing passenger ground transportation and related services, including bus, taxi, vehicle rental, ride sharing and on-demand ride sharing platforms, and other passenger logistics.",
     "industry": 203040,
+    "key": "travel-services",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -396,6 +436,7 @@
     "name": "Airport Services",
     "description": "Operators of airports and companies providing related services.",
     "industry": 203050,
+    "key": "airports-air-services",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -404,6 +445,7 @@
     "name": "Highways & Railtracks",
     "description": "Owners and operators of roads, tunnels and railtracks.",
     "industry": 203050,
+    "key": "highways-railtracks",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -412,6 +454,7 @@
     "name": "Marine Ports & Services",
     "description": "Owners and operators of marine ports and related services.",
     "industry": 203050,
+    "key": "marine-ports",
     "industryGroup": 2030,
     "sector": 20
   },
@@ -420,6 +463,7 @@
     "name": "Automotive Parts & Equipment",
     "description": "Manufacturers of parts and accessories for automobiles and motorcycles. Excludes companies classified in the Tires & Rubber Sub-Industry.",
     "industry": 251010,
+    "key": "auto-parts",
     "industryGroup": 2510,
     "sector": 25
   },
@@ -428,6 +472,7 @@
     "name": "Tires & Rubber",
     "description": "Manufacturers of tires and rubber.",
     "industry": 251010,
+    "key": "tires-rubber",
     "industryGroup": 2510,
     "sector": 25
   },
@@ -436,6 +481,7 @@
     "name": "Automobile Manufacturers",
     "description": "Companies that produce mainly passenger automobiles and light trucks. Excludes companies producing mainly motorcycles and three-wheelers classified in the Motorcycle Manufacturers Sub-Industry and heavy duty trucks classified in the Construction Machinery & Heavy Transportation Equipment Sub-Industry.",
     "industry": 251020,
+    "key": "auto-manufacturers",
     "industryGroup": 2510,
     "sector": 25
   },
@@ -444,6 +490,7 @@
     "name": "Motorcycle Manufacturers",
     "description": "Companies that produce motorcycles, scooters or three-wheelers. Excludes bicycles classified in the Leisure Products Sub-Industry.",
     "industry": 251020,
+    "key": "recreational-vehicles",
     "industryGroup": 2510,
     "sector": 25
   },
@@ -452,6 +499,7 @@
     "name": "Consumer Electronics",
     "description": "Manufacturers of consumer electronics products including TVs, home audio equipment, game consoles, digital cameras, and related products. Excludes personal home computer manufacturers classified in the Technology Hardware, Storage & Peripherals Sub-Industry, and electric household appliances classified in the Household Appliances Sub-Industry.",
     "industry": 252010,
+    "key": "consumer-electronics",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -460,6 +508,7 @@
     "name": "Home Furnishings",
     "description": "Manufacturers of soft home furnishings or furniture, including upholstery, carpets and wall-coverings.",
     "industry": 252010,
+    "key": "furnishings-fixtures-appliances",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -468,6 +517,7 @@
     "name": "Homebuilding",
     "description": "Residential construction companies. Includes manufacturers of prefabricated houses and semi-fixed manufactured homes.",
     "industry": 252010,
+    "key": "residential-construction",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -476,6 +526,7 @@
     "name": "Household Appliances",
     "description": "Manufacturers of electric household appliances and related products. Includes manufacturers of power and hand tools, including garden improvement tools.  Excludes TVs and other audio and video products classified in the Consumer Electronics Sub-Industry and personal computers classified in the Technology Hardware, Storage & Peripherals Sub-Industry.",
     "industry": 252010,
+    "key": "tools-accessories",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -484,6 +535,7 @@
     "name": "Housewares & Specialties",
     "description": "Manufacturers of durable household products, including cutlery, cookware, glassware, crystal, silverware, utensils, kitchenware and consumer specialties not classified elsewhere.",
     "industry": 252010,
+    "key": "housewares",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -492,6 +544,7 @@
     "name": "Leisure Products",
     "description": "Manufacturers of leisure products and equipment including sports equipment, bicycles and toys.",
     "industry": 252020,
+    "key": "leisure",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -500,6 +553,7 @@
     "name": "Apparel, Accessories & Luxury Goods",
     "description": "Manufacturers of apparel, accessories & luxury goods. Includes companies primarily producing designer handbags, wallets, luggage, jewelry and watches. Excludes shoes classified in the Footwear Sub-Industry.",
     "industry": 252030,
+    "key": "apparel-manufacturing",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -508,6 +562,7 @@
     "name": "Footwear",
     "description": "Manufacturers of footwear. Includes sport and leather shoes.",
     "industry": 252030,
+    "key": "footwear-accessories",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -516,6 +571,7 @@
     "name": "Textiles",
     "description": "Manufacturers of textile and related products not classified in the Apparel, Accessories & Luxury Goods, Footwear or Home Furnishings Sub-Industries.",
     "industry": 252030,
+    "key": "textile-manufacturing",
     "industryGroup": 2520,
     "sector": 25
   },
@@ -524,6 +580,7 @@
     "name": "Casinos & Gaming",
     "description": "Owners and operators of casinos and gaming facilities. Includes companies providing lottery and betting services.",
     "industry": 253010,
+    "key": "gambling",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -532,6 +589,7 @@
     "name": "Hotels, Resorts & Cruise Lines",
     "description": "Owners and operators of hotels, resorts and cruise-ships. Includes travel agencies, tour operators and related services not classified elsewhere. Excludes casino-hotels classified in the Casinos & Gaming Sub-Industry.",
     "industry": 253010,
+    "key": "lodging",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -540,6 +598,7 @@
     "name": "Leisure Facilities",
     "description": "Owners and operators of leisure facilities, including sport and fitness centers, stadiums, golf courses and amusement parks not classified in the Movies & Entertainment Sub-Industry.",
     "industry": 253010,
+    "key": "leisure-facilities",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -548,6 +607,7 @@
     "name": "Restaurants",
     "description": "Owners and operators of restaurants, bars, pubs, fast-food or take-out facilities. Includes companies that provide food catering services.",
     "industry": 253010,
+    "key": "restaurants",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -556,6 +616,7 @@
     "name": "Education Services",
     "description": "Companies providing educational services, either on-line or through conventional teaching methods. Includes, private universities, correspondence teaching, providers of educational seminars, educational materials and technical education. Excludes companies providing employee education programs classified in the Human Resources & Employment Services Sub-Industry.",
     "industry": 253020,
+    "key": "education-training-services",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -564,6 +625,7 @@
     "name": "Specialized Consumer Services",
     "description": "Companies providing consumer services not classified elsewhere. Includes residential services, home security, legal services, personal services, renovation & interior design services, consumer auctions and wedding & funeral services.",
     "industry": 253020,
+    "key": "personal-services",
     "industryGroup": 2530,
     "sector": 25
   },
@@ -572,30 +634,7 @@
     "name": "Distributors",
     "description": "Distributors and wholesalers of general merchandise not classified elsewhere. Includes vehicle distributors.",
     "industry": 255010,
-    "industryGroup": 2550,
-    "sector": 25
-  },
-  {
-    "code": 25502020,
-    "name": "Internet & Direct Marketing Retail (Discontinued)",
-    "description": "Companies providing  retail  services  primarily  on  the Internet, through mail order, and TV home shopping retailers. Also includes companies providing online marketplaces for consumer products and services.",
-    "industry": 255020,
-    "industryGroup": 2550,
-    "sector": 25
-  },
-  {
-    "code": 25503010,
-    "name": "Department Stores (Discontinued)",
-    "description": "Owners and operators of department stores.",
-    "industry": 255030,
-    "industryGroup": 2550,
-    "sector": 25
-  },
-  {
-    "code": 25503020,
-    "name": "General Merchandise Stores (Discontinued)",
-    "description": "Owners and operators of stores offering diversified general merchandise. Excludes hypermarkets and large-scale super centers classified in the Hypermarkets & Super Centers Sub-Industry.",
-    "industry": 255030,
+    "key": "distributors",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -604,6 +643,7 @@
     "name": "Broadline Retail",
     "description": "Retailers offering a wide range of consumer discretionary merchandise. This Sub-Industry includes general and discount merchandise retailers, department stores and on-line retailers and marketplaces selling mostly consumer discretionary merchandise.",
     "industry": 255030,
+    "key": "broadline-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -612,6 +652,7 @@
     "name": "Apparel Retail",
     "description": "Retailers specialized mainly in apparel and accessories.",
     "industry": 255040,
+    "key": "apparel-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -620,6 +661,7 @@
     "name": "Computer & Electronics Retail",
     "description": "Owners and operators of consumer electronics, computers, video and related products retail stores.",
     "industry": 255040,
+    "key": "electronics-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -628,6 +670,7 @@
     "name": "Home Improvement Retail",
     "description": "Owners and operators of home and garden improvement retail stores. Includes stores offering building materials and supplies.",
     "industry": 255040,
+    "key": "home-improvement-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -636,6 +679,7 @@
     "name": "Other Specialty Retail",
     "description": "Owners and operators of specialty retail stores not classified elsewhere. Includes jewelry stores, toy stores, office supply stores, health & vision care stores, and book & entertainment stores.",
     "industry": 255040,
+    "key": "specialty-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -644,6 +688,7 @@
     "name": "Automotive Retail",
     "description": "Owners and operators of stores specializing in automotive retail. Includes auto dealers, gas stations, and retailers of auto accessories, motorcycles & parts, automotive glass, and automotive equipment & parts.",
     "industry": 255040,
+    "key": "auto-truck-dealerships",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -652,6 +697,7 @@
     "name": "Homefurnishing Retail",
     "description": "Owners and operators of furniture and home furnishings retail stores. Includes residential furniture, homefurnishings, housewares, and interior design. Excludes home and garden improvement stores, classified in the Home Improvement Retail Sub-Industry.",
     "industry": 255040,
+    "key": "homefurnishing-retail",
     "industryGroup": 2550,
     "sector": 25
   },
@@ -660,6 +706,7 @@
     "name": "Drug Retail",
     "description": "Owners and operators of primarily drug retail stores and pharmacies.",
     "industry": 301010,
+    "key": "pharmaceutical-retailers",
     "industryGroup": 3010,
     "sector": 30
   },
@@ -668,6 +715,7 @@
     "name": "Food Distributors",
     "description": "Distributors of food products to other companies and not directly to the consumer.",
     "industry": 301010,
+    "key": "food-distribution",
     "industryGroup": 3010,
     "sector": 30
   },
@@ -676,6 +724,7 @@
     "name": "Food Retail",
     "description": "Owners and operators of primarily food retail stores.",
     "industry": 301010,
+    "key": "grocery-stores",
     "industryGroup": 3010,
     "sector": 30
   },
@@ -684,6 +733,7 @@
     "name": "Consumer Staples Merchandise Retail",
     "description": "Retailers offering a wide range of consumer staples merchandise such as food, household, and personal care products. This Sub-Industry includes hypermarkets, super centers and other consumer staples retailers such as discount retail spaces and on-line marketplaces selling mostly consumer staples goods.",
     "industry": 301010,
+    "key": "discount-stores",
     "industryGroup": 3010,
     "sector": 30
   },
@@ -692,6 +742,7 @@
     "name": "Brewers",
     "description": "Producers of beer and malt liquors. Includes breweries not classified in the Restaurants Sub-Industry.",
     "industry": 302010,
+    "key": "beverages-brewers",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -700,6 +751,7 @@
     "name": "Distillers & Vintners",
     "description": "Distillers, vintners and producers of alcoholic beverages not classified in the Brewers Sub-Industry.",
     "industry": 302010,
+    "key": "beverages-wineries-distilleries",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -708,6 +760,7 @@
     "name": "Soft Drinks & Non-alcoholic Beverages",
     "description": "Producers of non-alcoholic beverages including mineral waters. Excludes producers of milk classified in the Packaged Foods & Meats Sub-Industry.",
     "industry": 302010,
+    "key": "beverages-non-alcoholic",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -716,6 +769,7 @@
     "name": "Agricultural Products & Services",
     "description": "Producers of agricultural products. Includes crop growers, owners of plantations and companies that produce and process foods but do not package and market them. Excludes companies classified in the Forest Products Sub-Industry and those that package and market the food products classified in the Packaged Foods & Meats Sub-Industry.",
     "industry": 302020,
+    "key": "farm-products",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -724,6 +778,7 @@
     "name": "Packaged Foods & Meats",
     "description": "Producers of packaged foods including dairy products, fruit juices, meats, poultry, fish and pet foods.",
     "industry": 302020,
+    "key": "packaged-foods",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -732,6 +787,7 @@
     "name": "Tobacco",
     "description": "Manufacturers of cigarettes and other tobacco products.",
     "industry": 302030,
+    "key": "tobacco",
     "industryGroup": 3020,
     "sector": 30
   },
@@ -740,6 +796,7 @@
     "name": "Household Products",
     "description": "Producers of non-durable household products, including detergents, soaps, diapers and other tissue and household paper products not classified in the Paper Products Sub-Industry.",
     "industry": 303010,
+    "key": "household-personal-products",
     "industryGroup": 3030,
     "sector": 30
   },
@@ -748,6 +805,7 @@
     "name": "Personal Care Products",
     "description": "Manufacturers of personal and beauty care products, including cosmetics and perfumes.",
     "industry": 303020,
+    "key": "personal-care",
     "industryGroup": 3030,
     "sector": 30
   },
@@ -756,6 +814,7 @@
     "name": "Health Care Equipment",
     "description": "Manufacturers of health care equipment and devices. Includes medical instruments, drug delivery systems, cardiovascular & orthopedic devices, and diagnostic equipment.",
     "industry": 351010,
+    "key": "medical-devices",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -764,6 +823,7 @@
     "name": "Health Care Supplies",
     "description": "Manufacturers of health care supplies and medical products not classified elsewhere. Includes eye care products, hospital supplies, and safety needle & syringe devices.",
     "industry": 351010,
+    "key": "medical-supplies",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -772,6 +832,7 @@
     "name": "Health Care Distributors",
     "description": "Distributors and wholesalers of health care products not classified elsewhere.",
     "industry": 351020,
+    "key": "medical-distribution",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -780,6 +841,7 @@
     "name": "Health Care Services",
     "description": "Providers of patient health care services not classified elsewhere. Includes dialysis centers, lab testing services, and pharmacy management services. Also includes companies providing business support services to health care providers, such as clerical support services, collection agency services, staffing services and outsourced sales & marketing services.",
     "industry": 351020,
+    "key": "diagnostics-research",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -788,6 +850,7 @@
     "name": "Health Care Facilities",
     "description": "Owners and operators of health care facilities, including hospitals, nursing homes, rehabilitation centers and animal hospitals.",
     "industry": 351020,
+    "key": "medical-care-facilities",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -796,6 +859,7 @@
     "name": "Managed Health Care",
     "description": "Owners and operators of Health Maintenance Organizations (HMOs) and other managed plans.",
     "industry": 351020,
+    "key": "managed-health-care",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -804,6 +868,7 @@
     "name": "Health Care Technology",
     "description": "Companies providing information technology services primarily to health care providers. Includes companies providing application, systems and/or data processing software, internet-based tools, and IT consulting services to doctors, hospitals or businesses operating primarily in the Health Care Sector.",
     "industry": 351030,
+    "key": "health-information-services",
     "industryGroup": 3510,
     "sector": 35
   },
@@ -812,6 +877,7 @@
     "name": "Biotechnology",
     "description": "Companies primarily engaged in the research, development, manufacturing and/or marketing of products based on genetic analysis and genetic engineering. Includes companies specializing in protein-based therapeutics to treat human diseases. Excludes companies manufacturing products using biotechnology but without a health care application.",
     "industry": 352010,
+    "key": "biotechnology",
     "industryGroup": 3520,
     "sector": 35
   },
@@ -820,6 +886,7 @@
     "name": "Pharmaceuticals",
     "description": "Companies engaged in the research, development or production of pharmaceuticals. Includes veterinary drugs.",
     "industry": 352020,
+    "key": "drug-manufacturers-general",
     "industryGroup": 3520,
     "sector": 35
   },
@@ -828,6 +895,7 @@
     "name": "Life Sciences Tools & Services",
     "description": "Companies enabling the drug discovery, development and production continuum by providing analytical tools, instruments, consumables & supplies, clinical trial services and contract research services. Includes firms primarily servicing the pharmaceutical and biotechnology industries.",
     "industry": 352030,
+    "key": "medical-instruments-supplies",
     "industryGroup": 3520,
     "sector": 35
   },
@@ -836,6 +904,7 @@
     "name": "Diversified Banks",
     "description": "Large, geographically diverse banks with a national footprint whose revenues are derived primarily from conventional banking operations, have significant business activity in retail banking and small and medium corporate lending, and provide a diverse range of financial services. Excludes banks classified in the Regional Banks and Commercial & Residential Mortgage Finance Sub-Industries. Also excludes investment banks classified in the Investment Banking & Brokerage Sub-Industry.",
     "industry": 401010,
+    "key": "banks-diversified",
     "industryGroup": 4010,
     "sector": 40
   },
@@ -844,14 +913,7 @@
     "name": "Regional Banks",
     "description": "Commercial banks, savings banks and thrifts whose business are derived primarily from conventional banking operations such as retail banking, corporate lending and originating various residential and commercial mortgage loans funded mainly through deposits. Regional banks tend to operate in limited geographic regions. Excludes companies classified in the Diversified Banks and Commercial & Residential Mortgage Finance Sub-Industries. Also excludes investment banks classified in the Investment Banking & Brokerage Sub-Industry.",
     "industry": 401010,
-    "industryGroup": 4010,
-    "sector": 40
-  },
-  {
-    "code": 40102010,
-    "name": "Thrifts & Mortgage Finance (Discontinued)",
-    "description": "Financial institutions providing mortgage and mortgage related services. These include financial institutions whose assets are primarily mortgage related, savings & loans, mortgage lending institutions, building societies and companies providing insurance to mortgage banks.",
-    "industry": 401020,
+    "key": "banks-regional",
     "industryGroup": 4010,
     "sector": 40
   },
@@ -860,6 +922,7 @@
     "name": "Diversified Financial Services",
     "description": "Providers of a diverse range of financial services and/or with some interest in a wide range of financial services including banking, insurance and capital markets, but with no dominant business line. Excludes companies classified in the Regional Banks and Diversified Banks Sub-Industries.",
     "industry": 402010,
+    "key": "diversified-financial-services",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -868,6 +931,7 @@
     "name": "Multi-Sector Holdings",
     "description": "A company with significantly diversified holdings across three or more sectors, none of which contributes a majority of profit and/or sales. Stakes held are predominantly of a non-controlling nature. Includes diversified financial companies where stakes held are of a controlling nature. Excludes other diversified companies classified in the Industrials Conglomerates Sub-Industry.",
     "industry": 402010,
+    "key": "financial-conglomerates",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -876,6 +940,7 @@
     "name": "Specialized Finance",
     "description": "Providers of specialized financial services not classified elsewhere. Companies in this Sub-Industry derive a majority of revenue from one specialized line of business. Includes, but not limited to, commercial financing companies, central banks, leasing institutions, factoring services, and specialty boutiques. Excludes companies classified in the Financial Exchanges & Data Sub-Industry.",
     "industry": 402010,
+    "key": "shell-companies",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -884,6 +949,7 @@
     "name": "Commercial & Residential Mortgage Finance",
     "description": "Financial companies providing commercial and residential mortgage financing and related mortgage services. This Sub-Industry includes non-deposit funded mortgage lending institutions, building societies, companies providing real estate financing products, loan servicing, mortgage broker services, and mortgage insurance.",
     "industry": 402010,
+    "key": "mortgage-finance",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -892,6 +958,7 @@
     "name": "Transaction & Payment Processing Services",
     "description": "Providers of transaction & payment processing services and related payment services including digital/mobile payment processors, payment service providers & gateways, and digital wallet providers.",
     "industry": 402010,
+    "key": "payment-services",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -900,6 +967,7 @@
     "name": "Consumer Finance",
     "description": "Providers of consumer finance services, including personal credit, credit cards, lease financing, travel-related money services and pawn shops. Excludes mortgage lenders classified in the Commercial & Residential Mortgage Finance Sub-Industry.",
     "industry": 402020,
+    "key": "credit-services",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -908,6 +976,7 @@
     "name": "Asset Management & Custody Banks",
     "description": "Financial institutions primarily engaged in investment management and/or related custody and securities fee-based services. Includes companies operating mutual funds, closed-end funds and unit investment trusts. Excludes banks and other financial institutions primarily involved in commercial lending, investment banking, brokerage and other specialized financial activities.",
     "industry": 402030,
+    "key": "asset-management",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -916,6 +985,7 @@
     "name": "Investment Banking & Brokerage",
     "description": "Financial institutions primarily engaged in investment banking & brokerage services, including equity and debt underwriting, mergers and acquisitions, securities lending and advisory services. Excludes banks and other financial institutions primarily involved in commercial lending, asset management and specialized financial activities.",
     "industry": 402030,
+    "key": "investment-banking",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -924,6 +994,7 @@
     "name": "Diversified Capital Markets",
     "description": "Financial institutions primarily engaged in diversified capital markets activities, including a significant presence in at least two of the following area: large/major corporate lending, investment banking, brokerage and asset management. Excludes less diversified companies classified in the Asset Management & Custody Banks or Investment Banking & Brokerage Sub-Industries. Also excludes companies classified in the Banks or Insurance industry groups or the Consumer Finance Sub-Industry.",
     "industry": 402030,
+    "key": "capital-markets",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -932,6 +1003,7 @@
     "name": "Financial Exchanges & Data",
     "description": "Financial exchanges for securities, commodities, derivatives and other financial instruments, and providers of financial decision support tools and products including ratings agencies.",
     "industry": 402030,
+    "key": "financial-data-stock-exchanges",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -940,6 +1012,7 @@
     "name": "Mortgage REITs",
     "description": "Companies or Trusts that service, originate, purchase and/or securitize residential and/or commercial mortgage loans. Includes trusts that invest in mortgage-backed securities and other mortgage related assets.",
     "industry": 402040,
+    "key": "reit-mortgage",
     "industryGroup": 4020,
     "sector": 40
   },
@@ -948,6 +1021,7 @@
     "name": "Insurance Brokers",
     "description": "Insurance and reinsurance brokerage firms.",
     "industry": 403010,
+    "key": "insurance-brokers",
     "industryGroup": 4030,
     "sector": 40
   },
@@ -956,6 +1030,7 @@
     "name": "Life & Health Insurance",
     "description": "Companies providing primarily life, disability, indemnity or supplemental health insurance. Excludes managed care companies classified in the Managed Health Care Sub-Industry.",
     "industry": 403010,
+    "key": "insurance-life",
     "industryGroup": 4030,
     "sector": 40
   },
@@ -964,6 +1039,7 @@
     "name": "Multi-line Insurance",
     "description": "Insurance companies with diversified interests in life, health and property and casualty insurance.",
     "industry": 403010,
+    "key": "insurance-diversified",
     "industryGroup": 4030,
     "sector": 40
   },
@@ -972,6 +1048,7 @@
     "name": "Property & Casualty Insurance",
     "description": "Companies providing primarily property and casualty insurance.",
     "industry": 403010,
+    "key": "insurance-property-casualty",
     "industryGroup": 4030,
     "sector": 40
   },
@@ -980,6 +1057,7 @@
     "name": "Reinsurance",
     "description": "Companies providing primarily reinsurance.",
     "industry": 403010,
+    "key": "insurance-reinsurance",
     "industryGroup": 4030,
     "sector": 40
   },
@@ -988,14 +1066,7 @@
     "name": "IT Consulting & Other Services",
     "description": "Providers of information technology and systems integration services not classified in the Data Processing & Outsourced Services or Internet Software & Services Sub-Industries. Includes information technology consulting and information management services.",
     "industry": 451020,
-    "industryGroup": 4510,
-    "sector": 45
-  },
-  {
-    "code": 45102020,
-    "name": "Data Processing & Outsourced Services (Discontinued)",
-    "description": "Providers of commercial electronic data processing and/or business process outsourcing services. Includes companies that provide services for back-office automation.",
-    "industry": 451020,
+    "key": "information-technology-services",
     "industryGroup": 4510,
     "sector": 45
   },
@@ -1004,6 +1075,7 @@
     "name": "Internet Services & Infrastructure",
     "description": "Companies providing services and infrastructure for the internet industry including data centers and cloud networking and storage infrastructure. Also includes companies providing web hosting services. Excludes companies classified in the Software Industry.",
     "industry": 451020,
+    "key": "infrastructure-operations",
     "industryGroup": 4510,
     "sector": 45
   },
@@ -1012,6 +1084,7 @@
     "name": "Application Software",
     "description": "Companies engaged in developing and producing software designed for specialized applications for the business or consumer market. Includes enterprise and technical software, as well as cloud-based software. Excludes companies classified in the Interactive Home Entertainment Sub-Industry. Also excludes companies producing systems or database management software classified in the Systems Software Sub-Industry.",
     "industry": 451030,
+    "key": "software-application",
     "industryGroup": 4510,
     "sector": 45
   },
@@ -1020,6 +1093,7 @@
     "name": "Systems Software",
     "description": "Companies engaged in developing and producing systems and database management software.",
     "industry": 451030,
+    "key": "software-infrastructure",
     "industryGroup": 4510,
     "sector": 45
   },
@@ -1028,6 +1102,7 @@
     "name": "Communications Equipment",
     "description": "Manufacturers of communication equipment and products, including LANs, WANs, routers, telephones, switchboards and exchanges. Excludes cellular phone manufacturers classified in the Technology Hardware, Storage & Peripherals Sub-Industry.",
     "industry": 452010,
+    "key": "communication-equipment",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1036,6 +1111,7 @@
     "name": "Technology Hardware, Storage & Peripherals",
     "description": "Manufacturers of cellular phones, personal computers, servers, electronic computer components and peripherals. Includes data storage components, motherboards, audio and video cards, monitors, keyboards, printers, and other peripherals. Excludes semiconductors classified in the Semiconductors Sub-Industry.",
     "industry": 452020,
+    "key": "computer-hardware",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1044,6 +1120,7 @@
     "name": "Electronic Equipment & Instruments",
     "description": "Manufacturers of electronic equipment and instruments including analytical, electronic test and measurement instruments, scanner/barcode products, lasers, display screens, point-of-sales machines, and security system equipment.",
     "industry": 452030,
+    "key": "scientific-technical-instruments",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1052,6 +1129,7 @@
     "name": "Electronic Components",
     "description": "Manufacturers of electronic components. Includes electronic components, connection devices, electron tubes, electronic capacitors and resistors, electronic coil, printed circuit board, transformer and other inductors, signal processing technology/components.",
     "industry": 452030,
+    "key": "electronic-components",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1060,6 +1138,7 @@
     "name": "Electronic Manufacturing Services",
     "description": "Producers of electronic equipment mainly for the OEM (Original Equipment Manufacturers) markets.",
     "industry": 452030,
+    "key": "electronic-manufacturing-services",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1068,6 +1147,7 @@
     "name": "Technology Distributors",
     "description": "Distributors of technology hardware and equipment. Includes distributors of communications equipment, computers & peripherals, semiconductors, and electronic equipment and components.",
     "industry": 452030,
+    "key": "electronics-computer-distribution",
     "industryGroup": 4520,
     "sector": 45
   },
@@ -1076,6 +1156,7 @@
     "name": "Semiconductor Materials & Equipment",
     "description": "Manufacturers of semiconductor equipment, including manufacturers of the raw material and equipment used in the solar power industry.",
     "industry": 453010,
+    "key": "semiconductor-equipment-materials",
     "industryGroup": 4530,
     "sector": 45
   },
@@ -1084,6 +1165,7 @@
     "name": "Semiconductors",
     "description": "Manufacturers of semiconductors and related products, including manufacturers of solar modules and cells.",
     "industry": 453010,
+    "key": "semiconductors",
     "industryGroup": 4530,
     "sector": 45
   },
@@ -1092,6 +1174,7 @@
     "name": "Alternative Carriers",
     "description": "Providers of communications and high-density data transmission services primarily through a high bandwidth/fiber-optic cable network.",
     "industry": 501010,
+    "key": "alternative-carriers",
     "industryGroup": 5010,
     "sector": 50
   },
@@ -1100,6 +1183,7 @@
     "name": "Integrated Telecommunication Services",
     "description": "Operators of primarily fixed-line telecommunications networks and companies providing both wireless and fixed-line telecommunications services not classified elsewhere. Also includes internet service providers offering internet access to end users.",
     "industry": 501010,
+    "key": "telecom-services",
     "industryGroup": 5010,
     "sector": 50
   },
@@ -1108,6 +1192,7 @@
     "name": "Wireless Telecommunication Services",
     "description": "Providers of primarily cellular or wireless telecommunication services.",
     "industry": 501020,
+    "key": "telecom-services-wireless",
     "industryGroup": 5010,
     "sector": 50
   },
@@ -1116,6 +1201,7 @@
     "name": "Advertising",
     "description": "Companies providing advertising, marketing or public relations services.",
     "industry": 502010,
+    "key": "advertising-agencies",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1124,6 +1210,7 @@
     "name": "Broadcasting",
     "description": "Owners and operators of television or radio broadcasting systems, including programming. Includes radio and television broadcasting, radio networks, and radio stations.",
     "industry": 502010,
+    "key": "broadcasting",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1132,6 +1219,7 @@
     "name": "Cable & Satellite",
     "description": "Providers of cable or satellite television services. Includes cable networks and program distribution.",
     "industry": 502010,
+    "key": "cable-satellite",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1140,6 +1228,7 @@
     "name": "Publishing",
     "description": "Publishers of newspapers, magazines and books in print or electronic formats.",
     "industry": 502010,
+    "key": "publishing",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1148,6 +1237,7 @@
     "name": "Movies & Entertainment",
     "description": "Companies that engage in producing and selling entertainment products and services, including companies engaged in the production, distribution and screening of movies and television shows, producers and distributors of music, entertainment theaters and sports teams. Also includes companies offering and/or producing entertainment content streamed online.",
     "industry": 502020,
+    "key": "entertainment",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1156,6 +1246,7 @@
     "name": "Interactive Home Entertainment",
     "description": "Producers of interactive gaming products, including mobile gaming applications. Also includes educational software used primarily in the home. Excludes online gambling companies classified in the Casinos & Gaming Sub-Industry.",
     "industry": 502020,
+    "key": "electronic-gaming-multimedia",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1164,6 +1255,7 @@
     "name": "Interactive Media & Services",
     "description": "Companies engaging in content and information creation or distribution through proprietary platforms, where revenues are derived primarily through pay-per-click advertisements. Includes search engines, social media and networking platforms, online classifieds, and online review companies.",
     "industry": 502030,
+    "key": "internet-content-information",
     "industryGroup": 5020,
     "sector": 50
   },
@@ -1172,6 +1264,7 @@
     "name": "Electric Utilities",
     "description": "Companies that produce or distribute electricity. Includes both nuclear and non-nuclear facilities.",
     "industry": 551010,
+    "key": "utilities-regulated-electric",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1180,6 +1273,7 @@
     "name": "Gas Utilities",
     "description": "Companies whose main charter is to distribute and transmit natural and manufactured gas. Excludes companies primarily involved in gas exploration or production classified in the Oil & Gas Exploration & Production Sub-Industry. Also excludes companies engaged in the storage and/or transportation of oil, gas, and/or refined products classified in the Oil & Gas Storage & Transportation Sub-Industry.",
     "industry": 551020,
+    "key": "utilities-regulated-gas",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1188,6 +1282,7 @@
     "name": "Multi-Utilities",
     "description": "Utility companies with significantly diversified activities in addition to core Electric Utility, Gas Utility and/or Water Utility operations.",
     "industry": 551030,
+    "key": "utilities-diversified",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1196,6 +1291,7 @@
     "name": "Water Utilities",
     "description": "Companies that purchase and redistribute water to the end-consumer. Includes large-scale water treatment systems.",
     "industry": 551040,
+    "key": "utilities-regulated-water",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1204,6 +1300,7 @@
     "name": "Independent Power Producers & Energy Traders",
     "description": "Companies that operate as Independent Power Producers (IPPs), Gas & Power Marketing & Trading Specialists and/or Integrated Energy Merchants. Excludes producers of electricity using renewable sources, such as solar power, hydropower, and wind power. Also excludes electric transmission companies and utility distribution companies classified in the Electric Utilities Sub-Industry.",
     "industry": 551050,
+    "key": "utilities-independent-power-producers",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1212,6 +1309,7 @@
     "name": "Renewable Electricity",
     "description": "Companies that engage in the generation and distribution of electricity using renewable sources, including, but not limited to, companies that produce electricity using biomass, geothermal energy, solar energy, hydropower, and wind power. Excludes companies manufacturing capital equipment used to generate electricity using renewable sources, such as manufacturers of solar power systems, installers of photovoltaic cells, and companies involved in the provision of technology, components, and services mainly to this market.",
     "industry": 551050,
+    "key": "utilities-renewable",
     "industryGroup": 5510,
     "sector": 55
   },
@@ -1220,14 +1318,7 @@
     "name": "Diversified REITs",
     "description": "A company or Trust with significantly diversified operations across two or more property types.",
     "industry": 601010,
-    "industryGroup": 6010,
-    "sector": 60
-  },
-  {
-    "code": 60101060,
-    "name": "Residential REITs (Discontinued)",
-    "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of residential properties including multifamily homes, apartments, manufactured homes and student housing properties",
-    "industry": 601010,
+    "key": "reit-diversified",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1236,6 +1327,7 @@
     "name": "Industrial REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of industrial properties. Includes companies operating industrial warehouses and distribution properties.",
     "industry": 601025,
+    "key": "reit-industrial",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1244,6 +1336,7 @@
     "name": "Hotel & Resort REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of hotel and resort properties.",
     "industry": 601030,
+    "key": "reit-hotel-motel",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1252,6 +1345,7 @@
     "name": "Office REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of office properties.",
     "industry": 601040,
+    "key": "reit-office",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1260,6 +1354,7 @@
     "name": "Health Care REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of properties serving the health care industry, including hospitals, nursing homes, and assisted living properties.",
     "industry": 601050,
+    "key": "reit-healthcare-facilities",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1268,6 +1363,7 @@
     "name": "Multi-Family Residential REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of apartments and other multi-family housing including student housing.",
     "industry": 601060,
+    "key": "reit-residential",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1276,6 +1372,7 @@
     "name": "Single-Family Residential REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of single-family residential housing including manufactured homes.",
     "industry": 601060,
+    "key": "reit-redidential-single",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1284,6 +1381,7 @@
     "name": "Retail REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of shopping malls, outlet malls, neighborhood and community shopping centers.",
     "industry": 601070,
+    "key": "reit-retail",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1292,6 +1390,7 @@
     "name": "Other Specialized REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of properties not classified elsewhere. This Sub-Industry includes REITs that manage and own properties such as natural gas and crude oil pipelines, gas stations, fiber optic cables, prisons, automobile parking, and automobile dealerships.",
     "industry": 601080,
+    "key": "reit-specialty",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1300,6 +1399,7 @@
     "name": "Self-Storage REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of self storage properties.",
     "industry": 601080,
+    "key": "reit-self-storage",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1308,6 +1408,7 @@
     "name": "Telecom Tower REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of telecom towers and related structures that support wireless telecommunications.",
     "industry": 601080,
+    "key": "reit-telecom",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1316,6 +1417,7 @@
     "name": "Timber REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of timberland and timber-related properties.",
     "industry": 601080,
+    "key": "reit-timber",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1324,6 +1426,7 @@
     "name": "Data Center REITs",
     "description": "Companies or Trusts engaged in the acquisition, development, ownership, leasing, management and operation of data center properties.",
     "industry": 601080,
+    "key": "reit-datacenter",
     "industryGroup": 6010,
     "sector": 60
   },
@@ -1332,6 +1435,7 @@
     "name": "Diversified Real Estate Activities",
     "description": "Companies engaged in a diverse spectrum of real estate activities including real estate development & sales, real estate management, or real estate services, but with no dominant business line.",
     "industry": 602010,
+    "key": "real-estate-diversified",
     "industryGroup": 6020,
     "sector": 60
   },
@@ -1340,6 +1444,7 @@
     "name": "Real Estate Operating Companies",
     "description": "Companies engaged in operating real estate properties for the purpose of leasing & management.",
     "industry": 602010,
+    "key": "real-estate-operations",
     "industryGroup": 6020,
     "sector": 60
   },
@@ -1348,6 +1453,7 @@
     "name": "Real Estate Development",
     "description": "Companies that develop real estate and sell the properties after development. Excludes companies classified in the Homebuilding Sub-Industry.",
     "industry": 602010,
+    "key": "real-estate-development",
     "industryGroup": 6020,
     "sector": 60
   },
@@ -1356,6 +1462,7 @@
     "name": "Real Estate Services",
     "description": "Real estate service providers such as real estate agents, brokers & real estate appraisers.",
     "industry": 602010,
+    "key": "real-estate-services",
     "industryGroup": 6020,
     "sector": 60
   }

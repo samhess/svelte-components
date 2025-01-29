@@ -1,7 +1,7 @@
 <script lang="js">
   import { page } from '$app/state'
   import HeroIcon from '$lib/components/HeroIcon.svelte'
-  import '../main.css'
+  import '../app.css'
   let {data, children} = $props()
   let {mainMenu, subMenu} = $derived(data)
 

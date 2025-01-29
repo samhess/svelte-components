@@ -1,7 +1,7 @@
 [
   {
     "mic": "XSWX",
-    "name": "SIX Swiss Exchange",
+    "name": "SIX Swiss exchange",
     "acronym": "SIX",
     "yahooIdentifier": "SW",
     "googleIdentifier": "SWX",
@@ -21,7 +21,7 @@
   },
   {
     "mic": "XASX",
-    "name": "ASX - All Markets",
+    "name": "ASX - all markets",
     "acronym": "ASX",
     "yahooIdentifier": "AX",
     "googleIdentifier": "ASX",
@@ -41,7 +41,7 @@
   },
   {
     "mic": "XTSE",
-    "name": "Toronto Stock Exchange",
+    "name": "Toronto stock exchange",
     "acronym": "TSX",
     "yahooIdentifier": "TO",
     "googleIdentifier": "TSE",
@@ -71,7 +71,7 @@
   },
   {
     "mic": "BMEX",
-    "name": "BME - Bolsas y Mercados Espanoles",
+    "name": "BME - bolsas y mercados espanoles",
     "acronym": "BME",
     "yahooIdentifier": "MC",
     "googleIdentifier": "BME",
@@ -81,7 +81,7 @@
   },
   {
     "mic": "XHEL",
-    "name": "Nasdaq Helsinki Ltd",
+    "name": "Nasdaq Helsinki Ltd.",
     "acronym": "",
     "yahooIdentifier": "HE",
     "googleIdentifier": "HEL",
@@ -101,7 +101,7 @@
   },
   {
     "mic": "XLON",
-    "name": "London Stock Exchange",
+    "name": "London stock exchange",
     "acronym": "LSE",
     "yahooIdentifier": "L",
     "googleIdentifier": "LON",
@@ -111,17 +111,17 @@
   },
   {
     "mic": "XHKG",
-    "name": "Hong Kong Exchanges and Clearing Ltd",
+    "name": "Hong Kong exchanges and clearing Ltd.",
     "acronym": "HKEX",
     "yahooIdentifier": "HK",
     "googleIdentifier": "HKG",
     "country": "HK",
-    "city": "Hong kong",
+    "city": "Hong Kong",
     "website": "www.hkex.com.hk"
   },
   {
     "mic": "XDUB",
-    "name": "Irish Stock Exchange - All Market",
+    "name": "Irish stock exchange - all market",
     "acronym": "ISE",
     "yahooIdentifier": "IR",
     "googleIdentifier": "DUB",
@@ -131,17 +131,17 @@
   },
   {
     "mic": "XTAE",
-    "name": "Tel Aviv Stock Exchange",
+    "name": "Tel Aviv stock exchange",
     "acronym": "TASE",
     "yahooIdentifier": "TA",
-    "googleIdentifier": "TAE",
+    "googleIdentifier": "TLV",
     "country": "IL",
-    "city": "Tel aviv",
+    "city": "Tel Aviv",
     "website": "www.tase.co.il"
   },
   {
     "mic": "XMIL",
-    "name": "Borsa Italiana S.p.A.",
+    "name": "Borsa italiana S.p.A.",
     "acronym": "",
     "yahooIdentifier": "MI",
     "googleIdentifier": "BIT",
@@ -151,7 +151,7 @@
   },
   {
     "mic": "XTKS",
-    "name": "Tokyo Stock Exchange",
+    "name": "Tokyo stock exchange",
     "acronym": "TSE",
     "yahooIdentifier": "T",
     "googleIdentifier": "TYO",
@@ -171,17 +171,17 @@
   },
   {
     "mic": "XOSL",
-    "name": "Oslo Bors",
+    "name": "Oslo bors",
     "acronym": "",
     "yahooIdentifier": "OL",
-    "googleIdentifier": "OSL",
+    "googleIdentifier": "OTCMKTS",
     "country": "NO",
     "city": "Oslo",
     "website": "www.oslobors.no"
   },
   {
     "mic": "XNZE",
-    "name": "Nzx - All Markets",
+    "name": "Nzx - all markets",
     "acronym": "NZX",
     "yahooIdentifier": "NZ",
     "googleIdentifier": "NZE",
@@ -191,10 +191,10 @@
   },
   {
     "mic": "XLIS",
-    "name": "Euronext - Euronext Lisbon",
+    "name": "Euronext - Euronext lisbon",
     "acronym": "",
     "yahooIdentifier": "LS",
-    "googleIdentifier": "LIS",
+    "googleIdentifier": "ELI",
     "country": "PT",
     "city": "Lisbon",
     "website": "www.euronext.com"
@@ -211,37 +211,37 @@
   },
   {
     "mic": "XSES",
-    "name": "Singapore Exchange",
+    "name": "Singapore exchange",
     "acronym": "SGX",
     "yahooIdentifier": "SI",
-    "googleIdentifier": "SES",
+    "googleIdentifier": "SGX",
     "country": "SG",
     "city": "Singapore",
     "website": "www.sgx.com"
   },
   {
     "mic": "XNAS",
-    "name": "Nasdaq - All Markets",
+    "name": "Nasdaq - all markets",
     "acronym": "NASDAQ",
     "yahooIdentifier": "",
     "googleIdentifier": "NASDAQ",
     "country": "US",
-    "city": "New york",
+    "city": "New York",
     "website": "www.nasdaq.com"
   },
   {
     "mic": "XNYS",
-    "name": "New York Stock Exchange, Inc.",
+    "name": "New york stock exchange, Inc.",
     "acronym": "NYSE",
     "yahooIdentifier": "",
     "googleIdentifier": "NYSE",
     "country": "US",
-    "city": "New york",
+    "city": "New York",
     "website": "www.nyse.com"
   },
   {
     "mic": "XCBO",
-    "name": "Cboe Global Markets Inc.",
+    "name": "Cboe global markets Inc.",
     "acronym": "CBOE",
     "yahooIdentifier": "",
     "googleIdentifier": "BATS",
@@ -251,7 +251,7 @@
   },
   {
     "mic": "XSHG",
-    "name": "Shanghai Stock Exchange",
+    "name": "Shanghai stock exchange",
     "acronym": "SSE",
     "yahooIdentifier": "SS",
     "googleIdentifier": "SHA",
@@ -261,7 +261,7 @@
   },
   {
     "mic": "XSHE",
-    "name": "Shenzhen Stock Exchange",
+    "name": "Shenzhen stock exchange",
     "acronym": "",
     "yahooIdentifier": "SZ",
     "googleIdentifier": "SHE",
@@ -271,7 +271,7 @@
   },
   {
     "mic": "XKRX",
-    "name": "Korea Exchange (Stock Market)",
+    "name": "Korea exchange (stock market)",
     "acronym": "KRX SM",
     "yahooIdentifier": "KS",
     "googleIdentifier": "KRX",
@@ -281,7 +281,7 @@
   },
   {
     "mic": "XSAU",
-    "name": "Saudi Stock Exchange",
+    "name": "Saudi stock exchange",
     "acronym": "",
     "yahooIdentifier": "SR",
     "googleIdentifier": "TADAWUL",
@@ -291,7 +291,7 @@
   },
   {
     "mic": "XNSE",
-    "name": "National Stock Exchange of India",
+    "name": "National stock exchange of india",
     "acronym": "NSE",
     "yahooIdentifier": "NS",
     "googleIdentifier": "NSE",
@@ -301,7 +301,7 @@
   },
   {
     "mic": "XXXX",
-    "name": "No Market (e.g. unlisted)",
+    "name": "No market (e.g. unlisted)",
     "acronym": "",
     "yahooIdentifier": "",
     "googleIdentifier": "",
@@ -311,12 +311,252 @@
   },
   {
     "mic": "XOFF",
-    "name": "Off-exchange Transactions - Listed Instruments",
+    "name": "Off-exchange transactions - listed instruments",
     "acronym": "XOFF",
     "yahooIdentifier": "",
     "googleIdentifier": "",
     "country": "ZZ",
     "city": "n/a",
     "website": ""
+  },
+  {
+    "mic": "XTAI",
+    "name": "Taiwan stock exchange",
+    "acronym": "TWSE",
+    "yahooIdentifier": "TW",
+    "googleIdentifier": "TPE",
+    "country": "TW",
+    "city": "Taipei",
+    "website": "www.twse.com.tw"
+  },
+  {
+    "mic": "XJSE",
+    "name": "Johannesburg stock exchange",
+    "acronym": "JSE",
+    "yahooIdentifier": "JO",
+    "googleIdentifier": "JSE",
+    "country": "ZA",
+    "city": "Johannesburg",
+    "website": "www.jse.co.za"
+  },
+  {
+    "mic": "XIDX",
+    "name": "Indonesia stock exchange",
+    "acronym": "IDX",
+    "yahooIdentifier": "JK",
+    "googleIdentifier": "IDX",
+    "country": "ID",
+    "city": "Jakarta",
+    "website": "www.idx.co.id"
+  },
+  {
+    "mic": "XBSP",
+    "name": "Bolsa de valores de Sao Paulo",
+    "acronym": "",
+    "yahooIdentifier": "SA",
+    "googleIdentifier": "BVMF",
+    "country": "BR",
+    "city": "Sao Paulo",
+    "website": ""
+  },
+  {
+    "mic": "XMEX",
+    "name": "Bolsa mexicana de valores (mexican stock exchange)",
+    "acronym": "",
+    "yahooIdentifier": "MX",
+    "googleIdentifier": "BMV",
+    "country": "MX",
+    "city": "Mexico",
+    "website": "www.bmv.com.mx"
+  },
+  {
+    "mic": "XKLS",
+    "name": "Bursa Malaysia",
+    "acronym": "",
+    "yahooIdentifier": "KL",
+    "googleIdentifier": "KLSE",
+    "country": "MY",
+    "city": "Kuala Lumpur",
+    "website": "www.bursamalaysia.com"
+  },
+  {
+    "mic": "XADS",
+    "name": "Abu Dhabi securities exchange",
+    "acronym": "ADSM",
+    "yahooIdentifier": "DAS",
+    "googleIdentifier": "",
+    "country": "AE",
+    "city": "Abu Dhabi",
+    "website": "www.adx.ae"
+  },
+  {
+    "mic": "XATH",
+    "name": "Athens exchange S.A. cash market",
+    "acronym": "ATHEXC",
+    "yahooIdentifier": "AT",
+    "googleIdentifier": "",
+    "country": "GR",
+    "city": "Athens",
+    "website": "www.athexgroup.gr"
+  },
+  {
+    "mic": "XBKK",
+    "name": "Stock exchange of Thailand",
+    "acronym": "SET",
+    "yahooIdentifier": "BK",
+    "googleIdentifier": "OTCMKTS",
+    "country": "TH",
+    "city": "Bangkok",
+    "website": "www.set.or.th"
+  },
+  {
+    "mic": "XBOG",
+    "name": "Bolsa de valores de Colombia",
+    "acronym": "BVC",
+    "yahooIdentifier": "CL",
+    "googleIdentifier": "BVC",
+    "country": "CO",
+    "city": "Bogota",
+    "website": "www.bvc.com.co"
+  },
+  {
+    "mic": "XBND",
+    "name": "Budapest stock exchange - xbond",
+    "acronym": "",
+    "yahooIdentifier": "BD",
+    "googleIdentifier": "",
+    "country": "HU",
+    "city": "Budapest",
+    "website": "www.bet.hu"
+  },
+  {
+    "mic": "XDFM",
+    "name": "Dubai financial market",
+    "acronym": "DFM",
+    "yahooIdentifier": "AE",
+    "googleIdentifier": "",
+    "country": "AE",
+    "city": "Dubai",
+    "website": "www.dfm.co.ae"
+  },
+  {
+    "mic": "XCAI",
+    "name": "Egyptian exchange",
+    "acronym": "CASE",
+    "yahooIdentifier": "CA",
+    "googleIdentifier": "",
+    "country": "EG",
+    "city": "Cairo",
+    "website": "www.egyptse.com"
+  },
+  {
+    "mic": "XEQY",
+    "name": "Borsa Istanbul - equity market",
+    "acronym": "",
+    "yahooIdentifier": "IS",
+    "googleIdentifier": "IST",
+    "country": "TR",
+    "city": "Istanbul",
+    "website": "www.borsaistanbul.com"
+  },
+  {
+    "mic": "XKOS",
+    "name": "Korea exchange (kosdaq)",
+    "acronym": "KOSDAQ",
+    "yahooIdentifier": "KQ",
+    "googleIdentifier": "KOSDAQ",
+    "country": "KR",
+    "city": "Seoul",
+    "website": "eng.krx.co.kr"
+  },
+  {
+    "mic": "XKUW",
+    "name": "Kuwait stock exchange",
+    "acronym": "",
+    "yahooIdentifier": "KW",
+    "googleIdentifier": "",
+    "country": "KW",
+    "city": "Kuwait",
+    "website": "www.kuwaitse.com"
+  },
+  {
+    "mic": "XPHS",
+    "name": "Philippine stock exchange, Inc.",
+    "acronym": "PSE",
+    "yahooIdentifier": "PH",
+    "googleIdentifier": "OTCMKTS",
+    "country": "PH",
+    "city": "Pasig City",
+    "website": "www.pse.com.ph"
+  },
+  {
+    "mic": "XPRA",
+    "name": "Prague stock exchange",
+    "acronym": "PSE",
+    "yahooIdentifier": "PR",
+    "googleIdentifier": "OTCMKTS",
+    "country": "CZ",
+    "city": "Prague",
+    "website": "www.pse.cz"
+  },
+  {
+    "mic": "DSMD",
+    "name": "Qatar exchange",
+    "acronym": "DSM",
+    "yahooIdentifier": "QA",
+    "googleIdentifier": "",
+    "country": "QA",
+    "city": "Doha",
+    "website": "www.qatarexchange.qa"
+  },
+  {
+    "mic": "XSGO",
+    "name": "Santiago stock exchange",
+    "acronym": "",
+    "yahooIdentifier": "SN",
+    "googleIdentifier": "",
+    "country": "CL",
+    "city": "Santiago",
+    "website": "www.bolsadesantiago.com"
+  },
+  {
+    "mic": "XWAR",
+    "name": "Warsaw stock exchange/equities/main market",
+    "acronym": "WSE",
+    "yahooIdentifier": "WA",
+    "googleIdentifier": "WSE",
+    "country": "PL",
+    "city": "Warsaw",
+    "website": "www.gpw.pl"
+  },
+  {
+    "mic": "ROCO",
+    "name": "Taipei exchange",
+    "acronym": "TPEX",
+    "yahooIdentifier": "TWO",
+    "googleIdentifier": "",
+    "country": "TW",
+    "city": "Taipei",
+    "website": "www.tpex.org.tw"
+  },
+  {
+    "mic": "MISX",
+    "name": "Moscow exchange - all markets",
+    "acronym": "MOEX",
+    "yahooIdentifier": "RU",
+    "googleIdentifier": "OTCMKTS",
+    "country": "RU",
+    "city": "Moscow",
+    "website": "www.moex.com"
+  },
+  {
+    "mic": "XFRA",
+    "name": "Deutsche Börse AG",
+    "acronym": "",
+    "yahooIdentifier": "F",
+    "googleIdentifier": "FRA",
+    "country": "DE",
+    "city": "Frankfurt",
+    "website": "www.deutsche-boerse.com"
   }
 ]

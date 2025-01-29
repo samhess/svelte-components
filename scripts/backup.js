@@ -25,7 +25,3 @@ for (const table of tables) {
 }
 process.exit(0)
 
-
-// JSON.stringify cannot handle BigInt
-// const replacer = (key, value) => typeof value === 'bigint' ? parseInt(value) : value
-

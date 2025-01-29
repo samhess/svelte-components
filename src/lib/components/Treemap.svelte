@@ -15,10 +15,10 @@
 
   /** @type {Props} */
   let {
-    data = {},
-    structure = 'marketCap',
-    grouping = ['gicsSector', 'gicsIndustry', 'ticker'],
+    data,
     evaluation = 'performance1d',
+    grouping = ['sector', 'industry', 'instrument'],
+    structure = 'marketCap',
     height = '60vh'
   } = $props()
   /** @type {HTMLCanvasElement} */
@@ -71,7 +71,8 @@
   }
 
   function initChart() {
-    Chart.register(LinearScale, TreemapElement, TreemapController, Title, Tooltip, Legend)
+    Chart.register(LinearScale, Title, Tooltip, Legend)
+    Chart.register(TreemapElement, TreemapController)
     // @ts-ignore
     chart = new Chart(canvas, {type:'treemap'})
     chart.options.responsive = true
@@ -181,7 +182,7 @@
 	})
 </script>
 
-<div class="chart-container w-100" style="height:{height};">
+<div style="height:{height};">
   <canvas bind:this={canvas}></canvas>
 </div>
 

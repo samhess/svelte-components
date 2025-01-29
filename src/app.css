@@ -1,0 +1,100 @@
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-primary: var(--color-sky-600);
+  --color-secondary: var(--color-slate-600);
+  --color-success: var(--color-green-600);
+  --color-warning: var(--color-yellow-600);
+  --color-danger: var(--color-red-600);
+  --color-info: var(--color-cyan-600);
+}
+
+@layer base {
+  a {
+    color: var(--color-sky-600);
+    text-decoration-line: none;
+  }
+  button {
+    @apply rounded-md px-3 py-1.5 text-white;
+  }
+  caption {
+    margin-top:  8px;
+    font-size: large;
+    text-align: center;
+  }
+  dialog {
+    @apply w-3/5;
+    @apply border-slate-400;
+    @apply border-2;
+    margin: auto;
+  }
+  figcaption {
+    margin-top:  8px;
+    font-size: large;
+    text-align: center;
+  }
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  h2 {
+    font-size: var(--text-xl);
+    margin-top: 20px;
+  }
+  h3 {
+    font-size: var(--text-lg);
+  }
+  input, select {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    @apply !rounded;
+    @apply !border-slate-400;
+  }
+  img {
+    @apply aspect-video;
+  }
+  label {
+    font-weight: 600;
+    display: block;
+  }
+  table {
+    font-size: var(--text-sm);
+    border-collapse: collapse;
+    caption-side: bottom;
+    table-layout: auto;
+    text-align: left;
+    display: flex;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+  th {
+    white-space: nowrap;
+  }
+  td,th {
+    padding: 4px;
+  }
+  tbody tr {
+    @apply even:bg-gray-100 hover:bg-gray-200
+  }
+}
+
+.btn-primary {
+  @apply bg-sky-500 hover:bg-sky-600;
+}
+.btn-secondary {
+  @apply bg-slate-500 hover:bg-slate-600;
+}
+.btn-danger {
+  @apply bg-red-500 hover:bg-red-600 border-red-600;
+}
+
+
+
+
+
+
