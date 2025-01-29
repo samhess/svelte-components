@@ -1,7 +1,7 @@
 import db from '$lib/server/database.js'
 
 /** @type {import('./$types').PageServerLoad} */
-export async function load({ locals, fetch }) {
+export async function load({locals}) {
   const {session, user} = locals
   const entity = {
     attributes: {

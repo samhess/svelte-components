@@ -7,16 +7,15 @@
    */
 
   /** @type {Props} */
-  let { data } = $props();
-  let {entity, records} = data
+  let {data} = $props()
+  let {entity, records} = $derived(data) 
 </script>
 
 <article class="prose">
   <h1>Global Industry Classification Standard</h1>
   <p>The Global Industry Classification Standard (GICS) is an industry taxonomy developed in 1999 by MSCI and Standard & Poor's (S&P) for use by the global financial community. 
     The GICS structure consists of 11 sectors, 25 industry groups, 76 industries and 170 sub-industries
-    into which S&P has categorized all major public companies. 
-    The system is similar to <a href="/taxonomy/ICB">Industry Classification Benchmark (ICB)</a>.
+    into which S&P has categorized all major public companies.
   </p>
   <DataTable {entity} {records} update={()=>{}}>
     {#snippet children({ records, rowDblClick })}
