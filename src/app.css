@@ -13,12 +13,15 @@
 }
 
 @layer base {
-  article.prose {
-    @apply !max-w-5xl;
+  html, body {
+    @apply h-screen;
   }
   a {
     color: var(--color-sky-600);
     text-decoration-line: none;
+  }
+  article.prose {
+    @apply !max-w-5xl;
   }
   button {
     @apply rounded-md px-3 py-1.5 text-white;
@@ -66,7 +69,8 @@
     display: block;
   }
   main {
-    @apply mx-auto max-w-5xl
+    @apply mx-auto max-w-5xl;
+    min-height: 87%;
   }
   table {
     font-size: var(--text-sm);
