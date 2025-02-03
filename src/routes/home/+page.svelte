@@ -11,9 +11,6 @@
       <a href="/components/forms">AddressInput</a>
     </li>
     <li>
-      <a href="/components/icons">HeroIcon</a>
-    </li>
-    <li>
       <a href="/components/tables">DataTable</a>
     </li>
   </ul>

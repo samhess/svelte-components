@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 
+@plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
 
 @theme {
@@ -12,6 +13,9 @@
 }
 
 @layer base {
+  article.prose {
+    @apply !max-w-5xl;
+  }
   a {
     color: var(--color-sky-600);
     text-decoration-line: none;
@@ -61,22 +65,26 @@
     font-weight: 600;
     display: block;
   }
+  main {
+    @apply mx-auto max-w-5xl
+  }
   table {
     font-size: var(--text-sm);
     border-collapse: collapse;
     caption-side: bottom;
-    table-layout: auto;
+    table-layout: fixed;
     text-align: left;
-    display: flex;
     margin-top: 4px;
     margin-bottom: 4px;
     width: 100%;
   }
-  th {
+  th,td {
     white-space: nowrap;
-  }
-  td,th {
     padding: 4px;
+  }
+  td {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   tbody tr {
     @apply even:bg-gray-100 hover:bg-gray-200
@@ -92,9 +100,3 @@
 .btn-danger {
   @apply bg-red-500 hover:bg-red-600 border-red-600;
 }
-
-
-
-
-
-

@@ -16,19 +16,17 @@ function getSubMenu(mainMenuItem='') {
   } else {
     return []
   }
-
 }
 
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({locals, route}) {
-
   const {session, user} = locals
-  const mainMenu = [ 'Home', 'Components', 'Examples' ]
+  const routes = [ 'Home', 'Components', 'Examples' ]
   const {id:path} = route
   if (path) {
     const [level1] = path.replace(/^\//,'').split('/')
     const subMenu = getSubMenu(level1)
-    return {session, user, mainMenu, subMenu}
+    return {session, user, routes, subMenu}
   } else {
     error(500, 'route does not exist')
   }

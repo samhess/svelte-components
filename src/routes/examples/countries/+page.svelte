@@ -14,6 +14,8 @@
 
 <article class="prose">
   <h1>Countries</h1>
+</article>
+<div class="mt-6">
   <DataTable {entity} {records} update={()=>invalidateAll()}>
     {#snippet children({records, rowDblClick})}
       {#each records as record}
@@ -26,5 +28,5 @@
       {/each}
     {/snippet}
   </DataTable>
-</article>
+</div>
 

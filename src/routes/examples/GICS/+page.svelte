@@ -13,10 +13,12 @@
 
 <article class="prose">
   <h1>Global Industry Classification Standard</h1>
-  <p>The Global Industry Classification Standard (GICS) is an industry taxonomy developed in 1999 by MSCI and Standard & Poor's (S&P) for use by the global financial community. 
-    The GICS structure consists of 11 sectors, 25 industry groups, 76 industries and 170 sub-industries
+  <p class="lead">The Global Industry Classification Standard (GICS) is an industry taxonomy developed in 1999 by MSCI and Standard & Poor's (S&P) for use by the global financial community. 
+    The GICS structure consists of 11 sectors, 25 industry groups, 76 industries and 163 sub-industries
     into which S&P has categorized all major public companies.
   </p>
+</article>
+<div class="mt-6">
   <DataTable {entity} {records} update={()=>{}}>
     {#snippet children({ records, rowDblClick })}
       {#each records as record}
@@ -31,4 +33,6 @@
       {/each}
     {/snippet}
   </DataTable>
-</article>
+</div>
+
+

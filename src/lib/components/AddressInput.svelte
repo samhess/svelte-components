@@ -116,7 +116,7 @@
     <li>
       <a class="dropdown-item" href="/" onclick={(event)=>{event.preventDefault(); selectAddress(suggestion)} }>
         {formatLabel(suggestion.label,'start')}
-        <span class="text-primary-500">{formatLabel(suggestion.label,'middle')}</span>
+        <span class="text-primary">{formatLabel(suggestion.label,'middle')}</span>
         {formatLabel(suggestion.label, 'end')}
       </a> 
     </li>

@@ -17,6 +17,8 @@
   <p>
     This is a sortable (click on column in table header) and optionally editable (double click on table row) data table.
   </p>
+</article>
+<div class="mt-6">
   <DataTable {entity} {records} update={()=>invalidateAll()}>
     {#snippet children({records, rowDblClick})}
       {#each records as record}
@@ -29,4 +31,4 @@
       {/each}
     {/snippet}
   </DataTable>
-</article>
+</div>
