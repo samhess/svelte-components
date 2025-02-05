@@ -14,7 +14,7 @@
 <article class="prose">
   <h1>Tables</h1>
   <h2>DataTable</h2>
-  <p>
+  <p class="lead">
     This is a sortable (click on column in table header) and optionally editable (double click on table row) data table.
   </p>
 </article>

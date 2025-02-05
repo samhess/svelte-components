@@ -12,7 +12,7 @@ export async function load({locals}) {
       Sector: {name:'Sector', key:'code'}
     },
     endpoint: 'gics',
-    isEditable: session ? user.role==='admin' : false,
+    isEditable: true,
     name: 'GICS Taxonomy',
     sorting: {field:'code'}
   }

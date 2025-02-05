@@ -3,7 +3,7 @@ import {json} from '@sveltejs/kit'
 import {Prisma} from '@prisma/client'
 
 const {models} = Prisma.dmmf.datamodel
-const modelNames = models.map(({name})=>name.replace(/^Gics^$/,''))
+const modelNames = models.map(({name})=>name.replace(/^Gics(?!$)/,''))
 
 /** @type {Object<string,any>} */
 const hardOptions = {
@@ -39,20 +39,11 @@ const hardOptions = {
   ]
 }
 
-async function getOptions(entity='Article', orderKey='name', valueKey='code', nameKey='name') {
-  /** @type {Object<string,any>[]} */
-  // @ts-ignore
-  const options = await db[entity].findMany({orderBy: {orderKey: 'asc'}})
-  return options.map(option => ({
-    value: option[valueKey], 
-    name: option[nameKey]
-  }))
-}
-
 
 /** @type {import('./$types').RequestHandler} */
 export async function GET({params}) {
   const {entity} = params
+  
   if (entity in hardOptions) {
     const options = new Array(...hardOptions[entity])
     options.unshift({value:'', name:`\u2014\u2014\u2014 select ${entity.toLowerCase()} \u2014\u2014\u2014`})
@@ -86,22 +77,6 @@ export async function GET({params}) {
     }
     else if (entity==='IndustryGroup') {
       options = await db.gicsIndustryGroup.findMany({orderBy: {code: 'asc'}})
-      options = options.map(({code, name}) => ({value:code, name:`${code} \u2013 ${name}`}))
-    }
-    else if (entity==='Icb') {
-      options = await db.icb.findMany({orderBy: {code: 'asc'}})
-      options = options.map(({code, name}) => ({value:code, name:`${code} \u2013 ${name}`}))
-    }
-    else if (entity==='IcbSector') {
-      options = await db.icbSector.findMany({orderBy: {code: 'asc'}})
-      options = options.map(({code, name}) => ({value:code, name:`${code} \u2013 ${name}`}))
-    }
-    else if (entity==='IcbIndustry') {
-      options = await db.icbIndustry.findMany({orderBy: {code: 'asc'}})
-      options = options.map(({code, name}) => ({value:code, name:`${code} \u2013 ${name}`}))
-    }
-    else if (entity==='IcbSuperSector') {
-      options = await db.icbSuperSector.findMany({orderBy: {code: 'asc'}})
       options = options.map(({code, name}) => ({value:code, name:`${code} \u2013 ${name}`}))
     }
     else if (entity==='Instrument') {

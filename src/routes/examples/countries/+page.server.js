@@ -13,7 +13,7 @@ export async function load({locals}) {
     endpoint: 'country',
     name: 'Countries',
     sorting: {field:'code'},
-    isEditable: session ? user.role==='admin' : false,
+    isEditable: true,
   }
   const records = await db.country.findMany({
     orderBy: {code: 'asc'},

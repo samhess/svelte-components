@@ -22,31 +22,26 @@
 <article class="prose">
   <h1>Form Elements</h1>
   <h2>Address Autocomplete</h2>
-  <p>Type two and more letters in the street field and select an address from the suggestions.</p>
+  <p class="lead">Type two and more letters in the street field and select an address from the suggestions.</p>
   <form>
-    <div>
-      <div class="mb-2 w-1/2">
-        <label class="form-label" for="street">Street</label>
+    <div class="mb-4">
+      <label>Street
         <AddressInput mapboxOptions={mapbox} deliver={(results={})=>{Object.assign(address,results)}}></AddressInput>
-      </div>
+      </label>
     </div>
-    <div class="flex justify-normal">
-      <div class="me-5">
-        <label class="form-label" for="postcode">Postcode</label>
-        <input class="form-input" bind:value={address.postcode}/>
-      </div>
-      <div class="me-5">
-        <label class="form-label" for="city">City</label>
-        <input class="form-input" bind:value={address.city}/>
-      </div>
-      <div class="me-5">
-        <label class="form-label" for="county">County</label>
-        <input class="form-input" bind:value={address.state}/>
-      </div>
-      <div class="me-5">
-        <label class="form-label" for="county">Country</label>
-        <input class="form-input" bind:value={address.country}/>
-      </div>
+    <div class="flex justify-between">
+      <label>Postcode
+        <input name="postcode" bind:value={address.postcode}/>
+      </label>
+      <label>City
+        <input name="city" bind:value={address.city}/>
+      </label>
+      <label>County / State
+        <input name="state" bind:value={address.state}/>
+      </label>
+      <label>Country
+        <input name="country" autocomplete="off" bind:value={address.country}/>
+      </label>
     </div>
   </form>
 </article>

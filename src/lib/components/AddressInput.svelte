@@ -110,7 +110,7 @@
   }
 </script>
 
-<input type="text" class="form-input" bind:value={searchtext} oninput={searchAddress}/>
+<input type="text" name="street" bind:value={searchtext} oninput={searchAddress}/>
 <ul bind:this={dropdownMenu} class="list-none pl-0 mt-0">
   {#each suggestions as suggestion} 
     <li>

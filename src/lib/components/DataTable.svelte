@@ -81,7 +81,7 @@
 {#if toolbar}{@render toolbar({addItem})}{:else}
   {#if isEditable===true}
     <div class="text-end pb-3">
-      <button class="btn-primary" onclick={()=>addItem()}>Add</button>
+      <button class="" onclick={()=>addItem()}>Add</button>
     </div>
   {/if}
 {/if}

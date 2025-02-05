@@ -4,16 +4,16 @@ import db from '$lib/server/database.js'
 export async function load({locals}) {
   const {session, user} = locals
   const entity = {
-    attributes: [
-      { key: 'code', name: 'Code', align: 'left' },
-      { key: 'name', name: 'Name' },
-      { key: 'issuer', name: 'Issuer' },
-      { key: 'countries', name: 'Main currency in', edit:false },
-    ],
+    attributes: {
+      code: {name:'Code'},
+      name: {name:'Name'},
+      issuer: {name:'Issuer'},
+      countries: {name:'Main currency in', edit:false },
+    },
     endpoint: 'currency',
     name: 'Currencies',
     sorting: {field:'code'},
-    isEditable: session ? user.role==='admin' : false,
+    isEditable: true,
   }
   const records = await db.currency.findMany({
     orderBy: {code: 'asc'},

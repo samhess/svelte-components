@@ -14,7 +14,7 @@
   
 <article class="prose">
   <h1>Exchanges</h1>
-  <p class="lead">Current New York time is {new Date().toLocaleTimeString('default', {timeZone:'America/New_York', timeStyle:'short'})}</p>
+  <p class="lead">New York time is {new Date().toLocaleTimeString('default', {timeZone:'America/New_York', timeStyle:'short'})}</p>
 </article>
 <div class="mt-6">
   <DataTable {entity} {records} update={()=>invalidate('/api/exchange')}>

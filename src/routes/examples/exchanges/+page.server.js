@@ -17,7 +17,7 @@ export async function load({locals}) {
     endpoint: 'exchange',
     name: 'Exchanges',
     sorting: {field:'mic', direction:'asc'},
-    isEditable: session ? user.role==='admin' : false
+    isEditable: true,
   }
   const records = await db.exchange.findMany({
     orderBy: {mic: 'asc'},
