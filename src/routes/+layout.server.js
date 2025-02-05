@@ -1,18 +1,19 @@
-import { error } from '@sveltejs/kit'
+import {error} from '@sveltejs/kit'
 /** @type {Object<string,any>} */
-const menuItems = {
+const menu = {
   components: Object.keys(import.meta.glob('./components/*/*.svelte')),
   examples: Object.keys(import.meta.glob('./examples/*/*.svelte'))
 }
-function getSubMenu(mainMenuItem='') {
-  if (mainMenuItem in menuItems) {
+function getSubMenu(item='') {
+  if (menu[item]) {
     /** @type {string[]} */
-    const subMenu = menuItems[mainMenuItem]
-    return subMenu.map(path => ({
-      // @ts-ignore
-      name: path.match(/\/.*\/(.*)\//)[1].replace(/./,char=>char.toUpperCase()),
-      path: path.replace(/^\./,'').replace(/\/\+page.svelte$/,'')
-    }))
+    const subMenu = menu[item]
+    return subMenu
+      .map(path => ({
+        name: path.match(/\/.*\/(.*)\//)[1].replace(/./,char=>char.toUpperCase()),
+        path: path.replace(/^\./,'').replace(/\/\+page.svelte$/,'')
+      }))
+      .sort((a,b)=>a.name.localeCompare(b.name,undefined,{sensitivity:'base'}))
   } else {
     return []
   }
@@ -21,13 +22,11 @@ function getSubMenu(mainMenuItem='') {
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({locals, route}) {
   const {session, user} = locals
-  const routes = [ 'Home', 'Components', 'Examples' ]
-  const {id:path} = route
-  if (path) {
-    const [level1] = path.replace(/^\//,'').split('/')
-    const subMenu = getSubMenu(level1)
+  if (route.id) {
+    const subMenu = getSubMenu(route.id.split('/')[1])
+    const routes = ['Home','Components','Examples']
     return {session, user, routes, subMenu}
   } else {
-    error(500, 'route does not exist')
+    error(404, 'route does not exist')
   }
 }
