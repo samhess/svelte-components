@@ -49,6 +49,7 @@ model Exchange {
   country          String
   city             String
   website          String?
+  timezone         String?
   Country          Country      @relation(fields: [country], references: [code], onDelete: Cascade)
   Instrument       Instrument[]
 }

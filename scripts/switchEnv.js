@@ -1,4 +1,8 @@
 import {readFile, writeFile} from 'fs/promises'
+import {exec as execCb} from 'child_process'
+import {promisify} from "node:util"
+const exec = promisify(execCb)
+
 const env = process.argv[2] ?? 'dev'
 
 const prismaConfigPath = '../prisma/schema.prisma'
@@ -28,3 +32,8 @@ if (env==='prod') {
     await writeFile(packageJsonPath, JSON.stringify(packageJson,null,4), {encoding:'utf-8'})
   }
 }
+
+const {error, stdout, stderr} = await exec('cd .. && npx prisma generate')
+console.log(stdout)
+
+  
