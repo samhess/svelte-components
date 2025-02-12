@@ -17,8 +17,6 @@
     The GICS structure consists of 11 sectors, 25 industry groups, 76 industries and 163 sub-industries
     into which S&P has categorized all major public companies.
   </p>
-</article>
-<div class="mt-6">
   <DataTable {entity} {records} update={()=>{}}>
     {#snippet children({ records, rowDblClick })}
       {#each records as record}
@@ -33,6 +31,6 @@
       {/each}
     {/snippet}
   </DataTable>
-</div>
+</article>
 
 

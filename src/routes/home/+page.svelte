@@ -3,7 +3,7 @@
   <p>This is a collection of components I have been using in my personal projects.
      Maybe parts of it might be useful for others.
   </p>
-  <ul>
+  <ul class="list-disc list-inside text-primary">
     <li>
       <a href="/components/charts">Treemap</a>
     </li>
