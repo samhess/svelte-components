@@ -7,8 +7,8 @@
     "googleIdentifier": "SWX",
     "country": "CH",
     "city": "Zurich",
-    "timezone": "Europe/Zurich",
-    "website": "www.six-group.com"
+    "website": "www.six-group.com",
+    "timezone": "Europe/Zurich"
   },
   {
     "mic": "XWBO",
@@ -18,8 +18,8 @@
     "googleIdentifier": "VIE",
     "country": "AT",
     "city": "Vienna",
-    "timezone": "Europe/Vienna",
-    "website": "www.wienerboerse.at"
+    "website": "www.wienerboerse.at",
+    "timezone": "Europe/Vienna"
   },
   {
     "mic": "XASX",
@@ -29,8 +29,8 @@
     "googleIdentifier": "ASX",
     "country": "AU",
     "city": "Sydney",
-    "timezone": "Australia/Sydney",
-    "website": "www.asx.com.au"
+    "website": "www.asx.com.au",
+    "timezone": "Australia/Sydney"
   },
   {
     "mic": "XBRU",
@@ -40,8 +40,8 @@
     "googleIdentifier": "EBR",
     "country": "BE",
     "city": "Brussels",
-    "timezone": "Europe/Brussels",
-    "website": "www.euronext.com"
+    "website": "www.euronext.com",
+    "timezone": "Europe/Brussels"
   },
   {
     "mic": "XTSE",
@@ -51,8 +51,8 @@
     "googleIdentifier": "TSE",
     "country": "CA",
     "city": "Toronto",
-    "timezone": "America/Toronto",
-    "website": "www.tse.com"
+    "website": "www.tse.com",
+    "timezone": "America/Toronto"
   },
   {
     "mic": "XETR",
@@ -62,8 +62,8 @@
     "googleIdentifier": "ETR",
     "country": "DE",
     "city": "Frankfurt",
-    "timezone": "Europe/Berlin",
-    "website": "www.deutsche-boerse.com"
+    "website": "www.deutsche-boerse.com",
+    "timezone": "Europe/Berlin"
   },
   {
     "mic": "XCSE",
@@ -73,8 +73,8 @@
     "googleIdentifier": "CPH",
     "country": "DK",
     "city": "Copenhagen",
-    "timezone": "Europe/Copenhagen",
-    "website": "www.nasdaqomxnordic.com"
+    "website": "www.nasdaqomxnordic.com",
+    "timezone": "Europe/Copenhagen"
   },
   {
     "mic": "BMEX",
@@ -84,8 +84,8 @@
     "googleIdentifier": "BME",
     "country": "ES",
     "city": "Madrid",
-    "timezone": "Europe/Madrid",
-    "website": "www.bolsasymercados.es"
+    "website": "www.bolsasymercados.es",
+    "timezone": "Europe/Madrid"
   },
   {
     "mic": "XHEL",
@@ -95,8 +95,8 @@
     "googleIdentifier": "HEL",
     "country": "FI",
     "city": "Helsinki",
-    "timezone": "Europe/Helsinki",
-    "website": "www.nasdaqomxnordic.com"
+    "website": "www.nasdaqomxnordic.com",
+    "timezone": "Europe/Helsinki"
   },
   {
     "mic": "XPAR",
@@ -106,8 +106,8 @@
     "googleIdentifier": "EPA",
     "country": "FR",
     "city": "Paris",
-    "timezone": "Europe/Paris",
-    "website": "www.euronext.com"
+    "website": "www.euronext.com",
+    "timezone": "Europe/Paris"
   },
   {
     "mic": "XLON",
@@ -117,8 +117,8 @@
     "googleIdentifier": "LON",
     "country": "GB",
     "city": "London",
-    "timezone": "Europe/London",
-    "website": "www.londonstockexchange.com"
+    "website": "www.londonstockexchange.com",
+    "timezone": "Europe/London"
   },
   {
     "mic": "XHKG",
@@ -128,8 +128,8 @@
     "googleIdentifier": "HKG",
     "country": "HK",
     "city": "Hong Kong",
-    "timezone": "Asia/Hong_Kong",
-    "website": "www.hkex.com.hk"
+    "website": "www.hkex.com.hk",
+    "timezone": "Asia/Hong_Kong"
   },
   {
     "mic": "XDUB",
@@ -139,8 +139,8 @@
     "googleIdentifier": "DUB",
     "country": "IE",
     "city": "Dublin",
-    "timezone": "Europe/Dublin",
-    "website": "www.ise.ie"
+    "website": "www.ise.ie",
+    "timezone": "Europe/Dublin"
   },
   {
     "mic": "XTAE",
@@ -150,8 +150,8 @@
     "googleIdentifier": "TLV",
     "country": "IL",
     "city": "Tel Aviv",
-    "timezone": "Asia/Jerusalem",
-    "website": "www.tase.co.il"
+    "website": "www.tase.co.il",
+    "timezone": "Asia/Jerusalem"
   },
   {
     "mic": "XMIL",
@@ -161,8 +161,8 @@
     "googleIdentifier": "BIT",
     "country": "IT",
     "city": "Milan",
-    "timezone": "Europe/Rome",
-    "website": "www.borsaitaliana.it"
+    "website": "www.borsaitaliana.it",
+    "timezone": "Europe/Rome"
   },
   {
     "mic": "XTKS",
@@ -172,8 +172,8 @@
     "googleIdentifier": "TYO",
     "country": "JP",
     "city": "Tokyo",
-    "timezone": "Asia/Tokyo",
-    "website": "www.jpx.co.jp"
+    "website": "www.jpx.co.jp",
+    "timezone": "Asia/Tokyo"
   },
   {
     "mic": "XAMS",
@@ -183,8 +183,8 @@
     "googleIdentifier": "AMS",
     "country": "NL",
     "city": "Amsterdam",
-    "timezone": "Europe/Amsterdam",
-    "website": "www.euronext.com"
+    "website": "www.euronext.com",
+    "timezone": "Europe/Amsterdam"
   },
   {
     "mic": "XOSL",
@@ -194,8 +194,8 @@
     "googleIdentifier": "OTCMKTS",
     "country": "NO",
     "city": "Oslo",
-    "timezone": "Europe/Oslo",
-    "website": "www.oslobors.no"
+    "website": "www.oslobors.no",
+    "timezone": "Europe/Oslo"
   },
   {
     "mic": "XNZE",
@@ -205,8 +205,8 @@
     "googleIdentifier": "NZE",
     "country": "NZ",
     "city": "Auckland",
-    "timezone": "Pacific/Auckland",
-    "website": "www.nzx.com"
+    "website": "www.nzx.com",
+    "timezone": "Pacific/Auckland"
   },
   {
     "mic": "XLIS",
@@ -216,8 +216,8 @@
     "googleIdentifier": "ELI",
     "country": "PT",
     "city": "Lisbon",
-    "timezone": "Europe/Lisbon",
-    "website": "www.euronext.com"
+    "website": "www.euronext.com",
+    "timezone": "Europe/Lisbon"
   },
   {
     "mic": "XSTO",
@@ -227,8 +227,8 @@
     "googleIdentifier": "STO",
     "country": "SE",
     "city": "Stockholm",
-    "timezone": "Europe/Stockholm",
-    "website": "www.nasdaqomxnordic.com"
+    "website": "www.nasdaqomxnordic.com",
+    "timezone": "Europe/Stockholm"
   },
   {
     "mic": "XSES",
@@ -238,8 +238,8 @@
     "googleIdentifier": "SGX",
     "country": "SG",
     "city": "Singapore",
-    "timezone": "Asia/Singapore",
-    "website": "www.sgx.com"
+    "website": "www.sgx.com",
+    "timezone": "Asia/Singapore"
   },
   {
     "mic": "XNAS",
@@ -249,8 +249,8 @@
     "googleIdentifier": "NASDAQ",
     "country": "US",
     "city": "New York",
-    "timezone": "America/New_York",
-    "website": "www.nasdaq.com"
+    "website": "www.nasdaq.com",
+    "timezone": "America/New_York"
   },
   {
     "mic": "XNYS",
@@ -260,8 +260,8 @@
     "googleIdentifier": "NYSE",
     "country": "US",
     "city": "New York",
-    "timezone": "America/New_York",
-    "website": "www.nyse.com"
+    "website": "www.nyse.com",
+    "timezone": "America/New_York"
   },
   {
     "mic": "XCBO",
@@ -271,8 +271,8 @@
     "googleIdentifier": "BATS",
     "country": "US",
     "city": "Chicago",
-    "timezone": "America/Chicago",
-    "website": "markets.cboe.com"
+    "website": "markets.cboe.com",
+    "timezone": "America/Chicago"
   },
   {
     "mic": "XSHG",
@@ -282,8 +282,8 @@
     "googleIdentifier": "SHA",
     "country": "CN",
     "city": "Shanghai",
-    "timezone": "Asia/Shanghai",
-    "website": "www.sse.com.cn"
+    "website": "www.sse.com.cn",
+    "timezone": "Asia/Shanghai"
   },
   {
     "mic": "XSHE",
@@ -293,8 +293,8 @@
     "googleIdentifier": "SHE",
     "country": "CN",
     "city": "Shenzhen",
-    "timezone": "Asia/Shanghai",
-    "website": "www.szse.cn"
+    "website": "www.szse.cn",
+    "timezone": "Asia/Shanghai"
   },
   {
     "mic": "XKRX",
@@ -304,8 +304,8 @@
     "googleIdentifier": "KRX",
     "country": "KR",
     "city": "Seoul",
-    "timezone": "Asia/Seoul",
-    "website": "eng.krx.co.kr"
+    "website": "eng.krx.co.kr",
+    "timezone": "Asia/Seoul"
   },
   {
     "mic": "XSAU",
@@ -315,8 +315,8 @@
     "googleIdentifier": "TADAWUL",
     "country": "SA",
     "city": "Riyadh",
-    "timezone": "Asia/Riyadh",
-    "website": "www.tadawul.com.sa"
+    "website": "www.tadawul.com.sa",
+    "timezone": "Asia/Riyadh"
   },
   {
     "mic": "XNSE",
@@ -326,8 +326,8 @@
     "googleIdentifier": "NSE",
     "country": "IN",
     "city": "Mumbai",
-    "timezone": "Asia/Calcutta",
-    "website": "www.nseindia.com"
+    "website": "www.nseindia.com",
+    "timezone": "Asia/Calcutta"
   },
   {
     "mic": "XXXX",
@@ -337,8 +337,8 @@
     "googleIdentifier": "",
     "country": "ZZ",
     "city": "n/a",
-    "timezone": "",
-    "website": ""
+    "website": "",
+    "timezone": ""
   },
   {
     "mic": "XOFF",
@@ -348,8 +348,8 @@
     "googleIdentifier": "",
     "country": "ZZ",
     "city": "n/a",
-    "timezone": "",
-    "website": ""
+    "website": "",
+    "timezone": ""
   },
   {
     "mic": "XTAI",
@@ -359,8 +359,8 @@
     "googleIdentifier": "TPE",
     "country": "TW",
     "city": "Taipei",
-    "timezone": "Asia/Taipei",
-    "website": "www.twse.com.tw"
+    "website": "www.twse.com.tw",
+    "timezone": "Asia/Taipei"
   },
   {
     "mic": "XJSE",
@@ -370,8 +370,8 @@
     "googleIdentifier": "JSE",
     "country": "ZA",
     "city": "Johannesburg",
-    "timezone": "Africa/Johannesburg",
-    "website": "www.jse.co.za"
+    "website": "www.jse.co.za",
+    "timezone": "Africa/Johannesburg"
   },
   {
     "mic": "XIDX",
@@ -381,8 +381,8 @@
     "googleIdentifier": "IDX",
     "country": "ID",
     "city": "Jakarta",
-    "timezone": "Asia/Jakarta",
-    "website": "www.idx.co.id"
+    "website": "www.idx.co.id",
+    "timezone": "Asia/Jakarta"
   },
   {
     "mic": "XBSP",
@@ -392,8 +392,8 @@
     "googleIdentifier": "BVMF",
     "country": "BR",
     "city": "Sao Paulo",
-    "timezone": "America/Sao_Paulo",
-    "website": ""
+    "website": "",
+    "timezone": "America/Sao_Paulo"
   },
   {
     "mic": "XMEX",
@@ -403,8 +403,8 @@
     "googleIdentifier": "BMV",
     "country": "MX",
     "city": "Mexico",
-    "timezone": "America/Mexico_City",
-    "website": "www.bmv.com.mx"
+    "website": "www.bmv.com.mx",
+    "timezone": "America/Mexico_City"
   },
   {
     "mic": "XKLS",
@@ -414,8 +414,8 @@
     "googleIdentifier": "KLSE",
     "country": "MY",
     "city": "Kuala Lumpur",
-    "timezone": "Asia/Kuala_Lumpur",
-    "website": "www.bursamalaysia.com"
+    "website": "www.bursamalaysia.com",
+    "timezone": "Asia/Kuala_Lumpur"
   },
   {
     "mic": "XADS",
@@ -425,8 +425,8 @@
     "googleIdentifier": "",
     "country": "AE",
     "city": "Abu Dhabi",
-    "timezone": "Asia/Dubai",
-    "website": "www.adx.ae"
+    "website": "www.adx.ae",
+    "timezone": "Asia/Dubai"
   },
   {
     "mic": "XATH",
@@ -436,8 +436,8 @@
     "googleIdentifier": "",
     "country": "GR",
     "city": "Athens",
-    "timezone": "Europe/Athens",
-    "website": "www.athexgroup.gr"
+    "website": "www.athexgroup.gr",
+    "timezone": "Europe/Athens"
   },
   {
     "mic": "XBKK",
@@ -447,8 +447,8 @@
     "googleIdentifier": "OTCMKTS",
     "country": "TH",
     "city": "Bangkok",
-    "timezone": "Asia/Bangkok",
-    "website": "www.set.or.th"
+    "website": "www.set.or.th",
+    "timezone": "Asia/Bangkok"
   },
   {
     "mic": "XBOG",
@@ -458,8 +458,8 @@
     "googleIdentifier": "BVC",
     "country": "CO",
     "city": "Bogota",
-    "timezone": "America/Bogota",
-    "website": "www.bvc.com.co"
+    "website": "www.bvc.com.co",
+    "timezone": "America/Bogota"
   },
   {
     "mic": "XBND",
@@ -469,8 +469,8 @@
     "googleIdentifier": "",
     "country": "HU",
     "city": "Budapest",
-    "timezone": "Europe/Budapest",
-    "website": "www.bet.hu"
+    "website": "www.bet.hu",
+    "timezone": "Europe/Budapest"
   },
   {
     "mic": "XDFM",
@@ -480,8 +480,8 @@
     "googleIdentifier": "",
     "country": "AE",
     "city": "Dubai",
-    "timezone": "Asia/Dubai",
-    "website": "www.dfm.co.ae"
+    "website": "www.dfm.co.ae",
+    "timezone": "Asia/Dubai"
   },
   {
     "mic": "XCAI",
@@ -491,8 +491,8 @@
     "googleIdentifier": "",
     "country": "EG",
     "city": "Cairo",
-    "timezone": "Africa/Cairo",
-    "website": "www.egyptse.com"
+    "website": "www.egyptse.com",
+    "timezone": "Africa/Cairo"
   },
   {
     "mic": "XEQY",
@@ -502,8 +502,8 @@
     "googleIdentifier": "IST",
     "country": "TR",
     "city": "Istanbul",
-    "timezone": "Europe/Istanbul",
-    "website": "www.borsaistanbul.com"
+    "website": "www.borsaistanbul.com",
+    "timezone": "Europe/Istanbul"
   },
   {
     "mic": "XKOS",
@@ -513,8 +513,8 @@
     "googleIdentifier": "KOSDAQ",
     "country": "KR",
     "city": "Seoul",
-    "timezone": "Asia/Seoul",
-    "website": "eng.krx.co.kr"
+    "website": "eng.krx.co.kr",
+    "timezone": "Asia/Seoul"
   },
   {
     "mic": "XKUW",
@@ -524,8 +524,8 @@
     "googleIdentifier": "",
     "country": "KW",
     "city": "Kuwait",
-    "timezone": "Asia/Kuwait",
-    "website": "www.kuwaitse.com"
+    "website": "www.kuwaitse.com",
+    "timezone": "Asia/Kuwait"
   },
   {
     "mic": "XPHS",
@@ -535,8 +535,8 @@
     "googleIdentifier": "OTCMKTS",
     "country": "PH",
     "city": "Pasig City",
-    "timezone": "Asia/Manila",
-    "website": "www.pse.com.ph"
+    "website": "www.pse.com.ph",
+    "timezone": "Asia/Manila"
   },
   {
     "mic": "XPRA",
@@ -546,8 +546,8 @@
     "googleIdentifier": "OTCMKTS",
     "country": "CZ",
     "city": "Prague",
-    "timezone": "Europe/Prague",
-    "website": "www.pse.cz"
+    "website": "www.pse.cz",
+    "timezone": "Europe/Prague"
   },
   {
     "mic": "DSMD",
@@ -557,8 +557,8 @@
     "googleIdentifier": "",
     "country": "QA",
     "city": "Doha",
-    "timezone": "Asia/Qatar",
-    "website": "www.qatarexchange.qa"
+    "website": "www.qatarexchange.qa",
+    "timezone": "Asia/Qatar"
   },
   {
     "mic": "XSGO",
@@ -568,8 +568,8 @@
     "googleIdentifier": "",
     "country": "CL",
     "city": "Santiago",
-    "timezone": "America/Santiago",
-    "website": "www.bolsadesantiago.com"
+    "website": "www.bolsadesantiago.com",
+    "timezone": "America/Santiago"
   },
   {
     "mic": "XWAR",
@@ -579,8 +579,8 @@
     "googleIdentifier": "WSE",
     "country": "PL",
     "city": "Warsaw",
-    "timezone": "Europe/Warsaw",
-    "website": "www.gpw.pl"
+    "website": "www.gpw.pl",
+    "timezone": "Europe/Warsaw"
   },
   {
     "mic": "ROCO",
@@ -590,8 +590,8 @@
     "googleIdentifier": "",
     "country": "TW",
     "city": "Taipei",
-    "timezone": "Asia/Taipei",
-    "website": "www.tpex.org.tw"
+    "website": "www.tpex.org.tw",
+    "timezone": "Asia/Taipei"
   },
   {
     "mic": "MISX",
@@ -601,8 +601,8 @@
     "googleIdentifier": "OTCMKTS",
     "country": "RU",
     "city": "Moscow",
-    "timezone": "Europe/Moscow",
-    "website": "www.moex.com"
+    "website": "www.moex.com",
+    "timezone": "Europe/Moscow"
   },
   {
     "mic": "XFRA",
@@ -612,7 +612,7 @@
     "googleIdentifier": "FRA",
     "country": "DE",
     "city": "Frankfurt",
-    "timezone": "Europe/Berlin",
-    "website": "www.deutsche-boerse.com"
+    "website": "www.deutsche-boerse.com",
+    "timezone": "Europe/Berlin"
   }
 ]

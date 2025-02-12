@@ -3,7 +3,7 @@ import { writeFile } from 'node:fs/promises'
 import { format, resolve } from 'node:path'
 
 const prisma = new PrismaClient()
-const backupDir = resolve('..', 'database', 'backup')
+const backupDir = resolve(import.meta.dirname, '..', 'database', 'backup')
 console.log(`Backup directory is ${backupDir}`)
 
 const tables = await prisma.$queryRaw`
