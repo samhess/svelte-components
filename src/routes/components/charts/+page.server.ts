@@ -1,4 +1,3 @@
-
 /** @type {import('./$types').PageServerLoad} */
 export async function load({locals}) {
   const {session, user} = locals
@@ -37,5 +36,5 @@ export async function load({locals}) {
   const structure = 'marketCap'
   const grouping = ['type', 'name']
 
-  return {records,evaluation,structure,grouping}
+  return {records, evaluation, structure, grouping}
 }

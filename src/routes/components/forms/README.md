@@ -1,56 +1,60 @@
 # Svelte Component for Address Completion
 
-This is a Svelte component for address autocompletion. It integrates with 
+This is a Svelte component for address autocompletion. It integrates with
 [Mapbox Geocoding API](https://docs.mapbox.com/api/search/geocoding/).
 
 ## Demo
+
 [Demo](https://svelte-components-black.vercel.app/components/forms).
 
 ## Installation
+
 ```bash
 npm install @samhess/svelte-components
 ```
 
-## Usage 
+## Usage
+
 ```html
 <script>
   import {AddressInput} from '@samhess/svelte-components'
-  
+
   /** @type {Props} */
   let {data} = $props()
   let {mapbox} = $derived(data)
 
   let address = $state({
-    postcode: '', 
-    city: '', 
-    state: '', 
+    postcode: '',
+    city: '',
+    state: '',
     country: ''
   })
 </script>
 
 <form>
-  <AddressInput mapboxOptions={mapbox} deliver={(results={})=>{Object.assign(address,results)}}>
+  <AddressInput mapboxOptions="{mapbox}" deliver="{(results" ="{})" =""
+    >{Object.assign(address,results)}}>
   </AddressInput>
 </form>
 ```
 
 ## Properties
 
-| Property      | Attribute     | Type    | Description                        | Required | Default |
-| :------:      | :-------:     | :---:   | :---------:                        | :------: | :-----: |
-| mapboxOptions |               | Object  | Mapbox options as indicated below  | Yes      |         |
-|               | access_token  | String  | Mapbox access token                | Yes      | ''      |
-|               | limit         | String  | Limit of suggestions               | No       | 10      |
-|               | proximity     | String  | Search near                        | No       |'ip'     |
-|               | autocomplete  | Boolean | Autocomplete search input          | No       | true    |
-|               | fuzzyMatch    | Boolean | Not only exact match               | No       | true    |
-|               | country       | String  | Limit to certain countries         | No       | ''      |
-|               | language      | String  | Language for search and results    | No       | 'en'    |
+|   Property    |  Attribute   |  Type   |            Description            | Required | Default |
+| :-----------: | :----------: | :-----: | :-------------------------------: | :------: | :-----: |
+| mapboxOptions |              | Object  | Mapbox options as indicated below |   Yes    |         |
+|               | access_token | String  |        Mapbox access token        |   Yes    |   ''    |
+|               |    limit     | String  |       Limit of suggestions        |    No    |   10    |
+|               |  proximity   | String  |            Search near            |    No    |  'ip'   |
+|               | autocomplete | Boolean |     Autocomplete search input     |    No    |  true   |
+|               |  fuzzyMatch  | Boolean |       Not only exact match        |    No    |  true   |
+|               |   country    | String  |    Limit to certain countries     |    No    |   ''    |
+|               |   language   | String  |  Language for search and results  |    No    |  'en'   |
 
 Please refer to [Mapbox Geocoding API documentation](https://docs.mapbox.com/api/search/geocoding) for further information
 
 ## Events
 
-| Event | Description |
-| :---: | :---------: |
+|    Event    |                                                          Description                                                          |
+| :---------: | :---------------------------------------------------------------------------------------------------------------------------: |
 | **deliver** | Triggered when user selects address. Returns object with selected address containing street, postcode, city state and country |

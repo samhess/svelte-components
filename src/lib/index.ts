@@ -4,9 +4,9 @@ import DataTable from '$lib/components/DataTable.svelte'
 import EditDialog from '$lib/components/EditDialog.svelte'
 //import Sankey from '$lib/components/Sankey.svelte'
 import Treemap from '$lib/components/Treemap.svelte'
- 
-export { 
-  Bar, 
+
+export {
+  Bar,
   DataTable,
   EditDialog,
   //Sankey,

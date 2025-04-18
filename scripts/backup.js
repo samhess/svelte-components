@@ -1,6 +1,6 @@
-import { PrismaClient } from '@prisma/client'
-import { writeFile } from 'node:fs/promises'
-import { format, resolve } from 'node:path'
+import {PrismaClient} from '@prisma/client'
+import {writeFile} from 'node:fs/promises'
+import {format, resolve} from 'node:path'
 
 const prisma = new PrismaClient()
 const backupDir = resolve(import.meta.dirname, '..', 'database', 'backup')
@@ -16,12 +16,11 @@ const tables = await prisma.$queryRaw`
   order by tbl_name;
 `
 for (const table of tables) {
-  const {tbl_name:entity} = table
+  const {tbl_name: entity} = table
   const records = await prisma[entity].findMany()
   const json = JSON.stringify(records, undefined, 2)
-  const path = format({dir:backupDir, name:entity, ext:'json'})
+  const path = format({dir: backupDir, name: entity, ext: 'json'})
   await writeFile(path, json)
   console.log(`backing up table ${entity}`)
 }
 process.exit(0)
-
