@@ -1,4 +1,4 @@
-import type {PageServerLoadEvent} from "./$types.js"
+import type {PageServerLoadEvent} from './$types.js'
 
 export async function load({locals}:PageServerLoadEvent) {
   const {session, user} = locals
@@ -10,6 +10,5 @@ export async function load({locals}:PageServerLoadEvent) {
     limit: 5,
     language: 'de'
   }
-
   return {mapbox}
 }

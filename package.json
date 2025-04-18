@@ -1,7 +1,7 @@
 {
     "name": "@samhess/svelte-components",
     "private": false,
-    "version": "0.2.2",
+    "version": "0.3.0",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/samhess/svelte-components.git"
@@ -54,6 +54,7 @@
         "chartjs-chart-sankey": "^0.14.0",
         "chartjs-chart-treemap": "^3.1.0",
         "prettier": "^3.5.3",
+        "prettier-plugin-svelte": "^3.3.3",
         "prisma": "^6.6.0",
         "publint": "^0.3.12",
         "svelte-check": "^4.1.6",

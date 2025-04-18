@@ -17,24 +17,25 @@ npm install @samhess/svelte-components
 
 ```html
 <script>
-  import {AddressInput} from '@samhess/svelte-components'
+  import AddressInput from '$lib/components/AddressInput.svelte'
 
-  /** @type {Props} */
-  let {data} = $props()
-  let {mapbox} = $derived(data)
+  type Address = {
+    postcode?: string | number;
+    city?: string;
+    state?: string;
+    country?: string;
+  }
 
-  let address = $state({
-    postcode: '',
-    city: '',
-    state: '',
-    country: ''
-  })
+  const {data} = $props()
+
+  let address:Address = $state({})
 </script>
 
 <form>
-  <AddressInput mapboxOptions="{mapbox}" deliver="{(results" ="{})" =""
-    >{Object.assign(address,results)}}>
-  </AddressInput>
+  <AddressInput
+    mapboxOptions={data.mapbox}
+    dispatch={(results: Address) => Object.assign(address, results)}
+  ></AddressInput>
 </form>
 ```
 
@@ -50,11 +51,7 @@ npm install @samhess/svelte-components
 |               |  fuzzyMatch  | Boolean |       Not only exact match        |    No    |  true   |
 |               |   country    | String  |    Limit to certain countries     |    No    |   ''    |
 |               |   language   | String  |  Language for search and results  |    No    |  'en'   |
+| dispatch      |              | Function| Triggered when user selects address. Returns object with selected address containing street, postcode, city state and country | No | - |
 
 Please refer to [Mapbox Geocoding API documentation](https://docs.mapbox.com/api/search/geocoding) for further information
 
-## Events
-
-|    Event    |                                                          Description                                                          |
-| :---------: | :---------------------------------------------------------------------------------------------------------------------------: |
-| **deliver** | Triggered when user selects address. Returns object with selected address containing street, postcode, city state and country |
