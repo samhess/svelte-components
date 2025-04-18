@@ -1,6 +1,6 @@
 import type {PageServerLoadEvent} from './$types.js'
 
-export async function load({locals}:PageServerLoadEvent) {
+export async function load({locals}: PageServerLoadEvent) {
   const {session, user} = locals
 
   // mapbox options as per https://docs.mapbox.com/api/search/geocoding

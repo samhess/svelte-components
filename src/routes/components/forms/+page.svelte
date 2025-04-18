@@ -2,15 +2,15 @@
   import AddressInput from '$lib/components/AddressInput.svelte'
 
   type Address = {
-    postcode?: string | number;
-    city?: string;
-    state?: string;
-    country?: string;
+    postcode?: string | number
+    city?: string
+    state?: string
+    country?: string
   }
 
   const {data} = $props()
 
-  let address:Address = $state({})
+  let address: Address = $state({})
 </script>
 
 <article class="prose">
@@ -21,7 +21,8 @@
   </p>
   <form>
     <div class="mb-4">
-      <label>Street
+      <label
+        >Street
         <AddressInput
           mapboxOptions={data.mapbox}
           dispatch={(results: Address) => Object.assign(address, results)}
@@ -29,16 +30,20 @@
       </label>
     </div>
     <div class="flex justify-between">
-      <label>Postcode
+      <label
+        >Postcode
         <input name="postcode" value={address.postcode} />
       </label>
-      <label>City
+      <label
+        >City
         <input name="city" value={address.city} />
       </label>
-      <label>County / State
+      <label
+        >County / State
         <input name="state" value={address.state} />
       </label>
-      <label>Country
+      <label
+        >Country
         <input name="country" autocomplete="off" value={address.country} />
       </label>
     </div>
