@@ -1,7 +1,7 @@
-/** @type {import('./$types').PageServerLoad} */
-export async function load({locals}) {
-  const {session, user} = locals
+import type {PageServerLoadEvent} from "./$types.js"
 
+export async function load({locals}:PageServerLoadEvent) {
+  const {session, user} = locals
   const records = [
     {
       name: 'Apple',

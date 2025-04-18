@@ -1,12 +1,15 @@
-<script lang="js">
+<script lang="ts">
   import {page} from '$app/state'
-  import {Mail} from 'lucide-svelte'
+  import Mail from '@lucide/svelte/icons/mail'
   import '../app.css'
-  let {data, children} = $props()
-  let {routes, subMenu} = $derived(data)
+  const {data, children} = $props()
+  const routeNames = Array.from(Object.values(data.routes)).map((item) => item.name)
 
   let breadcrumb = $derived(page.route.id?.slice(1).replaceAll('/',' > ') ?? '')
   let currentRoute = $derived(page.route.id?.replace(/^\//,'') ?? '') 
+  let match = $derived(page.route.id?.match(/^\/(?<segment1>[^/]*)\//))
+  let segment1 = $derived(match?.groups?.segment1 ?? 'home')
+  let childRoutes = $derived(data.routes[segment1].children)
 </script>
 
 <svelte:head>
@@ -19,7 +22,7 @@
  <div class="block">
   <!-- main menu -->
   <div class="bg-sky-600 flex items-center space-x-2 justify-center py-1">
-    {#each routes as route}
+    {#each routeNames as route}
       <a
         href={`/${route.toLowerCase()}`}
         class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 text-lg font-semibold" 
@@ -29,13 +32,13 @@
     {/each}
   </div>
   <!-- dynamic sub menu -->
-  {#if subMenu.length}
+  {#if childRoutes.length}
     <div class="bg-sky-500 flex items-center space-x-2 justify-center py-1">
-      {#each subMenu as route}
-        <a href={route.path}
+      {#each childRoutes as route}
+        <a href={`/${segment1}/${route.toLowerCase().replace(/\s/g, '-')}`}
           class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 text-base font-medium"
-          class:text-white = { currentRoute.startsWith(route.path.slice(1)) }
-        >{ route.name }</a>
+          class:text-white = {currentRoute.endsWith(route.toLowerCase().replace(/\s/g, '-'))}
+        >{ route }</a>
       {/each}
     </div>
   {/if}

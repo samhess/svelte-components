@@ -53,7 +53,6 @@
         "chart.js": "^4.4.9",
         "chartjs-chart-sankey": "^0.14.0",
         "chartjs-chart-treemap": "^3.1.0",
-        "lucide-svelte": "^0.492.0",
         "prettier": "^3.5.3",
         "prisma": "^6.6.0",
         "publint": "^0.3.12",
@@ -62,6 +61,7 @@
         "vite": "^6.3.2"
     },
     "dependencies": {
+        "@lucide/svelte": "^0.494.0",
         "svelte": "^5.27.3"
     },
     "prisma": {

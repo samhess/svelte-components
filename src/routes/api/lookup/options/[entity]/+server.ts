@@ -1,3 +1,4 @@
+import type { GenericObject } from '$lib/types.js'
 import db from '$lib/server/database.js'
 import {json} from '@sveltejs/kit'
 import {Prisma} from '@prisma/client'
@@ -5,8 +6,7 @@ import {Prisma} from '@prisma/client'
 const {models} = Prisma.dmmf.datamodel
 const modelNames = models.map(({name}) => name.replace(/^Gics(?!$)/, ''))
 
-/** @type {Object<string,any>} */
-const hardOptions = {
+const hardOptions:GenericObject = {
   Assetclass: [
     {value: 'bond', name: 'Bond'},
     {value: 'commodity', name: 'Commodity'},
@@ -39,7 +39,6 @@ const hardOptions = {
   ]
 }
 
-/** @type {import('./$types').RequestHandler} */
 export async function GET({params}) {
   const {entity} = params
 
@@ -52,10 +51,7 @@ export async function GET({params}) {
     return json(options)
   } else if (modelNames.includes(entity)) {
     let options = new Array()
-    if (entity === 'Article') {
-      options = await db.article.findMany({orderBy: {title: 'asc'}})
-      options = options.map(({url, title}) => ({value: url, name: title}))
-    } else if (entity === 'Country') {
+    if (entity === 'Country') {
       options = await db.country.findMany({orderBy: {code: 'asc'}})
       options = options.map(({code, name}) => ({
         value: code,
@@ -98,12 +94,6 @@ export async function GET({params}) {
       options = options.map(({isin, name, ticker, exchange}) => ({
         value: isin,
         name: `${ticker}:${exchange} \u2013 ${isin} \u2013 ${name}`
-      }))
-    } else if (entity === 'Portfolio') {
-      options = await db.portfolio.findMany({orderBy: {name: 'asc'}})
-      options = options.map(({user, ticker, name}) => ({
-        value: `${user}:${ticker}`,
-        name: `${user}:${ticker} \u2013 ${name}`
       }))
     } else if (entity === 'Exchange') {
       options = await db.exchange.findMany({orderBy: {mic: 'asc'}})
