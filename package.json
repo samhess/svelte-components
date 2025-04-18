@@ -1,7 +1,7 @@
 {
   "name": "@samhess/svelte-components",
   "private": false,
-  "version": "0.3.0",
+  "version": "0.3.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samhess/svelte-components.git"
