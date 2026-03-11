@@ -36,22 +36,29 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 <script lang="ts">
   import {AddressInput} from '@samhess/svelte-components'
 
-  /** @type {Props} */
   let {data} = $props()
   let {mapbox} = $derived(data)
 
-  let address = $state({
-    postcode: '',
-    city: '',
-    state: '',
-    country: ''
-  })
+  type Address = {
+    postcode?: string | number
+    city?: string
+    state?: string
+    country?: string
+  }
+
+  const {data} = $props()
+
+  let address: Address = $state({})
 </script>
 
 <form>
-  <AddressInput mapboxOptions="{mapbox}" deliver="{(results" ="{})" =""
-    >{Object.assign(address,results)}}>
-  </AddressInput>
+  <label
+    >Street
+    <AddressInput
+      mapboxOptions={data.mapbox}
+      dispatch={(results: Address) => Object.assign(address, results)}
+    ></AddressInput>
+  </label>
 </form>
 ```
 
@@ -62,7 +69,6 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
   import DataTable from '$lib/components/DataTable.svelte'
   import {invalidateAll} from '$app/navigation'
 
-  /** @type {Props} */
   let {data} = $props()
   let {entity, records} = $derived(data)
 </script>
@@ -73,7 +79,21 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
     This is a sortable (click on column in table header) and optionally editable (double click on
     table row) data table.
   </p>
-  <DataTable {entity} {records} update="{()" ="">invalidateAll()}> </DataTable>
+  <DataTable {entity} {records}>
+    {#snippet tbody(records: any)}
+      {#each records as record}
+        <tr>
+          <td>{record.code}</td>
+          <td>{record.name}</td>
+          <td>{record.region}</td>
+          <td>{record.Currency.name} ({record.currency})</td>
+          {#if entity.isEditable}
+            {@render editRecord(entity.key, {code: record.code})}
+          {/if}
+        </tr>
+      {/each}
+    {/snippet}
+  </DataTable>
 </article>
 ```
 

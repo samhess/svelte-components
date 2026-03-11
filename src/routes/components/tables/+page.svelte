@@ -16,7 +16,7 @@
 </article>
 <div class="mt-6">
   <DataTable {entity} {records}>
-    {#snippet children(records: any)}
+    {#snippet tbody(records: any)}
       {#each records as record}
         <tr>
           <td>{record.code}</td>
