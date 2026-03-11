@@ -34,7 +34,7 @@ if (['production', 'prod', 'p'].includes(env)) {
     console.info('✔ Set database provider to postgres')
   }
   if (!packageJson.scripts.postinstall) {
-    packageJson.scripts.postinstall = 'prisma generate'
+    packageJson.scripts.postinstall = 'svelte-kit sync && prisma generate'
     await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2), {
       encoding: 'utf-8'
     })
