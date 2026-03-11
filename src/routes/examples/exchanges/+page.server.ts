@@ -15,7 +15,7 @@ export async function load({locals}: PageServerLoadEvent) {
       website: {name: 'Website'},
       time: {name: 'Local Time', edit: false, align: 'right'}
     },
-    endpoint: 'exchange',
+    key: 'exchange',
     name: 'Exchanges',
     sorting: {field: 'mic', direction: 'asc'},
     isEditable: true

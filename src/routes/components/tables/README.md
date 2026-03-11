@@ -15,7 +15,7 @@ npm install @samhess/svelte-components
 ## Usage
 
 ```html
-<script>
+<script lang="ts">
   import DataTable from '$lib/components/DataTable.svelte'
   import {invalidateAll} from '$app/navigation'
 

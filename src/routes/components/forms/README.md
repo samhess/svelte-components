@@ -16,19 +16,19 @@ npm install @samhess/svelte-components
 ## Usage
 
 ```html
-<script>
+<script lang="ts">
   import AddressInput from '$lib/components/AddressInput.svelte'
 
   type Address = {
-    postcode?: string | number;
-    city?: string;
-    state?: string;
-    country?: string;
+    postcode?: string | number
+    city?: string
+    state?: string
+    country?: string
   }
 
   const {data} = $props()
 
-  let address:Address = $state({})
+  let address: Address = $state({})
 </script>
 
 <form>

@@ -1,15 +1,17 @@
 <script lang="ts">
+  import type {LayoutProps} from './$types.ts'
   import {page} from '$app/state'
   import Mail from '@lucide/svelte/icons/mail'
   import '../app.css'
-  const {data, children} = $props()
+  const {data, children}: LayoutProps = $props()
+  // svelte-ignore state_referenced_locally
   const routeNames = Array.from(Object.values(data.routes)).map((item) => item.name)
 
   let breadcrumb = $derived(page.route.id?.slice(1).replaceAll('/', ' > ') ?? '')
   let currentRoute = $derived(page.route.id?.replace(/^\//, '') ?? '')
   let match = $derived(page.route.id?.match(/^\/(?<segment1>[^/]*)\//))
   let segment1 = $derived(match?.groups?.segment1 ?? 'home')
-  let childRoutes = $derived(data.routes[segment1].children)
+  let childRoutes = $derived(data.routes[segment1]?.children ?? [])
 </script>
 
 <svelte:head>

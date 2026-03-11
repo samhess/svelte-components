@@ -10,9 +10,8 @@ export async function load({locals}: PageServerLoadEvent) {
       issuer: {name: 'Issuer'},
       countries: {name: 'Main currency in', edit: false}
     },
-    endpoint: 'currency',
+    key: 'currency',
     name: 'Currencies',
-    sorting: {field: 'code'},
     isEditable: true
   }
   const records = await db.currency.findMany({

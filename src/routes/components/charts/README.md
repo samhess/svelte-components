@@ -15,7 +15,7 @@ npm install @samhess/svelte-components
 ## Usage
 
 ```html
-<script>
+<script lang="ts">
   import {Treemap} from '@samhess/svelte-components'
   let {data} = $props()
   let {records, structure, grouping, evaluation} = $derived(data)

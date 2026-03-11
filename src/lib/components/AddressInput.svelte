@@ -25,6 +25,7 @@
   let searchtext = $state('')
   let suggestions: GenericObject[] = $state([])
 
+  // svelte-ignore state_referenced_locally
   Object.assign(mapboxParams, mapboxOptions)
 
   function formatLabel(label = '', part = '') {

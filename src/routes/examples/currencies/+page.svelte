@@ -1,7 +1,6 @@
-<script>
-  // @ts-nocheck
-  import {invalidateAll} from '$app/navigation'
+<script lang="ts">
   import DataTable from '$lib/components/DataTable.svelte'
+  import {editRecord} from '$lib/components/Snippets.svelte'
 
   let {data} = $props()
   let {entity, records} = $derived(data)
@@ -9,14 +8,17 @@
 
 <article class="prose">
   <h1>Currencies</h1>
-  <DataTable {entity} {records} on:updateData={() => invalidateAll()}>
-    {#snippet children({records, rowDblClick})}
+  <DataTable {entity} {records}>
+    {#snippet tbody(records: any)}
       {#each records as record}
-        <tr ondblclick={() => rowDblClick(record)}>
+        <tr>
           <td>{record.code}</td>
           <td>{record.name}</td>
           <td>{record.issuer}</td>
-          <td>{record.Country.map(({code}) => code).join(', ')}</td>
+          <td>{record.Country.map(({code}: any) => code).join(', ')}</td>
+          {#if entity.isEditable}
+            {@render editRecord(entity.key, {code: record.code})}
+          {/if}
         </tr>
       {/each}
     {/snippet}

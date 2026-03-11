@@ -33,7 +33,7 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 ### Address Autocompletion
 
 ```html
-<script>
+<script lang="ts">
   import {AddressInput} from '@samhess/svelte-components'
 
   /** @type {Props} */
@@ -58,7 +58,7 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 ### DataTable
 
 ```html
-<script>
+<script lang="ts">
   import DataTable from '$lib/components/DataTable.svelte'
   import {invalidateAll} from '$app/navigation'
 
@@ -80,7 +80,7 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 ### TreeMap
 
 ```html
-<script>
+<script lang="ts">
   import {Treemap} from '@samhess/svelte-components'
   const data = [
     {

@@ -1,10 +1,10 @@
 import type {GenericObject} from '$lib/types.js'
 import db from '$lib/server/database.js'
 import {json} from '@sveltejs/kit'
-import {Prisma} from '@prisma/client'
+import {Prisma} from '../../../../../../prisma/generated/client.ts'
 
-const {models} = Prisma.dmmf.datamodel
-const modelNames = models.map(({name}) => name.replace(/^Gics(?!$)/, ''))
+const models = Object.values(Prisma.ModelName)
+const modelNames = models.map((name: string) => name.replace(/^Gics(?!$)/, ''))
 
 const hardOptions: GenericObject = {
   Assetclass: [

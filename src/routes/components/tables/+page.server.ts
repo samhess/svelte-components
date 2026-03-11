@@ -1,5 +1,5 @@
 import type {PageServerLoadEvent} from './$types.js'
-import db from '$lib/server/database.js'
+import db from '$lib/server/database.ts'
 
 export async function load({locals}: PageServerLoadEvent) {
   const {session, user} = locals
@@ -10,9 +10,8 @@ export async function load({locals}: PageServerLoadEvent) {
       region: {name: 'Region'},
       Currency: {name: 'Main Currency', default: 'USD', key: 'code'}
     },
-    endpoint: 'country',
+    key: 'country',
     name: 'Countries',
-    sorting: {field: 'code'},
     isEditable: true
   }
   const records = await db.country.findMany({

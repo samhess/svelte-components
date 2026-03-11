@@ -12,10 +12,9 @@ export async function load({locals}: PageServerLoadEvent) {
       IndustryGroup: {name: 'Industry Group', key: 'code'},
       Sector: {name: 'Sector', key: 'code'}
     },
-    endpoint: 'gics',
     isEditable: true,
-    name: 'GICS Taxonomy',
-    sorting: {field: 'code'}
+    key: 'gics',
+    name: 'GICS Taxonomy'
   }
   const records = await db.gics.findMany({
     include: {Industry: true, IndustryGroup: true, Sector: true}

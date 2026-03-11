@@ -1,12 +1,7 @@
-<script>
+<script lang="ts">
   import DataTable from '$lib/components/DataTable.svelte'
+  import {editRecord} from '$lib/components/Snippets.svelte'
 
-  /**
-   * @typedef {Object} Props
-   * @property {Object.<string, any>} data
-   */
-
-  /** @type {Props} */
   let {data} = $props()
   let {entity, records} = $derived(data)
 </script>
@@ -19,16 +14,19 @@
     consists of 11 sectors, 25 industry groups, 76 industries and 163 sub-industries into which S&P
     has categorized all major public companies.
   </p>
-  <DataTable {entity} {records} update={() => {}}>
-    {#snippet children({records, rowDblClick})}
+  <DataTable {entity} {records}>
+    {#snippet tbody(records: any)}
       {#each records as record}
-        <tr ondblclick={() => rowDblClick(record)}>
+        <tr>
           <td>{record.code}</td>
           <td>{record.name}</td>
           <td>{record.description}</td>
           <td>{record.Industry.name}</td>
           <td>{record.IndustryGroup.name}</td>
           <td>{record.Sector.name}</td>
+          {#if entity.isEditable}
+            {@render editRecord(entity.key, {code: record.code})}
+          {/if}
         </tr>
       {/each}
     {/snippet}
