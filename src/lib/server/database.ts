@@ -9,7 +9,7 @@ const url = new URL(connectionString)
 
 let adapter
 if (url.protocol == 'postgres:') {
-  console.log(`using postgres database ${url.hostname}`)
+  console.log(`using PostgreSQL database ${url.hostname}`)
   adapter = new PrismaPg({connectionString})
 } else {
   const url = `file:${process.cwd()}/database/svelte-components.db`
