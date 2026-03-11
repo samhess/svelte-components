@@ -1,7 +1,7 @@
 {
   "name": "@samhess/svelte-components",
   "private": false,
-  "version": "0.3.1",
+  "version": "0.4.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/samhess/svelte-components.git"
@@ -50,6 +50,7 @@
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/vite": "^4.2.1",
+    "@types/node": "^25.4.0",
     "chart.js": "^4.5.1",
     "chartjs-chart-sankey": "^0.14.0",
     "chartjs-chart-treemap": "^3.1.0",
@@ -64,6 +65,9 @@
   "dependencies": {
     "@lucide/svelte": "^0.577.0",
     "@prisma/adapter-better-sqlite3": "^7.4.2",
+    "@prisma/adapter-pg": "^7.4.2",
+    "dotenv": "^17.3.1",
+    "pg": "^8.20.0",
     "svelte": "^5.53.10"
   },
   "prisma": {

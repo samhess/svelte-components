@@ -20,7 +20,7 @@ if (['development', 'dev', 'd'].includes(env)) {
   }
   if (packageJson.scripts.postinstall) {
     delete packageJson.scripts.postinstall
-    await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 4), {
+    await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2), {
       encoding: 'utf-8'
     })
     console.info('✔ Removed postinstall script')
@@ -35,7 +35,7 @@ if (['production', 'prod', 'p'].includes(env)) {
   }
   if (!packageJson.scripts.postinstall) {
     packageJson.scripts.postinstall = 'prisma generate'
-    await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 4), {
+    await writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2), {
       encoding: 'utf-8'
     })
     console.info('✔ Added postinstall script')
