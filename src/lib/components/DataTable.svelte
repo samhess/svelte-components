@@ -80,7 +80,7 @@
           onclick={(e) => toggleSorting(key)}
         >
           {attribute.name}
-          <ArrowUpDown size={12} class="inline-block ms-0.5" />
+          <ArrowUpDown size={12} class="ms-0.5 inline-block" />
         </th>
       {/each}
       {#if isEditable}

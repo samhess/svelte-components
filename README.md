@@ -54,10 +54,9 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
 <form>
   <label
     >Street
-    <AddressInput
-      mapboxOptions={data.mapbox}
-      dispatch={(results: Address) => Object.assign(address, results)}
-    ></AddressInput>
+    <AddressInput mapboxOptions="{data.mapbox}" dispatch="{(results:" Address)="">
+      Object.assign(address, results)} ></AddressInput
+    >
   </label>
 </form>
 ```
@@ -80,19 +79,15 @@ import {AddressInput, DataTable, Treemap} from '@samhess/svelte-components'
     table row) data table.
   </p>
   <DataTable {entity} {records}>
-    {#snippet tbody(records: any)}
-      {#each records as record}
-        <tr>
-          <td>{record.code}</td>
-          <td>{record.name}</td>
-          <td>{record.region}</td>
-          <td>{record.Currency.name} ({record.currency})</td>
-          {#if entity.isEditable}
-            {@render editRecord(entity.key, {code: record.code})}
-          {/if}
-        </tr>
-      {/each}
-    {/snippet}
+    {#snippet tbody(records: any)} {#each records as record}
+    <tr>
+      <td>{record.code}</td>
+      <td>{record.name}</td>
+      <td>{record.region}</td>
+      <td>{record.Currency.name} ({record.currency})</td>
+      {#if entity.isEditable} {@render editRecord(entity.key, {code: record.code})} {/if}
+    </tr>
+    {/each} {/snippet}
   </DataTable>
 </article>
 ```

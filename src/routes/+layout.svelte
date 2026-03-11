@@ -5,7 +5,7 @@
   import '../app.css'
   const {data, children}: LayoutProps = $props()
   // svelte-ignore state_referenced_locally
-  const routeNames = Array.from(Object.values(data.routes)).map((item) => item.name)
+  const routeNames = Array.from(Object.values(data.routes)).map((item:any) => item.name)
 
   let breadcrumb = $derived(page.route.id?.slice(1).replaceAll('/', ' > ') ?? '')
   let currentRoute = $derived(page.route.id?.replace(/^\//, '') ?? '')
@@ -24,11 +24,11 @@
     <!-- menu -->
     <div class="block">
       <!-- main menu -->
-      <div class="bg-sky-600 flex items-center space-x-2 justify-center py-1">
+      <div class="flex items-center justify-center space-x-2 bg-sky-600 py-1">
         {#each routeNames as route}
           <a
             href={`/${route.toLowerCase()}`}
-            class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 text-lg font-semibold"
+            class="rounded-md px-3 text-lg font-semibold text-gray-300 hover:bg-sky-400 hover:text-white"
             class:text-white={currentRoute.startsWith(route.toLowerCase())}
             >{route}
           </a>
@@ -36,11 +36,11 @@
       </div>
       <!-- dynamic sub menu -->
       {#if childRoutes.length}
-        <div class="bg-sky-500 flex items-center space-x-2 justify-center py-1">
+        <div class="flex items-center justify-center space-x-2 bg-sky-500 py-1">
           {#each childRoutes as route}
             <a
               href={`/${segment1}/${route.toLowerCase().replace(/\s/g, '-')}`}
-              class="text-gray-300 hover:bg-sky-400 hover:text-white rounded-md px-3 text-base font-medium"
+              class="rounded-md px-3 text-base font-medium text-gray-300 hover:bg-sky-400 hover:text-white"
               class:text-white={currentRoute.endsWith(route.toLowerCase().replace(/\s/g, '-'))}
               >{route}</a
             >
@@ -56,7 +56,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-gray-400 text-white flex justify-between p-4">
+  <footer class="flex justify-between bg-gray-400 p-4 text-white">
     <div>@samhess/svelte-components</div>
     <div>
       <a class="text-white" href="https://www.linkedin.com/in/samhess/" target="_blank">
@@ -65,5 +65,3 @@
     </div>
   </footer>
 </div>
-
-

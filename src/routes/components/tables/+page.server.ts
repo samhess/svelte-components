@@ -1,4 +1,4 @@
-import type {PageServerLoadEvent} from './$types.js'
+import type {PageServerLoadEvent} from './$types.ts'
 import db from '$lib/server/database.ts'
 
 export async function load({locals}: PageServerLoadEvent) {

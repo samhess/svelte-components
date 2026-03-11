@@ -52,16 +52,16 @@
     {/if}
   {/each}
   {#if action === 'update'}
-    <div class="flex justify-between my-6">
+    <div class="my-6 flex justify-between">
       <button class="bg-red-500! hover:bg-red-600!" type="submit" formAction="?/delete">
         Delete
       </button>
-      <button class="text-white ms-2" type="submit" formAction={`?/${action}`}>
+      <button class="ms-2 text-white" type="submit" formAction={`?/${action}`}>
         {capitalize(action)}
       </button>
     </div>
   {:else}
-    <div class="text-end my-6">
+    <div class="my-6 text-end">
       <button class="text-white" type="submit" formAction={`?/${action}`}>
         {capitalize(action)}
       </button>

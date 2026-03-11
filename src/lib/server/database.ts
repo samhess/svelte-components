@@ -1,21 +1,20 @@
 import 'dotenv/config'
 import {PrismaBetterSqlite3} from '@prisma/adapter-better-sqlite3'
-import {PrismaPg} from "@prisma/adapter-pg"
+import {PrismaPg} from '@prisma/adapter-pg'
 import {PrismaClient, Prisma, $Enums} from '../../../prisma/generated/client.ts'
 import {env} from 'prisma/config'
-
-console.log(`DATABASE_URL: ${process.env.DATABASE_URL}`)
 
 const connectionString = env('DATABASE_URL')
 const url = new URL(connectionString)
 
 let adapter
 if (url.protocol == 'postgres:') {
-  console.log('using postgres database')
+  console.log(`using postgres database ${url.hostname}`)
   adapter = new PrismaPg({connectionString})
 } else {
-  console.log('using sqlite database')
-  adapter = new PrismaBetterSqlite3({url:`file:${process.cwd()}/database/svelte-components.db`})
+  const url = `file:${process.cwd()}/database/svelte-components.db`
+  console.log(`using SQLite database ${url}`)
+  adapter = new PrismaBetterSqlite3({url})
 }
 
 const db = new PrismaClient({
