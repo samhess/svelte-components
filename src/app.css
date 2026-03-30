@@ -58,6 +58,12 @@
       line-height: 1.5;
     }
   }
+  section {
+    @apply mt-4;
+  }
+  .datatable {
+    @apply my-10;
+  }
   a {
     color: var(--color-sky-600);
     text-decoration-line: none;
@@ -69,9 +75,8 @@
     @apply rounded bg-sky-500 px-3 py-1.5 text-white hover:bg-sky-600;
   }
   caption {
-    margin-top: 8px;
+    margin-bottom: 16px;
     font-size: large;
-    text-align: center;
   }
   dialog {
     @apply w-3/5;
@@ -100,7 +105,7 @@
     width: 100%;
     font-weight: normal;
     @apply mt-1 mb-2;
-    @apply rounded!;
+    @apply rounded;
     @apply border-slate-400!;
   }
   img {
@@ -111,7 +116,6 @@
     display: block;
   }
   main {
-    @apply h-full;
     @apply mx-auto max-w-5xl;
   }
   math {
@@ -121,10 +125,10 @@
   table {
     font-size: var(--text-sm);
     border-collapse: collapse;
-    caption-side: bottom;
+    caption-side: top;
     table-layout: auto;
     text-align: left;
-    margin-top: 4px;
+    margin-top: 10px;
     margin-bottom: 4px;
     width: 100%;
   }

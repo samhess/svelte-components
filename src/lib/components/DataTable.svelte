@@ -1,10 +1,10 @@
 <script lang="ts">
-  // @ts-nocheck
   import type {Snippet} from 'svelte'
   import type {GenericObject} from '$lib/types'
-  import {ArrowUpDown, Plus} from '@lucide/svelte'
+  import {ArrowUpDown} from '@lucide/svelte'
   import {createRecord} from '$lib/components/Snippets.svelte'
-  export interface TableProps {
+  export type TableProps = {
+    caption?: String
     entity: {
       attributes: GenericObject
       isEditable?: boolean
@@ -13,68 +13,51 @@
       sorting?: {field: string; direction: string}
     }
     records: Array<any>
-    dispatchData?: Function
-    tbody?: Snippet<Array<any>>
-    children?: Snippet<any>
+    tbody?: Snippet
   }
 
-  let props: TableProps = $props()
-  // svelte-ignore state_referenced_locally
-  let {isEditable = false} = $state(props.entity)
-  // svelte-ignore state_referenced_locally
-  let caption = $state(`${props.entity.name} (${props.records.length})`)
+  let {caption, entity, records, tbody}: TableProps = $props()
 
-  let sorting = $state({field: 'name', direction: 'asc'})
+  let isEditable = $derived(entity.isEditable)
+  let defaultSorting = $derived(entity.sorting ?? {field: 'name', direction: 'asc'})
+  let forceRender = $state(1)
   // svelte-ignore state_referenced_locally
-  let sortedRecords: Array<any> = $state(props.records)
+  let sorting = $state(defaultSorting)
 
-  function toggleSorting(field = 'name') {
+  function toggleSorting(field: string) {
     const direction = sorting.direction === 'asc' ? 'desc' : 'asc'
-    sortedRecords = sortRecords({field, direction})
-    if (props.dispatchData) {
-      props.dispatchData(sortedRecords)
-    }
+    forceRender = sortRecords({field, direction})
     sorting = {field, direction}
   }
 
-  function sortRecords({field = 'name', direction = 'asc'}) {
-    //console.log(`sorting ${field} ${direction}`)
+  function sortRecords({field, direction}: GenericObject) {
+    console.log(`sorting ${field} ${direction}`)
     const sortCode = direction === 'asc' ? 1 : -1
-    if (Array.isArray(props.records)) {
-      return props.records.toSorted((A, B) => {
-        let a = A[field] ?? ''
-        let b = B[field] ?? ''
-        if (typeof a === 'object' && typeof b === 'object') {
-          a = a.name
-          b = b.name
-        }
-        if (typeof a === 'string' && typeof b === 'string') {
-          const compareResult = a.localeCompare(b, undefined, {sensitivity: 'base'})
-          return compareResult * sortCode
-        }
-        if (a === b) return 0
-        return a > b ? sortCode : -sortCode
-      })
-    } else {
-      console.log(`empty records`)
-      return new Array()
-    }
+    records.sort((A, B) => {
+      let a = A[field] ?? ''
+      let b = B[field] ?? ''
+      if (typeof a === 'object' && typeof b === 'object') {
+        a = a.name
+        b = b.name
+      }
+      if (typeof a === 'string' && typeof b === 'string') {
+        const compareResult = a.localeCompare(b, undefined, {sensitivity: 'base'})
+        return compareResult * sortCode
+      }
+      if (a === b) return 0
+      return a > b ? sortCode : -sortCode
+    })
+    return new Date().valueOf()
   }
-
-  $effect(() => {
-    caption = `${props.entity.name} (${props.records.length})`
-    if (props.dispatchData) {
-      props.dispatchData(props.records)
-    }
-    sortedRecords = sortRecords({field: 'name', direction: 'asc'})
-  })
 </script>
 
-<table>
-  <caption class="text-center capitalize">{caption}</caption>
+<table class="datatable">
+  {#if caption}
+    <caption class="text-center">{caption}</caption>
+  {/if}
   <thead>
     <tr class="bg-gray-200">
-      {#each Object.entries(props.entity.attributes) as [key, attribute]}
+      {#each Object.entries(entity.attributes) as [key, attribute]}
         <th
           class={`${sorting.field == key ? 'underline' : ''} ${attribute.align === 'right' ? 'text-end' : ''}`}
           onclick={(e) => toggleSorting(key)}
@@ -85,27 +68,27 @@
       {/each}
       {#if isEditable}
         <th class="w-1/16 text-end">
-          {@render createRecord(props.entity.key)}
+          {@render createRecord(entity.key)}
         </th>
       {/if}
     </tr>
   </thead>
   <tbody>
-    {#if props.tbody && Array.isArray(sortedRecords)}
-      {@render props.tbody(sortedRecords)}
-    {:else if props.children && Array.isArray(sortedRecords)}
-      {@render props.children(sortedRecords)}
-    {:else}
-      {#each sortedRecords as record, index}
-        <tr>
-          {#each Object.entries(record).filter(([key, value]) => typeof value !== 'object') as [key, value]}
-            <td>{typeof value !== 'object' ? value : 'obj'}</td>
-            {#if isEditable}
-              <!-- <Edit entityKey={entity.key ?? ''} recordKey={record.code}></Edit> -->
-            {/if}
-          {/each}
-        </tr>
-      {/each}
-    {/if}
+    {#key forceRender}
+      {#if tbody}
+        {@render tbody()}
+      {:else}
+        {#each records as record}
+          <tr>
+            {#each Object.entries(record).filter(([key, value]) => typeof value !== 'object') as [key, value]}
+              <td>{typeof value !== 'object' ? value : 'obj'}</td>
+              {#if isEditable}
+                {@render createRecord(entity.key)}
+              {/if}
+            {/each}
+          </tr>
+        {/each}
+      {/if}
+    {/key}
   </tbody>
 </table>

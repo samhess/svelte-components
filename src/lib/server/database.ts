@@ -10,16 +10,15 @@ if (process.env.DATABASE_URL) {
   const connectionString = env('DATABASE_URL')
   const url = new URL(connectionString)
   if (url.protocol == 'postgres:') {
-  console.log(`using PostgreSQL database ${url.hostname}`)
-  adapter = new PrismaPg({connectionString})
-  } 
-  else {
+    console.log(`using PostgreSQL database ${url.hostname}`)
+    adapter = new PrismaPg({connectionString})
+  } else {
     const url = connectionString
     console.log(`using SQLite database ${url}`)
     adapter = new PrismaBetterSqlite3({url})
   }
 } else {
-  const path = resolve(process.cwd(),'database/svelte-components.db')
+  const path = resolve(process.cwd(), 'database/svelte-components.db')
   const url = `file:${path}`
   console.log(`using SQLite database ${url}`)
   adapter = new PrismaBetterSqlite3({url})

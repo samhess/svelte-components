@@ -3,7 +3,7 @@ import type {GenericObject} from '$lib/types.ts'
 export const routes: GenericObject = {
   home: {
     name: 'Home',
-    children: []
+    children: null
   },
   components: {
     name: 'Components',

@@ -1,6 +1,6 @@
 <script module lang="ts">
   import {PenLine, Plus} from '@lucide/svelte'
-  import type {GenericObject} from '$lib/types.ts'
+  import type {GenericObject} from '$lib/types'
   // Export the snippets from the module script
   export {createRecord, editRecord}
 </script>
@@ -16,11 +16,9 @@
   {#if path === '/crud'}
     {#if typeof record === 'object'}
       {@const searchParams = new URLSearchParams(record)}
-      <td class="w-1/16 text-end">
-        <a href={`${path}/${entity}?${searchParams.toString()}`}>
-          <PenLine class="inline" size={18} />
-        </a>
-      </td>
+      <a href={`${path}/${entity}?${searchParams.toString()}`}>
+        <PenLine class="inline" size={18} />
+      </a>
     {:else}
       <td class="w-1/16 text-end text-red-600"> Record key must be object </td>
     {/if}

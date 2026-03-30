@@ -9,27 +9,30 @@
 <article class="prose">
   <h1>Exchanges</h1>
   <DataTable {entity} {records}>
-    {#snippet tbody(records: any)}
-      {#each records as record}
+    {#snippet tbody()}
+      {#each records as { mic, name, acronym, yahooIdentifier, googleIdentifier, country, city, website, timezone }}
         <tr>
-          <td>{record.mic}</td>
-          <td>{record.name}</td>
-          <td>{record.acronym}</td>
-          <td>{record.yahooIdentifier}</td>
-          <td>{record.googleIdentifier}</td>
-          <td>{record.country}</td>
-          <td>{record.city}</td>
-          <td><a href="http://{record.website}" target="_blank">{record.website}</a></td>
-          <td class="text-end"
-            >{record.timezone
-              ? new Date().toLocaleTimeString('default', {
-                  timeZone: record.timezone,
-                  timeStyle: 'short'
-                })
-              : ''}</td
-          >
+          <td>{mic}</td>
+          <td>{name}</td>
+          <td>{acronym}</td>
+          <td>{yahooIdentifier}</td>
+          <td>{googleIdentifier}</td>
+          <td>{country}</td>
+          <td>{city}</td>
+          <td><a href="http://{website}" target="_blank">{website}</a></td>
+          {#if timezone}
+            {@const time = new Date().toLocaleTimeString(undefined, {
+              timeZone: timezone,
+              timeStyle: 'short'
+            })}
+            <td class="text-end">{time}</td>
+          {:else}
+            <td></td>
+          {/if}
           {#if entity.isEditable}
-            {@render editRecord(entity.key, {mic: record.mic})}
+            <td class="w-1/16 text-end">
+              {@render editRecord(entity.key, {mic})}
+            </td>
           {/if}
         </tr>
       {/each}

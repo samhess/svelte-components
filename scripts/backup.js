@@ -1,9 +1,12 @@
-import {PrismaClient} from '@prisma/client'
+import {PrismaBetterSqlite3} from '@prisma/adapter-better-sqlite3'
+import {PrismaClient} from '../prisma/generated/client.ts'
 import {writeFile} from 'node:fs/promises'
-import {format, resolve} from 'node:path'
+import {format, join} from 'node:path'
 
-const prisma = new PrismaClient()
-const backupDir = resolve(import.meta.dirname, '..', 'database', 'backup')
+const path = join(process.cwd(), '../database/svelte-components.db')
+const adapter = new PrismaBetterSqlite3({url:`file:${path}`})
+const prisma = new PrismaClient({adapter})
+const backupDir = join(import.meta.dirname, '..', 'database', 'backup')
 console.log(`Backup directory is ${backupDir}`)
 
 const tables = await prisma.$queryRaw`

@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type {GenericObject} from '$lib/types.ts'
+  import {enhance} from '$app/forms'
+  import type {GenericObject} from '../types'
   type Props = {
     fields: GenericObject[]
     record: GenericObject
@@ -11,12 +12,17 @@
   let record = $state(props.record)
 
   const capitalize = (str: string) => str.replace(/^\w/, (v) => v.toUpperCase())
+
+  function getType(fieldName: string) {
+    if (['instance'].includes(fieldName)) return 'number'
+    return 'text'
+  }
 </script>
 
 <form method="POST">
   {#each fields as field}
     {@const fieldname = field.name.replace(/^\w/, (c: string) => c.toLowerCase())}
-    {#if field.kind === 'scalar'}
+    {#if !Array.isArray(field.options)}
       <label class="font-semibold">
         {capitalize(field.name)}
         {#if fieldname === 'description'}
@@ -31,7 +37,7 @@
         {:else}
           <input
             step="any"
-            type={field.type}
+            type={getType(field.name)}
             name={field.name}
             bind:value={record[fieldname]}
             autoComplete="off"

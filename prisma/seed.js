@@ -1,8 +1,10 @@
-import {PrismaClient} from '@prisma/client'
+import {PrismaClient} from '../prisma/generated/client.ts'
+import {PrismaBetterSqlite3} from '@prisma/adapter-better-sqlite3'
 import {readFile} from 'fs/promises'
 import {resolve, format} from 'path'
 
-const prisma = new PrismaClient()
+const adapter = new PrismaBetterSqlite3({url})
+const prisma = new PrismaClient({adapter})
 const backupDir = resolve('database', 'backup')
 
 // order matters

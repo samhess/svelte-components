@@ -15,7 +15,7 @@
     has categorized all major public companies.
   </p>
   <DataTable {entity} {records}>
-    {#snippet tbody(records: any)}
+    {#snippet tbody()}
       {#each records as record}
         <tr>
           <td>{record.code}</td>
@@ -25,7 +25,9 @@
           <td>{record.IndustryGroup.name}</td>
           <td>{record.Sector.name}</td>
           {#if entity.isEditable}
-            {@render editRecord(entity.key, {code: record.code})}
+            <td class="w-1/16 text-end">
+              {@render editRecord(entity.key, {code: record.code})}
+            </td>
           {/if}
         </tr>
       {/each}
