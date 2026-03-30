@@ -1,6 +1,6 @@
 <script lang="ts">
   import {enhance} from '$app/forms'
-  import type {GenericObject} from '../types'
+  import type {GenericObject} from '../types.ts'
   type Props = {
     fields: GenericObject[]
     record: GenericObject

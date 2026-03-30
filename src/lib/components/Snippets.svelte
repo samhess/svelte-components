@@ -1,6 +1,6 @@
 <script module lang="ts">
   import {PenLine, Plus} from '@lucide/svelte'
-  import type {GenericObject} from '$lib/types'
+  import type {GenericObject} from '$lib/types.ts'
   // Export the snippets from the module script
   export {createRecord, editRecord}
 </script>

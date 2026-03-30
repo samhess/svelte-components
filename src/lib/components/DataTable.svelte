@@ -1,6 +1,6 @@
 <script lang="ts">
   import type {Snippet} from 'svelte'
-  import type {GenericObject} from '$lib/types'
+  import type {GenericObject} from '$lib/types.ts'
   import {ArrowUpDown} from '@lucide/svelte'
   import {createRecord} from '$lib/components/Snippets.svelte'
   export type TableProps = {
